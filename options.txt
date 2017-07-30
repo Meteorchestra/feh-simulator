@@ -1,0 +1,60 @@
+CHALLENGER: Replace this with the name of any hero
+- For a complete list of hero names, see heroes.py (or the duel results)
+challenger = Lyn
+
+BOON/BANE: Replace these with any stat name (hp/atk/spd/def/res/none)
+boon = atk
+bane = res
+
+MERGE: Replace this with a numerical merge value (1-10 are officially supported)
+merge = 10
+
+SKILLSET: Replace these with any skill name (will be reset to default if invalid)
+- For a complete list of skill names, see skills.py
+#A = Defiant Atk 3
+#B = Renewal 3
+#C = Spur Spd 3
+#S = Quickened Pulse
+#Special = Luna
+#Weapon = Sol Katti
+
+OUTPUT STYLE:
+- "Verbose": Show full text of each duel
+- "Summary": Show victor/rounds/overkill for each duel
+- "Totals": Show only total stats
+- "CompareBuilds": Show comparison of results for different skillsets (see additional options below)
+output = Verbose
+
+STATS: Comma-separated list of total stats to display for each scenario
+- "Wins": Cases where the challenger defeats a foe utterly
+- "Losses": Cases where the challenger is defeated utterly
+- "Inconclusive": Cases where both the challenger and the enemy survive the specified rounds
+stats = Wins,Losses,Inconclusive
+
+SCENARIOS: Different combinations of round initiations to analyze
+- Each scenario can be listed as a combination of "C" and "E"
+- A "C" indicates a round that the challenger initiates
+- An "E" indicates a round that the enemy initiates
+scenarios = CECE,ECEC,C,E
+
+ENEMY OPTIONS:
+enemymerge = 10
+
+ADJACENT ALLIES: By default, owl tomes will appear weaker than other tomes because there are no nearby allies.
+To adjust this, set this value to a chosen number of adjacent allies.
+adjacentallies = 0
+
+COMPAREBUILDS OPTIONS:
+- "comparebuildsslots" = skill slots to iterate through (separated by commas)
+- Note that setting more than one or two slots here will take a long time
+- Set this to "consecutive" to evaluate options for each stat slot individually, followed by an evaluation across all slots with the top skills from the individual slot results
+- Set this to "consecutive-slot1-slot2" to evaluate options for each stat slot other than the named slots (consecutive-weapon will always keep the current weapon, for example)
+comparebuildsslots = consecutive-weapon
+- "comparebuildsstatformat" = How to display and evaluate builds
+	- "StatTotalAcrossScenarios": Calculate one stat, use the sum across scenarios as sort value
+comparebuildsstatformat = StatTotalAcrossScenarios
+- "comparebuildstopskills" = Number of skills from each slot to use for the final evaluation if running a 'consecutive' CompareBuilds
+- The default is 4; the final evaluation can take a very long time if it's much larger
+comparebuildstopskills = 6
+
+debug = full
