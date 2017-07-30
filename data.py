@@ -435,7 +435,7 @@ fl["a"] = "None"
 fl["b"] = "None"
 fl["c"] = "None"
 fl["s"] = "None"
-fl["replace"] = {"weapon":0,"special":0,"a":0,"b":0,"c":0}
+fl["replace"] = {"weapon":0,"special":0,"a":0,"b":0,"c":0,"s":0}
 
 fl["buffs"] = {"atk":0,"spd":0,"def":0,"res":0}
 fl["debuffs"] = {"atk":0,"spd":0,"def":0,"res":0}
@@ -491,3 +491,33 @@ def parseOptions(optionsFile="options.txt"):
 			options["debug"] = opt[1]
 		elif opt[0] == "adjacentallies":
 			options["adjacentallies"] = int(opt[1])
+		elif opt[0] == "defaultA":
+			enemies["fl"]["a"] = opt[1]
+		elif opt[0] == "defaultB":
+			enemies["fl"]["b"] = opt[1]
+		elif opt[0] == "defaultC":
+			enemies["fl"]["c"] = opt[1]
+		elif opt[0] == "defaultS":
+			enemies["fl"]["s"] = opt[1]
+		elif opt[0] == "defaultSpecial":
+			enemies["fl"]["special"] = opt[1]
+		elif opt[0] == "defaultWeapon":
+			enemies["fl"]["weapon"] = opt[1]
+		elif opt[0] == "overrideA":
+			enemies["fl"]["a"] = opt[1]
+			enemies["fl"]["replace"]["a"] = 1
+		elif opt[0] == "overrideB":
+			enemies["fl"]["b"] = opt[1]
+			enemies["fl"]["replace"]["b"] = 1
+		elif opt[0] == "overrideC":
+			enemies["fl"]["c"] = opt[1]
+			enemies["fl"]["replace"]["c"] = 1
+		elif opt[0] == "overrideS":
+			enemies["fl"]["s"] = opt[1]
+			enemies["fl"]["replace"]["s"] = 1
+		elif opt[0] == "overrideSpecial":
+			enemies["fl"]["special"] = opt[1]
+			enemies["fl"]["replace"]["special"] = 1
+		elif opt[0] == "overrideWeapon":
+			enemies["fl"]["weapon"] = opt[1]
+			enemies["fl"]["replace"]["weapon"] = 1

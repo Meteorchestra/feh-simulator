@@ -8,6 +8,7 @@ bane = res
 
 MERGE: Replace this with a numerical merge value (1-10 are officially supported)
 merge = 10
+enemymerge = 10
 
 SKILLSET: Replace these with any skill name (will be reset to default if invalid)
 - For a complete list of skill names, see skills.py
@@ -23,7 +24,7 @@ OUTPUT STYLE:
 - "Summary": Show victor/rounds/overkill for each duel
 - "Totals": Show only total stats
 - "CompareBuilds": Show comparison of results for different skillsets (see additional options below)
-output = Verbose
+output = CompareBuilds
 
 STATS: Comma-separated list of total stats to display for each scenario
 - "Wins": Cases where the challenger defeats a foe utterly
@@ -37,8 +38,21 @@ SCENARIOS: Different combinations of round initiations to analyze
 - An "E" indicates a round that the enemy initiates
 scenarios = CECE,ECEC,C,E
 
-ENEMY OPTIONS:
-enemymerge = 10
+ENEMY SKILLSET DEFAULTS: Enemies will gain these skills if they have no skill in the specified slot
+defaultA = Fury 3
+defaultB = Quick Riposte 3
+defaultC = Threaten Spd 3
+defaultS = Quickened Pulse
+defaultSpecial = Moonbow
+defaultWeapon = Dire Thunder
+
+ENEMY SKILLSET OVERRIDES: Enemies will gain these skills (if valid) even if they already have a skill in the specified slot
+overrideA = Fury 3
+overrideB = Quick Riposte 3
+overrideC = Threaten Spd 3
+overrideS = Quickened Pulse
+overrideSpecial = Moonbow
+overrideWeapon = Brave Bow+
 
 ADJACENT ALLIES: By default, owl tomes will appear weaker than other tomes because there are no nearby allies.
 To adjust this, set this value to a chosen number of adjacent allies.
@@ -49,12 +63,10 @@ COMPAREBUILDS OPTIONS:
 - Note that setting more than one or two slots here will take a long time
 - Set this to "consecutive" to evaluate options for each stat slot individually, followed by an evaluation across all slots with the top skills from the individual slot results
 - Set this to "consecutive-slot1-slot2" to evaluate options for each stat slot other than the named slots (consecutive-weapon will always keep the current weapon, for example)
-comparebuildsslots = consecutive-weapon
+comparebuildsslots = consecutive-weapon-c
 - "comparebuildsstatformat" = How to display and evaluate builds
 	- "StatTotalAcrossScenarios": Calculate one stat, use the sum across scenarios as sort value
 comparebuildsstatformat = StatTotalAcrossScenarios
 - "comparebuildstopskills" = Number of skills from each slot to use for the final evaluation if running a 'consecutive' CompareBuilds
 - The default is 4; the final evaluation can take a very long time if it's much larger
 comparebuildstopskills = 6
-
-debug = full
