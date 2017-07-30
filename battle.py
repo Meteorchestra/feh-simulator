@@ -374,7 +374,7 @@ class ActiveHero:
 			if (offensiveSpecialActivated):
 				self.resetCharge()
 				if self.verbose:
-					damageText += self.name + " activates " + self.special + ". "
+					damageText += self.name + " activates " + self.special + ".\n"
 					
 		#Don't do anything else if it's just an AOE attack
 		if (not AOE):
@@ -418,7 +418,7 @@ class ActiveHero:
 			
 			if self.verbose and (weaponAdvantage != 0):
 				damageText += (self.name + "'s attack is multiplied by "
-						+ str(round(1 + weaponAdvantageBonus, 2)) + " because of weapon advantage. ")
+						+ str(round(1 + weaponAdvantageBonus, 2)) + " because of weapon advantage.\n")
 
 			#Check weapon effective against
 			effectiveBonus = 1
@@ -430,7 +430,7 @@ class ActiveHero:
 
 				if self.verbose and (effectiveBonus > 1):
 					damageText += (self.name + "'s attack is multiplied by "
-							+ str(effectiveBonus) + " from weapon effectiveness. ")
+							+ str(effectiveBonus) + " from weapon effectiveness.\n")
 
 			#Check damage reducing specials
 			defensiveSpecialActivated = False
@@ -450,7 +450,7 @@ class ActiveHero:
 							if self.verbose:
 								damageText += (enemy.name + " blocks "
 										+ str(enemy.skillAttributes["specialshield"][skill]) 
-										+ " damage with " + skill + ". ")
+										+ " damage with " + skill + ".\n")
 
 				if "miracle" in enemy.skillAttributes and enemy.stats["hp"] > 1:
 					miracle = True
@@ -458,7 +458,7 @@ class ActiveHero:
 			if defensiveSpecialActivated:
 				if self.verbose and (dmgReduction < 1):
 					damageText += (enemy.name + " multiplies damage by " + str(dmgReduction)
-							+ " with " + enemy.special + ". ")
+							+ " with " + enemy.special + ".\n")
 				enemy.resetCharge()
 
 			#Weapon mod for healers
@@ -712,7 +712,7 @@ class ActiveHero:
 
 			#Finally, Galeforce!
 			if ("galeforce" in self.skillAttributes and data.options["useGaleforce"]
-					and self.skillAttributes["charge"][self.special] <= self.charge):
+					and self.skillAttributes["charge"][self.special] <= self.charge and not galeforce):
 				if self.verbose:
 					roundText += self.name + " initiates again with Galeforce!\n"
 				self.resetCharge()
