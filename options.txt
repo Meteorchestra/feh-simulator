@@ -1,10 +1,21 @@
+GENERAL NOTES ON OPTIONS:
+- All options have default values, remove ones you aren't using for a cleaner input file
+- Options are based on the exact text before and after the equals, so add any character (such as #) before an option 
+	to conveniently disable it
+- Options are case-sensitive
+
 CHALLENGER: Replace this with the name of any hero
 - For a complete list of hero names, see heroes.py (or the duel results)
-challenger = Corrin(F) (Summer)
+challenger = Abel
 
 BOON/BANE: Replace these with any stat name (hp/atk/spd/def/res/none)
 boon = atk
 bane = res
+
+RARITY: Replace with a rarity value (1-5 are officially supported)
+- Skillsets may behave unexpectedly for a hero/rarity combination that doesn't exist
+rarity = 5
+enemyrarity = 5
 
 MERGE: Replace this with a numerical merge value (1-10 are officially supported)
 merge = 10
@@ -19,12 +30,20 @@ S = Quickened Pulse
 Special = Luna
 Weapon = Sol Katti
 
+DAMAGE TAKEN: Replace this with any numerical value - if higher than the unit's HP, unit will start at 1 HP
+damage = 25
+enemydamage = 6
+
+PRECHARGE: Precharge value for unit's special (if higher than charge required, special will start ready to activate)
+precharge = 1
+enemyprecharge = 72
+
 OUTPUT STYLE:
 - "Verbose": Show full text of each duel
 - "Summary": Show victor/rounds/overkill for each duel
 - "Totals": Show only total stats
 - "CompareBuilds": Show comparison of results for different skillsets (see additional options below)
-output = CompareBuilds
+output = Verbose
 
 STATS: Comma-separated list of total stats to display for each scenario
 - "Wins": Cases where the challenger defeats a foe utterly
@@ -36,7 +55,32 @@ SCENARIOS: Different combinations of round initiations to analyze
 - Each scenario can be listed as a combination of "C" and "E"
 - A "C" indicates a round that the challenger initiates
 - An "E" indicates a round that the enemy initiates
-scenarios = CECE,ECEC,C,E
+scenarios = CECE
+
+ENEMY FILTERS: Mark any category as 'exclude' to exclude units of that type
+melee = include
+ranged = include
+red = include
+blue = include
+green = include
+gray = include
+physical = include
+magical = include
+infantry = include
+cavalry = include
+flying = include
+armored = include
+staff = include
+nonstaff = include
+
+THREATEN/PLOY EFFECT: Who threatens and ploys affect on the first turn (Both/Neither/Attacker/Defender)
+threatenrule = Both
+
+PLOY BEHAVIOR: Whether ranged attackers will attack diagonally to dodge ploys (Diagonal/Orthogonal)
+ployangle = Orthogonal
+
+GALEFORCE: Whether to initiate again if Galeforce triggers
+usegaleforce = True
 
 ENEMY SKILLSET DEFAULTS: Enemies will gain these skills if they have no skill in the specified slot
 defaultA = Fury 3
@@ -53,6 +97,36 @@ overrideC = Threaten Spd 3
 overrideS = Quickened Pulse
 overrideSpecial = Moonbow
 overrideWeapon = Brave Bow+
+
+BUFFS: Buff values for each stat
+atkbuff = 6
+spdbuff = 6
+defbuff = 0
+resbuff = 0
+enemyatkbuff = 2
+enemyspdbuff = 2
+enemydefbuff = 2
+enemyresbuff = 2
+
+DEBUFFS: Debuff values for each stat
+atkdebuff = -3
+spddebuff = -3
+defdebuff = -3
+resdebuff = -3
+enemyatkdebuff = -1
+enemyspddebuff = -1
+enemydefdebuff = -1
+enemyresdebuff = -1
+
+SPURS: Spur values for each stat
+atkspur = 4
+spdspur = 4
+defspur = 4
+resspur = 4
+enemyatkspur = 3
+enemyspdspur = 3
+enemydefspur = 3
+enemyresspur = 3
 
 ADJACENT ALLIES: By default, owl tomes will appear weaker than other tomes because there are no nearby allies.
 To adjust this, set this value to a chosen number of adjacent allies.

@@ -453,71 +453,145 @@ def parseOptions(optionsFile="options.txt"):
 	optionList = optionList.splitlines()
 	for option in optionList:
 		opt = option.split(" = ")
-		if opt[0] == "challenger":
-			challenger["name"] = opt[1]
-		elif opt[0] == "boon":
-			challenger["boon"] = opt[1]
-		elif opt[0] == "bane":
-			challenger["bane"] = opt[1]
-		elif opt[0] == "merge":
-			challenger["merge"] = int(opt[1])
-		elif opt[0] == "A":
-			challenger["a"] = opt[1]
-		elif opt[0] == "B":
-			challenger["b"] = opt[1]
-		elif opt[0] == "C":
-			challenger["c"] = opt[1]
-		elif opt[0] == "S":
-			challenger["s"] = opt[1]
-		elif opt[0] == "Special":
-			challenger["special"] = opt[1]
-		elif opt[0] == "Weapon":
-			challenger["weapon"] = opt[1]
-		elif opt[0] == "enemymerge":
-			enemies["fl"]["merge"] = int(opt[1])
-		elif opt[0] == "output":
-			options["output"] = opt[1]
-		elif opt[0] == "stats":
-			options["stats"] = opt[1].split(",")
-		elif opt[0] == "scenarios":
-			options["scenarios"] = opt[1].split(",")
-		elif opt[0] == "comparebuildsslots":
-			options["comparebuildsslots"] = opt[1].split(",")
-		elif opt[0] == "comparebuildsstatformat":
-			options["comparebuildsstatformat"] = opt[1]
-		elif opt[0] == "comparebuildstopskills":
-			options["comparebuildstopskills"] = int(opt[1])
-		elif opt[0] == "debug":
-			options["debug"] = opt[1]
-		elif opt[0] == "adjacentallies":
-			options["adjacentallies"] = int(opt[1])
-		elif opt[0] == "defaultA":
-			enemies["fl"]["a"] = opt[1]
-		elif opt[0] == "defaultB":
-			enemies["fl"]["b"] = opt[1]
-		elif opt[0] == "defaultC":
-			enemies["fl"]["c"] = opt[1]
-		elif opt[0] == "defaultS":
-			enemies["fl"]["s"] = opt[1]
-		elif opt[0] == "defaultSpecial":
-			enemies["fl"]["special"] = opt[1]
-		elif opt[0] == "defaultWeapon":
-			enemies["fl"]["weapon"] = opt[1]
-		elif opt[0] == "overrideA":
-			enemies["fl"]["a"] = opt[1]
-			enemies["fl"]["replace"]["a"] = 1
-		elif opt[0] == "overrideB":
-			enemies["fl"]["b"] = opt[1]
-			enemies["fl"]["replace"]["b"] = 1
-		elif opt[0] == "overrideC":
-			enemies["fl"]["c"] = opt[1]
-			enemies["fl"]["replace"]["c"] = 1
-		elif opt[0] == "overrideS":
-			enemies["fl"]["s"] = opt[1]
-			enemies["fl"]["replace"]["s"] = 1
-		elif opt[0] == "overrideSpecial":
-			enemies["fl"]["special"] = opt[1]
-			enemies["fl"]["replace"]["special"] = 1
-		elif opt[0] == "overrideWeapon":
-			enemies["fl"]["weapon"] = opt[1]
-			enemies["fl"]["replace"]["weapon"] = 1
+		if len(opt) == 2:
+			if opt[0] == "challenger":
+				challenger["name"] = opt[1]
+			elif opt[0] == "boon":
+				challenger["boon"] = opt[1]
+			elif opt[0] == "bane":
+				challenger["bane"] = opt[1]
+			elif opt[0] == "merge":
+				challenger["merge"] = int(opt[1])
+			elif opt[0] == "A":
+				challenger["a"] = opt[1]
+			elif opt[0] == "B":
+				challenger["b"] = opt[1]
+			elif opt[0] == "C":
+				challenger["c"] = opt[1]
+			elif opt[0] == "S":
+				challenger["s"] = opt[1]
+			elif opt[0] == "Special":
+				challenger["special"] = opt[1]
+			elif opt[0] == "Weapon":
+				challenger["weapon"] = opt[1]
+			elif opt[0] == "enemymerge":
+				enemies["fl"]["merge"] = int(opt[1])
+			elif opt[0] == "output":
+				options["output"] = opt[1]
+			elif opt[0] == "stats":
+				options["stats"] = opt[1].split(",")
+			elif opt[0] == "scenarios":
+				options["scenarios"] = opt[1].split(",")
+			elif opt[0] == "comparebuildsslots":
+				options["comparebuildsslots"] = opt[1].split(",")
+			elif opt[0] == "comparebuildsstatformat":
+				options["comparebuildsstatformat"] = opt[1]
+			elif opt[0] == "comparebuildstopskills":
+				options["comparebuildstopskills"] = int(opt[1])
+			elif opt[0] == "debug":
+				options["debug"] = opt[1]
+			elif opt[0] == "adjacentallies":
+				options["adjacentallies"] = int(opt[1])
+			elif opt[0] == "defaultA":
+				enemies["fl"]["a"] = opt[1]
+			elif opt[0] == "defaultB":
+				enemies["fl"]["b"] = opt[1]
+			elif opt[0] == "defaultC":
+				enemies["fl"]["c"] = opt[1]
+			elif opt[0] == "defaultS":
+				enemies["fl"]["s"] = opt[1]
+			elif opt[0] == "defaultSpecial":
+				enemies["fl"]["special"] = opt[1]
+			elif opt[0] == "defaultWeapon":
+				enemies["fl"]["weapon"] = opt[1]
+			elif opt[0] == "overrideA":
+				enemies["fl"]["a"] = opt[1]
+				enemies["fl"]["replace"]["a"] = 1
+			elif opt[0] == "overrideB":
+				enemies["fl"]["b"] = opt[1]
+				enemies["fl"]["replace"]["b"] = 1
+			elif opt[0] == "overrideC":
+				enemies["fl"]["c"] = opt[1]
+				enemies["fl"]["replace"]["c"] = 1
+			elif opt[0] == "overrideS":
+				enemies["fl"]["s"] = opt[1]
+				enemies["fl"]["replace"]["s"] = 1
+			elif opt[0] == "overrideSpecial":
+				enemies["fl"]["special"] = opt[1]
+				enemies["fl"]["replace"]["special"] = 1
+			elif opt[0] == "overrideWeapon":
+				enemies["fl"]["weapon"] = opt[1]
+				enemies["fl"]["replace"]["weapon"] = 1
+			elif opt[0] == "atkbuff":
+				challenger["buffs"]["atk"] = int(opt[1])
+			elif opt[0] == "spdbuff":
+				challenger["buffs"]["spd"] = int(opt[1])
+			elif opt[0] == "defbuff":
+				challenger["buffs"]["def"] = int(opt[1])
+			elif opt[0] == "resbuff":
+				challenger["buffs"]["res"] = int(opt[1])
+			elif opt[0] == "enemyatkbuff":
+				enemies["fl"]["buffs"]["atk"] = int(opt[1])
+			elif opt[0] == "enemyspdbuff":
+				enemies["fl"]["buffs"]["spd"] = int(opt[1])
+			elif opt[0] == "enemydefbuff":
+				enemies["fl"]["buffs"]["def"] = int(opt[1])
+			elif opt[0] == "enemyresbuff":
+				enemies["fl"]["buffs"]["res"] = int(opt[1])
+			elif opt[0] == "atkdebuff":
+				challenger["debuffs"]["atk"] = int(opt[1])
+			elif opt[0] == "spddebuff":
+				challenger["debuffs"]["spd"] = int(opt[1])
+			elif opt[0] == "defdebuff":
+				challenger["debuffs"]["def"] = int(opt[1])
+			elif opt[0] == "resdebuff":
+				challenger["debuffs"]["res"] = int(opt[1])
+			elif opt[0] == "enemyatkdebuff":
+				enemies["fl"]["debuffs"]["atk"] = int(opt[1])
+			elif opt[0] == "enemyspddebuff":
+				enemies["fl"]["debuffs"]["spd"] = int(opt[1])
+			elif opt[0] == "enemydefdebuff":
+				enemies["fl"]["debuffs"]["def"] = int(opt[1])
+			elif opt[0] == "enemyresdebuff":
+				enemies["fl"]["debuffs"]["res"] = int(opt[1])
+			elif opt[0] == "atkspur":
+				challenger["spur"]["atk"] = int(opt[1])
+			elif opt[0] == "spdspur":
+				challenger["spur"]["spd"] = int(opt[1])
+			elif opt[0] == "defspur":
+				challenger["spur"]["def"] = int(opt[1])
+			elif opt[0] == "resspur":
+				challenger["spur"]["res"] = int(opt[1])
+			elif opt[0] == "enemyatkspur":
+				enemies["fl"]["spur"]["atk"] = int(opt[1])
+			elif opt[0] == "enemyspdspur":
+				enemies["fl"]["spur"]["spd"] = int(opt[1])
+			elif opt[0] == "enemydefspur":
+				enemies["fl"]["spur"]["def"] = int(opt[1])
+			elif opt[0] == "enemyresspur":
+				enemies["fl"]["spur"]["res"] = int(opt[1])
+			elif opt[0] == "rarity":
+				challenger["rarity"] = int(opt[1])
+			elif opt[0] == "enemyrarity":
+				enemies["fl"]["rarity"] = int(opt[1])
+			elif opt[0] == "damage":
+				challenger["damage"] = int(opt[1])
+			elif opt[0] == "enemydamage":
+				enemies["fl"]["damage"] = int(opt[1])
+			elif opt[0] == "precharge":
+				challenger["precharge"] = int(opt[1])
+			elif opt[0] == "enemyprecharge":
+				enemies["fl"]["precharge"] = int(opt[1])
+			elif opt[0] in enemies["fl"]["include"]:
+				if opt[1] == "exclude":
+					enemies["fl"]["include"][opt[0]] = 0
+			elif opt[0] == "threatenrule":
+				options["threatenRule"] = opt[1]
+			elif opt[0] == "ployangle":
+				options["ployBehavior"] = opt[1]
+			elif opt[0] == "usegaleforce":
+				if opt[1] == "True":
+					options["useGaleforce"] = True
+				else:
+					options["useGaleforce"] = False
+			
