@@ -1,4 +1,4 @@
-# feh-simulator
+# FEH Build Evaluator
 A mass dueling simulator and build evaluator for Fire Emblem Heroes.
 
 Forked from https://github.com/Andu2/FEH-Mass-Simulator and converted to a Python command-line tool.
@@ -12,7 +12,8 @@ Upcoming features:
 - Custom enemy list and enemy skill override capabilities
 - More statistics to evaluate
 - Additional modes to better evaluate resiliency of builds over multiple battles
+- Party evaluation capabilities
 
-Run with 'python battleSim.py <INPUTFILEPATH>' - will default to options.txt if no filepath is given.
+Run with 'python battleSim.py INPUTFILEPATH' - will default to options.txt if no filepath is given.
 
 The provided options.txt is a sample options file and contains information about the currently available options.
