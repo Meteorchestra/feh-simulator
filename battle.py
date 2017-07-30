@@ -344,15 +344,14 @@ class ActiveHero:
 				#AOE specials don't take spur into effect
 				AOEEffectiveAtk = selfEffectiveStats["atk"] - self.spur["atk"] - self.combatSpur["atk"]
 				
-				if "AOE" in self.skillAttributes:
-					multiplier = self.skillAttributes["AOE"][self.special]
-					AOEDamage = enemy.getNonlethalDamage(dmgBoost
-						+ math.floor(self.skillAttributes["AOE"][self.special] * (AOEEffectiveAtk - relevantDef)))
-					self.resetCharge()
-					enemy.stats["hp"] -= AOEDamage
-					if self.verbose:
-						damageText += ("Before combat, " + self.name + " hits with " + self.special
-								+ " for " + str(AOEDamage) + ".\n")
+				multiplier = self.skillAttributes["AOE"][self.special]
+				AOEDamage = enemy.getNonlethalDamage(dmgBoost
+					+ math.floor(self.skillAttributes["AOE"][self.special] * (AOEEffectiveAtk - relevantDef)))
+				self.resetCharge()
+				enemy.stats["hp"] -= AOEDamage
+				if self.verbose:
+					damageText += ("Before combat, " + self.name + " hits with " + self.special
+							+ " for " + str(AOEDamage) + ".\n")
 					
 			else:
 				offensiveSpecialActivated = False
@@ -391,12 +390,29 @@ class ActiveHero:
 
 			#Extra weapon advantage is apparently limited to 0.2 more (doesn't stack)
 			extraWeaponAdvantage = 0
-			if (weaponAdvantage != 0):
-				for skill in self.getSkillsWithAttribute("trianglebonus"):
-					extraWeaponAdvantage += self.skillAttributes["trianglebonus"][skill]
-				for skill in enemy.getSkillsWithAttribute("trianglebonus"):
-					extraWeaponAdvantage += enemy.skillAttributes["trianglebonus"][skill]
+			if weaponAdvantage != 0:
+				if "negateselfaffinity" not in self.skillAttributes:
+					for skill in self.getSkillsWithAttribute("trianglebonus"):
+						extraWeaponAdvantage += self.skillAttributes["trianglebonus"][skill]
+				if "negateselfaffinity" not in enemy.skillAttributes:
+					for skill in enemy.getSkillsWithAttribute("trianglebonus"):
+						extraWeaponAdvantage += enemy.skillAttributes["trianglebonus"][skill]
 				extraWeaponAdvantage = min(extraWeaponAdvantage, .2)
+				
+			#Handle Cancel Affinity
+			if extraWeaponAdvantage > 0:
+				if weaponAdvantage == 1:
+					if ("negateenemyaffinity" in enemy.skillAttributes
+							or "negateenemydisaffinity" in self.skillAttributes):
+						extraWeaponAdvantage = 0
+					elif "reverseenemyaffinity" in enemy.skillAttributes:
+						extraWeaponAdvantage = -extraWeaponAdvantage
+				elif weaponAdvantage == -1:
+					if ("negateenemydisaffinity" in enemy.skillAttributes
+							or "negateenemyaffinity" in self.skillAttributes):
+						extraWeaponAdvantage = 0
+					elif "reverseenemyaffinity" in self.skillAttributes:
+						extraWeaponAdvantage = -extraWeaponAdvantage
 
 			weaponAdvantageBonus = (0.2 + extraWeaponAdvantage) * weaponAdvantage
 			
@@ -428,6 +444,13 @@ class ActiveHero:
 						defensiveSpecialActivated = True
 						#All current defensive specials are damage reduction
 						dmgReduction = effect["value"]
+						
+						for skill in enemy.getSkillsWithAttribute("specialshield"):
+							dmgBoost -= enemy.skillAttributes["specialshield"][skill]
+							if self.verbose:
+								damageText += (enemy.name + " blocks "
+										+ str(enemy.skillAttributes["specialshield"][skill]) 
+										+ " damage with " + skill + ". ")
 
 				if "miracle" in enemy.skillAttributes and enemy.stats["hp"] > 1:
 					miracle = True
@@ -574,7 +597,8 @@ class ActiveHero:
 		anyRangeCounter = ("anyrangecounter" in enemy.skillAttributes)
 		
 		#Check for AOE specials
-		roundText += self.doDamage(enemy, self.range, False, True)
+		if "AOE" in self.skillAttributes:
+			roundText += self.doDamage(enemy, self.range, False, True)
 
 		vantage = any(enemy.getActiveSkillsWithAttribute("vantage"))
 		desperation = any(self.getActiveSkillsWithAttribute("desperation"))
@@ -749,6 +773,9 @@ def checkAdjacency(self, enemy, condition, attribute):
 	
 def checkAttackedClass(self, enemy, condition, attribute):
 	return self.didAttack and enemy.moveType == condition["value"]
+
+def checkDefensiveSpecial(self, enemy, condition, attribute):
+	return self.skillAttributes["special"][self.special]["type"] == "defense"
 	
 #Map of functions to avoid a big ugly conditional
 #See skills.py for a more complete description of skill conditions
@@ -770,6 +797,7 @@ conditionCheckFunctions = {
 	"breaker": checkBreaker,
 	"riposte": checkDefWithHpMin,
 	"sweep": checkSweep,
+	"defensivespecial": checkDefensiveSpecial,
 }
 
 def checkCondition(self, skill, enemy=None, attribute=None):

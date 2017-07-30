@@ -38,6 +38,12 @@ def getValidSkillsForSlot(name, slot):
 		skill = skills[skillName]
 		#Inherit rules can be comma-separated if multiple rules must be met, thanks to Galeforce
 		inheritRules = skill["inheritrule"].split(",")
+		#Some skills only require matching some rules
+		#Ex: Shield Pulse requires melee attack type and infantry OR armored move type
+		if "rulestomatch" in skill:
+			rulesToMatch = skill["rulestomatch"]
+		else:
+			rulesToMatch = len(inheritRules)
 		if ((not slot) or (skill["slot"] == slot)):
 			if name:
 				attackType = getAttackTypeFromWeapon(heroes[name]["weapontype"])
@@ -78,7 +84,7 @@ def getValidSkillsForSlot(name, slot):
 						#Everyone can inherit!
 						inheritRuleMatches += 1
 
-					if (inheritRuleMatches == len(inheritRules)):
+					if (inheritRuleMatches >= rulesToMatch):
 						validSkills.append(skillName)
 			else:
 				#It's the right slot, not given a hero, so it's valid unless unique

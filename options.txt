@@ -1,6 +1,6 @@
 CHALLENGER: Replace this with the name of any hero
 - For a complete list of hero names, see heroes.py (or the duel results)
-challenger = Lyn
+challenger = Corrin(F) (Summer)
 
 BOON/BANE: Replace these with any stat name (hp/atk/spd/def/res/none)
 boon = atk
@@ -11,12 +11,12 @@ merge = 10
 
 SKILLSET: Replace these with any skill name (will be reset to default if invalid)
 - For a complete list of skill names, see skills.py
-#A = Defiant Atk 3
-#B = Renewal 3
-#C = Spur Spd 3
-#S = Quickened Pulse
-#Special = Luna
-#Weapon = Sol Katti
+A = Triangle Adept 3
+B = Cancel Affinity 1
+C = Spur Spd 3
+S = Quickened Pulse
+Special = Luna
+Weapon = Sol Katti
 
 OUTPUT STYLE:
 - "Verbose": Show full text of each duel

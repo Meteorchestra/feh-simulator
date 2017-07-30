@@ -11,6 +11,7 @@
 #	- Can be prefixed with 'non' to indicate that only the specified type cannot inherit
 #	- Can be comma-separated to indicate several rules must be met
 #	- The rule "unique" means it cannot be inherited, the rule "" means anyone can inherit
+# rulestomatch: Indicates a number of the inherit rules that must be met, if not all
 # affectsduel: Indicates whether a skill affects a duel
 # ismax: Indicates that there is no other skill strictly superior to the skill
 # turnstotrigger: A count of turns for this unit after which an effect triggers
@@ -30,6 +31,7 @@
 # postheal: A post-combat heal
 # blade: Gain attack bonus based on sum of buffs
 # specialboost: Damage bonus when offensive specials are triggered
+# specialshield: Damage reduction when defensive specials are triggered
 # AOE: Flag for AOE specials - the value is the damage multiplier
 # special: Flag for offensive or defensive specials (some unique specials have their own attribute)
 #	- type: 'offense' or 'defense'
@@ -43,6 +45,10 @@
 #		- aether: combine effects of absorb and pierce
 #		- vengeance: damage boost of (value * damage taken)
 # trianglebonus: Additional multiplier for triangle advantage
+# negateselfaffinity: Negate trianglebonus of other skills this unit has
+# negateenemyaffinity: Negate trianglebonus of skills the enemy has when the enemy is at an advantage
+# negateenemydisaffinity: Negate trianglebonus of skills the enemy has when the enemy is at a disadvantage
+# reverseenemyaffinity: Reverse trianglebonus of skills the enemy has when the enemy is at an advantage
 # effective: Indicates a movement type or weapon type to gain a 1.5x attack bonus against
 # shield: Prevents enemy 'effective' skills
 # wrath: Override weapon modifiers (Wrathful Staff)
@@ -105,6 +111,7 @@
 # - attacktype = the attack type (magical/physical) that the enemy must have
 # - stat = stat to compare for whether the enemy can counter
 # - margin = necessary stat margin to prevent the enemy from countering
+# defensivespecial: Check that the unit has a defensive special
 #####
 
 skillList = {
@@ -1765,6 +1772,7 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"miracle":1,
+		"special":{"type":"defense", "range":"miracle"},
 	},
 	"HP 3":{
 		"slot":"a",
@@ -4236,5 +4244,407 @@ skillList = {
 		"sp":120,
 		"inheritrule":"",
 		"ismax":1,
-	}
+	},
+	"Dark Excalibur":{
+		"slot":"weapon",
+		"sp":400,
+		"atk":14,
+		"inheritrule":"unique",
+		"affectsduel":1,
+		"ismax":1,
+		"specialboost":10,
+	},
+	"Mirror Strike 1":{
+		"slot":"a",
+		"sp":120,
+		"inheritrule":"nonstaff",
+		"affectsduel":1,
+		"spur":{"atk":2, "res":2},
+		"condition":{"type":"init"},
+	},
+	"Mirror Strike 2":{
+		"slot":"a",
+		"sp":240,
+		"inheritrule":"nonstaff",
+		"affectsduel":1,
+		"ismax":1,
+		"spur":{"atk":4, "res":4},
+		"condition":{"type":"init"},
+	},
+	"Res Ploy 1":{
+		"slot":"c",
+		"sp":60,
+		"inheritrule":"",
+		"affectsduel":1,
+		"condition":{"type":"statcomp", "stat":"res", "margin":1},
+		"ploy":{"res":-3},
+	},
+	"Res Ploy 2":{
+		"slot":"c",
+		"sp":120,
+		"inheritrule":"",
+		"affectsduel":1,
+		"condition":{"type":"statcomp", "stat":"res", "margin":1},
+		"ploy":{"res":-4},
+	},
+	"Res Ploy 3":{
+		"slot":"c",
+		"sp":60,
+		"inheritrule":"",
+		"affectsduel":1,
+		"ismax":1,
+		"condition":{"type":"statcomp", "stat":"res", "margin":1},
+		"ploy":{"res":-5},
+	},
+	"HP Spd 1":{
+		"slot":"a",
+		"sp":100,
+		"inheritrule":"",
+		"affectsduel":1,
+		"hp":3,
+		"spd":1,
+	},
+	"HP Spd 2":{
+		"slot":"a",
+		"sp":200,
+		"inheritrule":"",
+		"affectsduel":1,
+		"ismax":1,
+		"hp":4,
+		"spd":2,
+	},
+	"Slaying Edge":{
+		"slot":"weapon",
+		"sp":200,
+		"inheritrule":"sword",
+		"affectsduel":1,
+		"atk":10,
+		"charge":1,
+	},
+	"Slaying Edge+":{
+		"slot":"weapon",
+		"sp":300,
+		"inheritrule":"sword",
+		"affectsduel":1,
+		"ismax":1,
+		"atk":14,
+		"charge":1,
+	},
+	"Shield Pulse 1":{
+		"slot":"b",
+		"sp":60,
+		"inheritrule":"melee,infantry,armored",
+		"rulestomatch":2,
+		"affectsduel":1,
+		"precharge":1,
+		"condition":{"type":"defensivespecial"},
+	},
+	"Shield Pulse 2":{
+		"slot":"b",
+		"sp":120,
+		"inheritrule":"melee,infantry,armored",
+		"rulestomatch":2,
+		"affectsduel":1,
+		"precharge":1,
+		"specialshield":5,
+		"condition":{"type":"defensivespecial"},
+	},
+	"Shield Pulse 3":{
+		"slot":"b",
+		"sp":240,
+		"inheritrule":"melee,infantry,armored",
+		"rulestomatch":2,
+		"affectsduel":1,
+		"ismax":1,
+		"precharge":2,
+		"specialshield":5,
+		"condition":{"type":"defensivespecial"},
+	},
+	"Ridersbane":{
+		"slot":"weapon",
+		"sp":200,
+		"inheritrule":"lance",
+		"affectsduel":1,
+		"atk":10,
+		"effective":"cavalry",
+	},
+	"Ridersbane+":{
+		"slot":"weapon",
+		"sp":300,
+		"inheritrule":"lance",
+		"affectsduel":1,
+		"ismax":1,
+		"atk":14,
+		"effective":"cavalry",
+	},
+	"Cancel Affinity 1":{
+		"slot":"b",
+		"sp":50,
+		"inheritrule":"melee,physical",
+		"rulestomatch":1,
+		"affectsduel":1,
+		"negateenemyaffinity":1,
+		"negateselfaffinity":1,
+		"negateenemydisaffinity":1,
+	},
+	"Cancel Affinity 2":{
+		"slot":"b",
+		"sp":100,
+		"inheritrule":"melee,physical",
+		"rulestomatch":1,
+		"affectsduel":1,
+		"negateenemyaffinity":1,
+		"negateselfaffinity":1,
+	},
+	"Cancel Affinity 3":{
+		"slot":"b",
+		"sp":200,
+		"inheritrule":"melee,physical",
+		"rulestomatch":1,
+		"affectsduel":1,
+		"ismax":1,
+		"reverseenemyaffinity":1,
+		"negateselfaffinity":1,
+	},
+	"Slaying Bow":{
+		"slot":"weapon",
+		"sp":200,
+		"inheritrule":"bow",
+		"affectsduel":1,
+		"atk":8,
+		"effective":"flying",
+		"charge":1,
+	},
+	"Slaying Bow+":{
+		"slot":"weapon",
+		"sp":300,
+		"inheritrule":"bow",
+		"affectsduel":1,
+		"ismax":1,
+		"atk":12,
+		"effective":"flying",
+		"charge":1,
+	},
+	"Zanbato":{
+		"slot":"weapon",
+		"sp":200,
+		"inheritrule":"sword",
+		"affectsduel":1,
+		"atk":10,
+		"effective":"cavalry",
+	},
+	"Zanbato+":{
+		"slot":"weapon",
+		"sp":300,
+		"inheritrule":"sword",
+		"affectsduel":1,
+		"ismax":1,
+		"atk":14,
+		"effective":"cavalry",
+	},
+	"Sword Valor 1":{
+		"slot":"c",
+		"sp":30,
+		"inheritrule":"sword",
+	},
+	"Sword Valor 2":{
+		"slot":"c",
+		"sp":60,
+		"inheritrule":"sword",
+	},
+	"Sword Valor 3":{
+		"slot":"c",
+		"sp":120,
+		"inheritrule":"sword",
+		"ismax":1,
+	},
+	"Dark Aura":{
+		"slot":"weapon",
+		"sp":400,
+		"inheritrule":"unique",
+		"affectsduel":1,
+		"ismax":1,
+		"atk":14,
+	},
+	"Drive Atk 1":{
+		"slot":"c",
+		"sp":120,
+		"inheritrule":"",
+	},
+	"Drive Atk 2":{
+		"slot":"c",
+		"sp":240,
+		"inheritrule":"",
+		"ismax":1,
+	},
+	"Berkut's Lance":{
+		"slot":"weapon",
+		"sp":200,
+		"inheritrule":"lance",
+		"affectsduel":1,
+		"atk":10,
+		"spur":{"res":4},
+		"condition":{"type":"def"},
+	},
+	"Berkut's Lance+":{
+		"slot":"weapon",
+		"sp":300,
+		"inheritrule":"lance",
+		"affectsduel":1,
+		"ismax":1,
+		"atk":14,
+		"spur":{"res":4},
+		"condition":{"type":"def"},
+	},
+	"Water Boost 1":{
+		"slot":"a",
+		"sp":50,
+		"inheritrule":"",
+		"affectsduel":1,
+		"spur":{"res":2},
+		"condition":{"type":"statcomp", "stat":"hp", "margin":3},
+	},
+	"Water Boost 2":{
+		"slot":"a",
+		"sp":100,
+		"inheritrule":"",
+		"affectsduel":1,
+		"spur":{"res":4},
+		"condition":{"type":"statcomp", "stat":"hp", "margin":3},
+	},
+	"Water Boost 3":{
+		"slot":"a",
+		"sp":200,
+		"inheritrule":"",
+		"affectsduel":1,
+		"ismax":1,
+		"spur":{"res":6},
+		"condition":{"type":"statcomp", "stat":"hp", "margin":3},
+	},
+	"Lilith Floatie":{
+		"slot":"weapon",
+		"sp":200,
+		"inheritrule":"axe",
+		"affectsduel":1,
+		"atk":10,
+	},
+	"Lilith Floatie+":{
+		"slot":"weapon",
+		"sp":300,
+		"inheritrule":"axe",
+		"affectsduel":1,
+		"ismax":1,
+		"atk":14,
+	},
+	"Infantry Pulse 1":{
+		"slot":"c",
+		"sp":60,
+		"inheritrule":"infantry",
+	},
+	"Infantry Pulse 2":{
+		"slot":"c",
+		"sp":120,
+		"inheritrule":"infantry",
+	},
+	"Infantry Pulse 3":{
+		"slot":"c",
+		"sp":240,
+		"inheritrule":"infantry",
+		"ismax":1,
+	},
+	"Tomato Tome":{
+		"slot":"weapon",
+		"sp":200,
+		"inheritrule":"redtome",
+		"affectsduel":1,
+		"atk":8,
+	},
+	"Tomato Tome+":{
+		"slot":"weapon",
+		"sp":300,
+		"inheritrule":"redtome",
+		"affectsduel":1,
+		"ismax":1,
+		"atk":12,
+	},
+	"Hibiscus Tome":{
+		"slot":"weapon",
+		"sp":200,
+		"inheritrule":"greentome",
+		"affectsduel":1,
+		"atk":8,
+	},
+	"Hibiscus Tome+":{
+		"slot":"weapon",
+		"sp":300,
+		"inheritrule":"greentome",
+		"affectsduel":1,
+		"ismax":1,
+		"atk":12,
+	},
+	"Spd Res 1":{
+		"slot":"a",
+		"sp":80,
+		"inheritrule":"",
+		"affectsduel":1,
+		"spd":1,
+		"res":1,
+	},
+	"Spd Res 2":{
+		"slot":"a",
+		"sp":160,
+		"inheritrule":"",
+		"affectsduel":1,
+		"ismax":1,
+		"spd":2,
+		"res":2,
+	},
+	"G Tome Valor 1":{
+		"slot":"c",
+		"sp":30,
+		"inheritrule":"greentome",
+	},
+	"G Tome Valor 2":{
+		"slot":"c",
+		"sp":60,
+		"inheritrule":"greentome",
+	},
+	"G Tome Valor 3":{
+		"slot":"c",
+		"sp":120,
+		"inheritrule":"greentome",
+		"ismax":1,
+	},
+	"Sealife Tome":{
+		"slot":"weapon",
+		"sp":200,
+		"inheritrule":"bluetome",
+		"affectsduel":1,
+		"atk":8,
+	},
+	"Sealife Tome+":{
+		"slot":"weapon",
+		"sp":300,
+		"inheritrule":"bluetome",
+		"affectsduel":1,
+		"ismax":1,
+		"atk":12,
+	},
+	"Swift Strike 1":{
+		"slot":"a",
+		"sp":120,
+		"inheritrule":"nonstaff",
+		"affectsduel":1,
+		"spur":{"spd":2, "res":2},
+		"condition":{"type":"init"},
+	},
+	"Swift Strike 2":{
+		"slot":"a",
+		"sp":240,
+		"inheritrule":"nonstaff",
+		"affectsduel":1,
+		"ismax":1,
+		"spur":{"spd":4, "res":4},
+		"condition":{"type":"init"},
+	},
 }
