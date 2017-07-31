@@ -16,4 +16,6 @@ Upcoming features:
 
 Run with 'python battleSim.py OPTIONSFILEPATH' - will default to options.txt if no filepath is given.
 
+Also try 'python battleSim.py findbuilds.txt HERONAME' - you can specify the hero name as an additional argument to easily use the same options for multiple heroes.
+
 The provided options.txt is a sample options file and contains information about the currently available options.

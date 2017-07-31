@@ -1,0 +1,15 @@
+comparebuildsslots = consecutive-c-s
+
+output = CompareBuilds
+
+stats = Wins
+
+scenarios = CECECECECE,ECECECECEC,C,E
+
+comparebuildsstatformat = StatTotalAcrossScenarios
+comparebuildstopskills = 6
+exportbuilds = 10
+
+merge = 10
+enemymerge = 10
+adjacentallies = 1

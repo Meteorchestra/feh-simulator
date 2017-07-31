@@ -7,6 +7,10 @@ if len(sys.argv) > 1:
 	data.parseOptions(sys.argv[1])
 else:
 	data.parseOptions()
+	
+#If there's another argument, set it as the challenger name
+if len(sys.argv) > 2:
+	data.challenger["name"] = sys.argv[2]
 
 #Initialize hero and enemies
 hero = data.challenger
