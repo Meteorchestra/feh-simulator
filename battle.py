@@ -330,7 +330,7 @@ class ActiveHero:
 
 		offensiveSpecialActivated = False
 
-		if self.skillAttributes["charge"][self.special] <= self.charge:
+		if "special" in self.skillAttributes and self.skillAttributes["charge"][self.special] <= self.charge:
 			
 			for skill in self.getSkillsWithAttribute("specialboost"):
 				dmgBoost += self.skillAttributes["specialboost"][skill]
@@ -775,7 +775,7 @@ def checkAttackedClass(self, enemy, condition, attribute):
 	return self.didAttack and enemy.moveType == condition["value"]
 
 def checkDefensiveSpecial(self, enemy, condition, attribute):
-	return self.skillAttributes["special"][self.special]["type"] == "defense"
+	return "special" in self.skillAttributes and self.skillAttributes["special"][self.special]["type"] == "defense"
 	
 #Map of functions to avoid a big ugly conditional
 #See skills.py for a more complete description of skill conditions
