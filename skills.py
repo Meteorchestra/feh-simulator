@@ -32,9 +32,8 @@
 # blade: Gain attack bonus based on sum of buffs
 # specialboost: Damage bonus when offensive specials are triggered
 # specialshield: Damage reduction when defensive specials are triggered
-# AOE: Flag for AOE specials - the value is the damage multiplier
 # special: Flag for offensive or defensive specials (some unique specials have their own attribute)
-#	- type: 'offense' or 'defense'
+#	- type: 'offense' or 'defense' or 'AOE'
 #	- range: range at which a defensive special applies
 #	- value: fraction by which a defensive special reduces damage (currently the only effect for defensive specials)
 #	- effect:
@@ -1548,7 +1547,7 @@ skillList = {
 		"charge":5,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
-		"AOE":1,
+		"special":{"type":"AOE", "multiplier":1},
 	},
 	"Rising Wind":{
 		"slot":"special",
@@ -1556,7 +1555,7 @@ skillList = {
 		"charge":5,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
-		"AOE":1,
+		"special":{"type":"AOE", "multiplier":1},
 	},
 	"Rising Light":{
 		"slot":"special",
@@ -1564,7 +1563,7 @@ skillList = {
 		"charge":5,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
-		"AOE":1,
+		"special":{"type":"AOE", "multiplier":1},
 	},
 	"Rising Flame":{
 		"slot":"special",
@@ -1572,7 +1571,7 @@ skillList = {
 		"charge":5,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
-		"AOE":1,
+		"special":{"type":"AOE", "multiplier":1},
 	},
 	"Growing Thunder":{
 		"slot":"special",
@@ -1581,7 +1580,7 @@ skillList = {
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"ismax":1,
-		"AOE":1
+		"special":{"type":"AOE", "multiplier":1},
 	},
 	"Blazing Thunder":{
 		"slot":"special",
@@ -1590,7 +1589,7 @@ skillList = {
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"ismax":1,
-		"AOE":1.5,
+		"special":{"type":"AOE", "multiplier":1.5},
 	},
 	"Growing Wind":{
 		"slot":"special",
@@ -1599,7 +1598,7 @@ skillList = {
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"ismax":1,
-		"AOE":1
+		"special":{"type":"AOE", "multiplier":1},
 	},
 	"Blazing Wind":{
 		"slot":"special",
@@ -1608,7 +1607,7 @@ skillList = {
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"ismax":1,
-		"AOE":1.5,
+		"special":{"type":"AOE", "multiplier":1.5},
 	},
 	"Growing Light":{
 		"slot":"special",
@@ -1617,7 +1616,7 @@ skillList = {
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"ismax":1,
-		"AOE":1,
+		"special":{"type":"AOE", "multiplier":1},
 	},
 	"Blazing Light":{
 		"slot":"special",
@@ -1626,7 +1625,7 @@ skillList = {
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"ismax":1,
-		"AOE":1.5,
+		"special":{"type":"AOE", "multiplier":1.5},
 	},
 	"Growing Flame":{
 		"slot":"special",
@@ -1635,7 +1634,7 @@ skillList = {
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"ismax":1,
-		"AOE":1,
+		"special":{"type":"AOE", "multiplier":1},
 	},
 	"Blazing Flame":{
 		"slot":"special",
@@ -1644,7 +1643,7 @@ skillList = {
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"ismax":1,
-		"AOE":1.5,
+		"special":{"type":"AOE", "multiplier":1.5},
 	},
 	"Buckler":{
 		"slot":"special",

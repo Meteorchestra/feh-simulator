@@ -331,12 +331,33 @@ class ActiveHero:
 		offensiveSpecialActivated = False
 
 		if "special" in self.skillAttributes and self.skillAttributes["charge"][self.special] <= self.charge:
-			
-			for skill in self.getSkillsWithAttribute("specialboost"):
-				dmgBoost += self.skillAttributes["specialboost"][skill]
+			offensiveSpecialActivated = False
+			#Special will fire if it's an attacking special
+			effect = self.skillAttributes["special"][self.special]
+			if effect["type"] == "offense":
+				offensiveSpecialActivated = True
+				if effect["effect"] == "multiplier":
+					dmgMultiplier = effect["value"]
+				elif effect["effect"] == "boostbystat":
+					dmgBoost += selfEffectiveStats[effect["stat"]] * effect["value"]
+				elif effect["effect"] == "absorb" or effect["effect"] == "aether":
+					absorbPct = effect["value"]
+				elif effect["effect"] == "pierce" or effect["effect"] == "aether":
+					enemyDefModifier = -effect["value"]
+				elif effect["effect"] == "vengeance":
+					dmgBoost += (self.maxHp - self.stats["hp"]) * effect["value"]
+
+			if (offensiveSpecialActivated):
+				self.resetCharge()
 				if self.verbose:
+					damageText += self.name + " activates " + self.special + ".\n"
+			
+			if (offensiveSpecialActivated or AOE):
+				for skill in self.getSkillsWithAttribute("specialboost"):
+					dmgBoost += self.skillAttributes["specialboost"][skill]
+					if self.verbose:
 						damageText += (self.name + " gains " + str(self.skillAttributes["specialboost"][skill])
-								+ " damage from " + skill + ". ")
+									+ " damage from " + skill + ". ")
 
 			#Do AOE specials
 			if (AOE):
@@ -344,37 +365,15 @@ class ActiveHero:
 				#AOE specials don't take spur into effect
 				AOEEffectiveAtk = selfEffectiveStats["atk"] - self.spur["atk"] - self.combatSpur["atk"]
 				
-				multiplier = self.skillAttributes["AOE"][self.special]
+				multiplier = self.skillAttributes["special"][self.special]["multiplier"]
 				AOEDamage = enemy.getNonlethalDamage(dmgBoost
-					+ math.floor(self.skillAttributes["AOE"][self.special] * (AOEEffectiveAtk - relevantDef)))
+						+ math.floor(multiplier * (AOEEffectiveAtk - relevantDef)))
 				self.resetCharge()
 				enemy.stats["hp"] -= AOEDamage
 				if self.verbose:
 					damageText += ("Before combat, " + self.name + " hits with " + self.special
 							+ " for " + str(AOEDamage) + ".\n")
-					
-			else:
-				offensiveSpecialActivated = False
-				#Special will fire if it's an attacking special
-				if "special" in self.skillAttributes:
-					effect = self.skillAttributes["special"][self.special]
-					if effect["type"] == "offense":
-						offensiveSpecialActivated = True
-						if effect["effect"] == "multiplier":
-							dmgMultiplier = effect["value"]
-						elif effect["effect"] == "boostbystat":
-							dmgBoost += selfEffectiveStats[effect["stat"]] * effect["value"]
-						elif effect["effect"] == "absorb" or effect["effect"] == "aether":
-							absorbPct = effect["value"]
-						elif effect["effect"] == "pierce" or effect["effect"] == "aether":
-							enemyDefModifier = -effect["value"]
-						elif effect["effect"] == "vengeance":
-							dmgBoost += (self.maxHp - self.stats["hp"]) * effect["value"]
-
-			if (offensiveSpecialActivated):
-				self.resetCharge()
-				if self.verbose:
-					damageText += self.name + " activates " + self.special + ".\n"
+				
 					
 		#Don't do anything else if it's just an AOE attack
 		if (not AOE):
@@ -457,7 +456,7 @@ class ActiveHero:
 
 			if defensiveSpecialActivated:
 				if self.verbose and (dmgReduction < 1):
-					damageText += (enemy.name + " multiplies damage by " + str(dmgReduction)
+					damageText += (enemy.name + " multiplies damage by " + str(1-dmgReduction)
 							+ " with " + enemy.special + ".\n")
 				enemy.resetCharge()
 
@@ -597,7 +596,7 @@ class ActiveHero:
 		anyRangeCounter = ("anyrangecounter" in enemy.skillAttributes)
 		
 		#Check for AOE specials
-		if "AOE" in self.skillAttributes:
+		if "special" in self.skillAttributes and self.skillAttributes["special"][self.special]["type"] == "AOE":
 			roundText += self.doDamage(enemy, self.range, False, True)
 
 		vantage = any(enemy.getActiveSkillsWithAttribute("vantage"))
