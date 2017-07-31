@@ -242,37 +242,76 @@ def boostStatsFromSkills(hero):
 	for slot in data["skillSlots"]:
 		for stat in data["stats"]:
 			hero[stat] += skills[hero[slot]][stat]
+			
+def getDefaultEnemyWithName(name):
+	return {
+			"hp":0,
+			"atk":0,
+			"spd":0,
+			"def":0,
+			"res":0,
+			"weapon":"None",
+			"special":"None",
+			"a":"None",
+			"b":"None",
+			"c":"None",
+			"s":"None",
+			"buffs": fl["buffs"],
+			"debuffs": fl["debuffs"],
+			"spur": fl["spur"],
+			"boon": fl["boon"],
+			"bane": fl["bane"],
+			"merge": fl["merge"],
+			"rarity": fl["rarity"],
+			"precharge": fl["precharge"],
+			"damage": fl["damage"],
+			"name":name
+		}
 	
 #Sets enemy list based on include rules
 def initEnemyList():
 	fl = enemies["fl"]
 	includes = fl["include"]
-
-	for hero in heroes:
-		if hero not in fl["list"]:
-			fl["list"][hero] = {
-				"hp":0,
-				"atk":0,
-				"spd":0,
-				"def":0,
-				"res":0,
-				"weapon":"None",
-				"special":"None",
-				"a":"None",
-				"b":"None",
-				"c":"None",
-				"s":"None",
-				"buffs": fl["buffs"],
-				"debuffs": fl["debuffs"],
-				"spur": fl["spur"],
-				"boon": fl["boon"],
-				"bane": fl["bane"],
-				"merge": fl["merge"],
-				"rarity": fl["rarity"],
-				"precharge": fl["precharge"],
-				"damage": fl["damage"],
-				"name":hero
-			}
+	
+	if options["useCustomEnemyList"]:
+		enemyFile = open(options["useCustomEnemyList"])
+		enemyList = enemyFile.read().splitlines()
+		if options["customEnemyListFormat"] == "Names":
+			for enemyName in enemyList:
+				print enemyName
+				fl["list"][enemyName] = getDefaultEnemyWithName(enemyName)
+		elif options["customEnemyListFormat"] == "Builds":
+			for enemy in enemyList:
+				enemyDetails = enemy.split(",")
+				fl["list"][enemyDetails[0]] = {
+					"hp":0,
+					"atk":0,
+					"spd":0,
+					"def":0,
+					"res":0,
+					"weapon":enemyDetails[10],
+					"special":enemyDetails[9],
+					"a":enemyDetails[5],
+					"b":enemyDetails[6],
+					"c":enemyDetails[7],
+					"s":enemyDetails[8],
+					"buffs": fl["buffs"],
+					"debuffs": fl["debuffs"],
+					"spur": fl["spur"],
+					"boon":enemyDetails[2],
+					"bane":enemyDetails[3],
+					"merge":int(enemyDetails[4]),
+					"rarity": fl["rarity"],
+					"precharge": fl["precharge"],
+					"damage": fl["damage"],
+					"name":enemyDetails[1]
+				}	
+			
+	else:
+		for hero in heroes:
+			fl["list"][hero] = getDefaultEnemyWithName(hero)
+		
+	for hero in fl["list"]:
 		enemy = fl["list"][hero]
 			
 		setGeneralInfo(enemy)
@@ -303,7 +342,7 @@ def initEnemyList():
 			for slot in data["skillSlots"]:
 				if (enemies["fl"][slot] != "None"
 						and (enemies["fl"]["replace"][slot] == 1 or enemy[slot] == "None")):
-					if enemies["fl"][slot] in heroes[hero]["possibleSkills"]:
+					if enemies["fl"][slot] in heroes[enemy["name"]]["possibleSkills"]:
 						enemy[slot] = enemies["fl"][slot]
 			
 			setStats(enemy)
@@ -327,6 +366,8 @@ options["threatenRule"] = "Neither"
 options["ployBehavior"] = "Diagonal"
 options["showOnlyMaxSkills"] = True
 options["hideUnaffectingSkills"] = True
+options["useCustomEnemyList"] = None
+options["customEnemyListFormat"] = "Builds"
 options["viewFilter"] = "all"
 options["sortOrder"] = 1
 options["roundInitiators"] = "CE"
@@ -335,6 +376,7 @@ options["stats"] = ["Wins", "Losses", "Inconclusive"]
 options["debug"] = None
 options["comparebuildstopskills"] = 4
 options["comparebuildsresultslimit"] = 100
+options["exportbuilds"] = 0
 options["adjacentallies"] = 0
 	
 for skill in skills:
@@ -488,6 +530,8 @@ def parseOptions(optionsFile="options.txt"):
 				options["comparebuildsstatformat"] = opt[1]
 			elif opt[0] == "comparebuildstopskills":
 				options["comparebuildstopskills"] = int(opt[1])
+			elif opt[0] == "comparebuildsresultslimit":
+				options["comparebuildsresultslimit"] = int(opt[1])
 			elif opt[0] == "debug":
 				options["debug"] = opt[1]
 			elif opt[0] == "adjacentallies":
@@ -594,4 +638,10 @@ def parseOptions(optionsFile="options.txt"):
 					options["useGaleforce"] = True
 				else:
 					options["useGaleforce"] = False
+			elif opt[0] == "usecustomenemylist":
+				options["useCustomEnemyList"] = opt[1]
+			elif opt[0] == "customenemylistformat":
+				options["customEnemyListFormat"] = opt[1]
+			elif opt[0] == "exportbuilds":
+				options["exportbuilds"] = int(opt[1])
 			

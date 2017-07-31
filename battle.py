@@ -984,8 +984,8 @@ def calculateForEachBuild(skillsets):
 			data.challenger[slot] = skillset[slot]
 		data.setStats(data.challenger)
 		data.challenger["activeHero"] = ActiveHero(data.challenger)
-		skillsetString = (skillset["a"] + "/" + skillset["b"] + "/" + skillset["c"] + "/"
-				+ skillset["s"] + "/" + skillset["special"] + "/" + skillset["weapon"])
+		skillsetString = (skillset["a"] + "," + skillset["b"] + "," + skillset["c"] + ","
+				+ skillset["s"] + "," + skillset["special"] + "," + skillset["weapon"])
 		results[skillsetString] = calculateForEachScenario(data.options["scenarios"])
 		if focusSlot:
 			slotresults[skillset[focusSlot]] = results[skillsetString]
@@ -1021,6 +1021,11 @@ def calculateForEachBuild(skillsets):
 			resultsString += str(getStatTotalAcrossScenariosToSort(skillsetString))
 			resultsString = resultsString + "\t" + skillsetString
 		print resultsString
+		
+	for i in range(min(len(skillsetStrings), data.options["exportbuilds"])):
+		print (data.challenger["name"] + "Build" + str(i) + "," + data.challenger["name"] + ","
+				+ data.challenger["boon"] + "," + data.challenger["bane"] + "," + str(data.challenger["merge"])
+				+ "," + skillsetStrings[i])
 	
 	if data.options["debug"] == "full":
 		print "DEBUG INFO"
