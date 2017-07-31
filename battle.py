@@ -468,7 +468,7 @@ class ActiveHero:
 				
 			#This is currently just Wrathful Staff
 			for skill in self.getActiveSkillsWithAttribute("wrath"):
-				weaponModifier = min(weaponModifier, self.skillAttributes["wrath"][skill])
+				weaponModifier = max(weaponModifier, self.skillAttributes["wrath"][skill])
 				
 			#This is currently just Absorb
 			for skill in self.getSkillsWithAttribute("absorb"):
