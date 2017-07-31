@@ -4288,7 +4288,7 @@ skillList = {
 	},
 	"Res Ploy 3":{
 		"slot":"c",
-		"sp":60,
+		"sp":240,
 		"inheritrule":"",
 		"affectsduel":1,
 		"ismax":1,
