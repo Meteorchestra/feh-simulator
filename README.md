@@ -7,13 +7,13 @@ Current features:
 - Calculate mass duel results based on character information and options stored in local input files
 - Evaluate results across multiple scenarios at once (offensive ORKOs, defensive ORKOs, extended duels, etc.)
 - Find optimal builds for a character with one command (based on provided criteria)
+- Evaluate results against custom enemy lists with multiple builds for the same hero
 
 Upcoming features:
-- Custom enemy list and enemy skill override capabilities
 - More statistics to evaluate
 - Additional modes to better evaluate resiliency of builds over multiple battles
-- Party evaluation capabilities
+- Team evaluation capabilities
 
-Run with 'python battleSim.py INPUTFILEPATH' - will default to options.txt if no filepath is given.
+Run with 'python battleSim.py OPTIONSFILEPATH' - will default to options.txt if no filepath is given.
 
 The provided options.txt is a sample options file and contains information about the currently available options.
