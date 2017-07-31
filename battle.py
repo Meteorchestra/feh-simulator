@@ -72,8 +72,8 @@ class ActiveHero:
 			for skill in self.skillAttributes["turnstotrigger"]:
 				self.skillAttributes["turnstotrigger"][skill] -= data.options["startTurn"]
 				
-		#Update precharge with skills that give precharge (Quickened Pulse)
-		for skill in self.getSkillsWithAttribute("precharge"):
+		#Update precharge with skills that give precharge
+		for skill in self.getActiveSkillsWithAttribute("precharge"):
 			self.precharge += self.skillAttributes["precharge"][skill]
 		
 		#Set charge at beginning
