@@ -1,0 +1,5648 @@
+ENEMIES - CUSTOM LIST
+
+Seasons 18-24 Arena data provided by /r/falutin
+ 
+Abel (5*+1 +atk -hp)  
+Weapon: Brave Lance+  
+Special: Draconic Aura  
+A: Swift Sparrow 2  
+B: Swordbreaker 3  
+C: Spur Atk 3  
+S: Attack 1  
+  
+Alfonse (5*)  
+Weapon: Folkvangr  
+Special: Daylight  
+A: Death Blow 2  
+B: Swordbreaker 2  
+C: Spur Atk 2  
+  
+Alfonse (5*)  
+Weapon: Folkvangr  
+Special: Aether  
+A: Death Blow 3  
+B: Axebreaker 3  
+C: Spur Atk 3  
+S: Fortify Res 1  
+  
+Alfonse (5*)  
+Weapon: Folkvangr  
+Special: Draconic Aura  
+A: Death Blow 3  
+B: Quick Riposte 2  
+C: Spur Atk 3  
+S: Attack 1  
+  
+Alfonse (5*)  
+Weapon: Folkvangr  
+Special: Sol  
+A: Death Blow 3  
+B: Renewal 3  
+C: Spur Atk 3  
+S: HP 3  
+  
+Alfonse (5*)  
+Weapon: Folkvangr  
+Special: Sol  
+A: Death Blow 3  
+B: Swordbreaker 1  
+C: Spur Atk 3  
+  
+Alfonse (5*)  
+Weapon: Folkvangr  
+Special: Sol  
+A: Death Blow 3  
+B: Swordbreaker 1  
+C: Spur Atk 3  
+S: Fortify Res 1  
+  
+Alfonse (5*)  
+Weapon: Folkvangr  
+Special: Draconic Aura  
+A: Death Blow 3  
+B: Swordbreaker 3  
+C: Spur Atk 3  
+S: Quickened Pulse  
+  
+Alfonse (5*)  
+Weapon: Folkvangr  
+Special: Daylight  
+A: Fury 2  
+B: Brash Assault 3  
+S: Spur Def 1  
+  
+Alm (5*+1 +res -atk)  
+Weapon: Falchion  
+Special: Moonbow  
+A: Fury 3  
+B: Vantage 3  
+C: Threaten Def 3  
+S: Speed 1  
+  
+Alm (5* +hp -def)  
+Weapon: Falchion  
+Special: Draconic Aura  
+A: Fury 3  
+B: Windsweep 3  
+C: Threaten Spd 3  
+S: Attack 1  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Astra  
+B: Vantage 3  
+C: Spur Res 3  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Astra  
+B: Vantage 3  
+C: Spur Res 3  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Night Sky  
+B: Vantage 3  
+C: Threaten Def 3  
+S: Quickened Pulse  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Iceberg  
+A: Darting Blow 3  
+B: Vantage 3  
+C: Spur Res 3  
+S: Attack 1  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Astra  
+A: Defense 3  
+B: Vantage 3  
+C: Hone Atk 3  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Astra  
+A: Defiant Atk 3  
+B: Vantage 3  
+C: Spur Res 3  
+S: Fortify Res 1  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Astra  
+A: Defiant Atk 3  
+B: Vantage 3  
+C: Spur Res 3  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Astra  
+A: Distant Counter  
+B: Vantage 3  
+C: Spur Res 3  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Luna  
+A: Distant Counter  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Attack 1  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Astra  
+A: Fury 2  
+B: Desperation 3  
+C: Fortify Res 3  
+S: Spur Def 1  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Night Sky  
+A: Fury 2  
+B: Vantage 3  
+C: Spur Res 3  
+S: Fortify Res 1  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Astra  
+A: Fury 3  
+B: Desperation 3  
+C: Spur Res 3  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Night Sky  
+A: Fury 3  
+B: Desperation 3  
+C: Fortify Res 3  
+S: HP 3  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Reprisal  
+A: Fury 3  
+B: Desperation 3  
+C: Hone Spd 3  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Astra  
+A: Fury 3  
+B: Vantage 3  
+C: Spur Res 3  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Astra  
+A: Fury 3  
+B: Vantage 3  
+C: Spur Res 3  
+S: Attack 1  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Astra  
+A: Fury 3  
+B: Vantage 3  
+C: Spur Res 3  
+S: Fortify Res 1  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Astra  
+A: Fury 3  
+B: Vantage 3  
+C: Spur Res 3  
+S: Fortify Res 1  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Astra  
+A: Fury 3  
+B: Vantage 3  
+C: Spur Res 3  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Luna  
+A: Fury 3  
+B: Vantage 3  
+C: Spur Res 3  
+S: Spur Def 1  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Iceberg  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Spur Res 3  
+S: Fortify Res 1  
+  
+Anna (5*)  
+Weapon: Noatun  
+Special: Astra  
+A: HP 5  
+B: Vantage 3  
+C: Fortify Res 3  
+S: Breath of Life 1  
+  
+Azura (5*+2 +atk -res)  
+Weapon: Sapphire Lance  
+Special: Dragon Fang  
+A: Speed 3  
+B: Wings of Mercy 3  
+C: Fortify Res 3  
+S: Spur Def 1  
+  
+Azura (5* +spd -hp)  
+Weapon: Sapphire Lance+  
+Special: Moonbow  
+A: Darting Blow 3  
+B: Wings of Mercy 3  
+C: Hone Atk 3  
+S: Speed 1  
+  
+Azura (5*+1 +hp -atk)  
+Weapon: Sapphire Lance+  
+Special: Moonbow  
+A: Darting Blow 3  
+B: Wings of Mercy 3  
+C: Hone Atk 3  
+  
+Azura (5*+1 +spd -res)  
+Weapon: Sapphire Lance+  
+Special: Sol  
+A: Distant Counter  
+B: B Tomebreaker 3  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Azura (5*+1 +spd -atk)  
+Weapon: Sapphire Lance+  
+Special: Moonbow  
+A: Distant Counter  
+B: Swordbreaker 3  
+C: Hone Atk 3  
+S: Fortify Res 1  
+  
+Azura (5*+2 +res -hp)  
+Weapon: Sapphire Lance+  
+Special: Iceberg  
+A: Distant Counter  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Speed 1  
+  
+Azura (5*+4 +atk -def)  
+Weapon: Sapphire Lance+  
+Special: Luna  
+A: Distant Counter  
+B: Wings of Mercy 3  
+C: Hone Atk 3  
+S: Spur Def 1  
+  
+Azura (5*+1 +atk -def)  
+Weapon: Sapphire Lance+  
+Special: Sol  
+A: Fury 2  
+B: Renewal 3  
+C: Hone Atk 2  
+S: HP 3  
+  
+Azura (5*+2)  
+Weapon: Sapphire Lance+  
+Special: Glimmer  
+A: Fury 2  
+B: Swordbreaker 2  
+C: Fortify Res 3  
+S: Speed 1  
+  
+Azura (5*+1 +hp -def)  
+Weapon: Sapphire Lance+  
+Special: Escutcheon  
+A: Fury 2  
+B: Wings of Mercy 3  
+C: Hone Atk 3  
+  
+Azura (5*)  
+Weapon: Sapphire Lance+  
+A: Fury 3  
+B: Swordbreaker 3  
+C: Fortify Res 3  
+  
+Azura (5*+2 +spd -def)  
+Weapon: Sapphire Lance+  
+Special: Moonbow  
+A: Fury 3  
+B: Swordbreaker 3  
+C: Hone Atk 3  
+S: HP 3  
+  
+Azura (5*+2 +atk -res)  
+Weapon: Sapphire Lance+  
+Special: Moonbow  
+A: Fury 3  
+B: Swordbreaker 3  
+C: Fortify Def 3  
+S: Attack 1  
+  
+Azura (5*+4 +def -res)  
+Weapon: Sapphire Lance+  
+Special: Moonbow  
+A: Fury 3  
+B: Swordbreaker 3  
+C: Fortify Res 3  
+S: Attack 1  
+  
+Azura (5* +atk -hp)  
+Weapon: Sapphire Lance+  
+A: Fury 3  
+B: Wings of Mercy 2  
+C: Hone Atk 3  
+S: Fortify Res 1  
+  
+Azura (5*+2 +spd -res)  
+Weapon: Sapphire Lance+  
+Special: Moonbow  
+A: Fury 3  
+B: Wings of Mercy 2  
+C: Fortify Res 3  
+  
+Azura (5*+3 +spd -res)  
+Weapon: Sapphire Lance+  
+Special: Escutcheon  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Hone Atk 3  
+S: Speed 1  
+  
+Azura (5*+2 +atk -def)  
+Weapon: Sapphire Lance+  
+Special: Galeforce  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Hone Atk 3  
+S: Spur Def 1  
+  
+Azura (5* +spd -def)  
+Weapon: Sapphire Lance+  
+Special: Iceberg  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Azura (5*+1 +spd -res)  
+Weapon: Sapphire Lance+  
+Special: Luna  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Fortify Res 3  
+S: Spur Def 1  
+  
+Azura (5* +def -res)  
+Weapon: Sapphire Lance+  
+Special: Moonbow  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Fortify Res 3  
+S: Spur Def 1  
+  
+Azura (5*+1 +hp -spd)  
+Weapon: Sapphire Lance+  
+Special: Moonbow  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Hone Atk 3  
+S: Fortify Res 1  
+  
+Azura (5*+1 +spd -atk)  
+Weapon: Sapphire Lance+  
+Special: Moonbow  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Hone Atk 3  
+S: Fortify Res 1  
+  
+Azura (5*+1 +res -spd)  
+Weapon: Sapphire Lance+  
+Special: Escutcheon  
+A: Speed 3  
+B: Drag Back  
+C: Fortify Res 3  
+S: Spur Def 1  
+  
+Azura (5* +spd -res)  
+Weapon: Sapphire Lance+  
+A: Speed 3  
+B: Escape Route 3  
+C: Fortify Res 3  
+  
+Azura (5*+2 +res -spd)  
+Weapon: Sapphire Lance+  
+Special: Iceberg  
+A: Speed 3  
+B: Escape Route 3  
+C: Fortify Res 3  
+S: Breath of Life 1  
+  
+Azura (5* +hp -def)  
+Weapon: Sapphire Lance+  
+Special: Moonbow  
+A: Speed 3  
+B: Escape Route 3  
+C: Fortify Res 3  
+  
+Azura (5*+2)  
+Weapon: Sapphire Lance+  
+Special: New Moon  
+A: Speed 3  
+B: Lancebreaker 3  
+C: Fortify Res 3  
+  
+Azura (5* +def -res)  
+Weapon: Sapphire Lance+  
+Special: Night Sky  
+A: Speed 3  
+B: Vantage 3  
+C: Fortify Res 3  
+  
+Azura (5* +hp -spd)  
+Weapon: Sapphire Lance+  
+Special: New Moon  
+A: Speed 3  
+B: Wings of Mercy 1  
+C: Fortify Res 3  
+S: Spur Def 1  
+  
+Azura (5* +spd -res)  
+Weapon: Sapphire Lance+  
+Special: New Moon  
+A: Speed 3  
+B: Wings of Mercy 2  
+C: Hone Atk 3  
+  
+Azura (5*+2 +hp -res)  
+Weapon: Sapphire Lance+  
+Special: Astra  
+A: Speed 3  
+B: Wings of Mercy 3  
+C: Fortify Res 3  
+S: Speed 1  
+  
+Azura (5*+4 +spd -def)  
+Weapon: Sapphire Lance+  
+Special: Iceberg  
+A: Speed 3  
+B: Wings of Mercy 3  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Azura (5*+1 +spd -atk)  
+Weapon: Sapphire Lance+  
+Special: Miracle  
+A: Speed 3  
+B: Wings of Mercy 3  
+C: Spur Atk 3  
+  
+Azura (5*+1)  
+Weapon: Sapphire Lance+  
+Special: Moonbow  
+A: Speed 3  
+B: Wings of Mercy 3  
+C: Hone Atk 3  
+S: Spur Def 1  
+  
+Azura (5*+1 +atk -def)  
+Weapon: Sapphire Lance+  
+Special: Moonbow  
+A: Speed 3  
+B: Wings of Mercy 3  
+C: Fortify Res 3  
+S: HP 3  
+  
+Azura (5*+2 +spd -res)  
+Weapon: Sapphire Lance+  
+Special: Moonbow  
+A: Speed 3  
+B: Wings of Mercy 3  
+C: Fortify Res 3  
+  
+Azura (5*+5 +hp -def)  
+Weapon: Sapphire Lance+  
+Special: Moonbow  
+A: Speed 3  
+B: Wings of Mercy 3  
+C: Hone Atk 3  
+S: Fortify Res 1  
+  
+Azura (5*+3 +hp -res)  
+Weapon: Sapphire Lance+  
+Special: Sol  
+A: Speed 3  
+B: Wings of Mercy 3  
+C: Hone Atk 3  
+  
+Azura (5*+3 +hp -def)  
+Weapon: Sapphire Lance+  
+Special: Glimmer  
+A: Swift Sparrow 2  
+B: Wings of Mercy 3  
+C: Spur Spd 3  
+  
+Barst (5*+3 +spd -hp)  
+Weapon: Emerald Axe+  
+Special: Moonbow  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Spur Def 3  
+S: Spur Def 1  
+  
+Caeda (5*+1 +atk -def)  
+Weapon: Armorslayer+  
+Special: New Moon  
+A: Darting Blow 3  
+B: Drag Back  
+C: Fortify Fliers  
+  
+Caeda (5*+3)  
+Weapon: Armorslayer+  
+Special: Night Sky  
+A: Death Blow 3  
+B: Seal Def 2  
+C: Fortify Fliers  
+S: HP 3  
+  
+Caeda (Bride) (5* +def -hp)  
+Weapon: Blessed Bouquet+  
+Special: Iceberg  
+A: Attack Res 2  
+C: Hone Spd 3  
+S: Speed 1  
+  
+Caeda (Bride) (5*+2 +spd -hp)  
+Weapon: Blessed Bouquet+  
+Special: Iceberg  
+A: Attack Res 2  
+C: Hone Spd 3  
+S: Spur Def 1  
+  
+Cain (5* +res -spd)  
+Weapon: Brave Sword+  
+Special: Escutcheon  
+A: Death Blow 2  
+B: Wings of Mercy 3  
+C: Threaten Atk 3  
+  
+Cain (5*+1 +def -atk)  
+Weapon: Brave Sword+  
+Special: Ignis  
+A: Distant Def 3  
+B: Hit and Run  
+C: Fortify Cavalry  
+S: Speed 1  
+  
+Camilla (5*+1)  
+Weapon: Brave Axe+  
+Special: Draconic Aura  
+A: Darting Blow 3  
+B: Drag Back  
+C: Savage Blow 3  
+S: Speed 1  
+  
+Camilla (5*+1 +spd -hp)  
+Weapon: Brave Axe+  
+Special: Draconic Aura  
+A: Darting Blow 3  
+B: Vantage 2  
+C: Savage Blow 3  
+S: Spur Def 1  
+  
+Camilla (5*+3 +def -spd)  
+Weapon: Brave Axe+  
+Special: Draconic Aura  
+A: Life and Death 3  
+B: Axebreaker 3  
+C: Fortify Fliers  
+S: Attack 1  
+  
+Camilla (Spring) (5*+1 +hp -res)  
+Weapon: Gronnblade+  
+A: Close Counter  
+B: Vantage 3  
+C: Goad Fliers  
+S: HP 3  
+  
+Camilla (Spring) (5*+1 +def -res)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Death Blow 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Camilla (Spring) (5*+6 +atk -hp)  
+Weapon: Gronnblade+  
+Special: Draconic Aura  
+A: Fury 2  
+B: Vantage 3  
+C: Fortify Fliers  
+  
+Camilla (Spring) (5* +spd -def)  
+Weapon: Gronnblade+  
+Special: Growing Wind  
+A: Fury 3  
+B: Desperation 3  
+C: Goad Fliers  
+S: Attack 1  
+  
+Camilla (Spring) (5*+2 +res -def)  
+Weapon: Gronnblade+  
+Special: Dragon Gaze  
+A: Fury 3  
+B: G Tomebreaker 3  
+C: Goad Fliers  
+S: HP 3  
+  
+Camilla (Spring) (5*+2 +def -hp)  
+Weapon: Gronnblade+  
+Special: Glimmer  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Atk 3  
+  
+Camilla (Spring) (5*+3 +atk -def)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Fury 3  
+B: Vantage 3  
+C: Goad Fliers  
+  
+Camilla (Spring) (5*+2 +atk -def)  
+Weapon: Gronnraven+  
+Special: Draconic Aura  
+A: Death Blow 3  
+B: G Tomebreaker 3  
+C: Savage Blow 3  
+S: Attack 1  
+  
+Camilla (Spring) (5*+2 +spd -hp)  
+Weapon: Gronnraven+  
+Special: Luna  
+A: Triangle Adept 3  
+B: Axebreaker 3  
+C: Hone Spd 3  
+S: Speed 1  
+  
+Camilla (Spring) (5* +res -spd)  
+Weapon: Gronnraven+  
+Special: Moonbow  
+A: Triangle Adept 3  
+B: G Tomebreaker 3  
+C: Goad Fliers  
+S: HP 3  
+  
+Camilla (Spring) (5*+3 +def -res)  
+Weapon: Gronnraven+  
+Special: Moonbow  
+A: Triangle Adept 3  
+B: Lancebreaker 2  
+C: Fortify Res 3  
+S: Spur Def 1  
+  
+Camilla (Spring) (5*+1 +def -res)  
+Weapon: Gronnraven+  
+Special: Bonfire  
+A: Triangle Adept 3  
+B: Vantage 3  
+C: Fortify Fliers  
+S: HP 3  
+  
+Camus (5*)  
+Weapon: Gradivus  
+Special: Growing Thunder  
+B: Vantage 3  
+C: Goad Cavalry  
+S: Quickened Pulse  
+  
+Camus (5*)  
+Weapon: Gradivus  
+Special: Growing Thunder  
+A: Attack 2  
+B: Swordbreaker 2  
+C: Spur Atk 2  
+S: Speed 1  
+  
+Camus (5*)  
+Weapon: Gradivus  
+Special: Astra  
+A: Death Blow 3  
+B: Quick Riposte 3  
+C: Hone Cavalry  
+S: HP 3  
+  
+Camus (5*)  
+Weapon: Gradivus  
+Special: Moonbow  
+A: Defiant Atk 2  
+B: Vantage 3  
+C: Spur Atk 2  
+S: Attack 1  
+  
+Camus (5*)  
+Weapon: Gradivus  
+Special: Bonfire  
+A: Fury 2  
+B: Vantage 3  
+C: Hone Cavalry  
+S: HP 3  
+  
+Camus (5*+1)  
+Weapon: Gradivus  
+Special: Luna  
+A: Fury 3  
+B: Renewal 3  
+C: Fortify Cavalry  
+S: Speed 1  
+  
+Camus (5*)  
+Weapon: Gradivus  
+Special: Bonfire  
+A: Fury 3  
+B: Vantage 3  
+C: Goad Cavalry  
+S: HP 3  
+  
+Camus (5*)  
+Weapon: Gradivus  
+Special: Bonfire  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Cavalry  
+S: Breath of Life 1  
+  
+Camus (5*)  
+Weapon: Gradivus  
+Special: Bonfire  
+A: Fury 3  
+B: Vantage 3  
+C: Fortify Cavalry  
+S: Fortify Res 1  
+  
+Camus (5*+1)  
+Weapon: Gradivus  
+Special: Bonfire  
+A: Fury 3  
+B: Vantage 3  
+C: Fortify Cavalry  
+S: Fortify Res 1  
+  
+Camus (5*)  
+Weapon: Gradivus  
+Special: Luna  
+A: Grani's Shield  
+B: Escape Route 3  
+C: Goad Cavalry  
+  
+Camus (5*)  
+Weapon: Gradivus  
+Special: Growing Thunder  
+A: Grani's Shield  
+B: Swordbreaker 1  
+C: Goad Cavalry  
+  
+Camus (5*)  
+Weapon: Gradivus  
+Special: Draconic Aura  
+A: Grani's Shield  
+B: Vantage 3  
+C: Hone Atk 3  
+S: Fortify Res 1  
+  
+Camus (5*)  
+Weapon: Gradivus  
+Special: Luna  
+A: Grani's Shield  
+B: Vantage 3  
+C: Goad Cavalry  
+S: HP 3  
+  
+Camus (5*+1)  
+Weapon: Gradivus  
+Special: Bonfire  
+A: Triangle Adept 3  
+B: Swordbreaker 3  
+C: Goad Cavalry  
+S: Attack 1  
+  
+Catria (5*+1)  
+Weapon: Killer Lance+  
+Special: Luna  
+A: Armored Blow 3  
+B: Seal Atk 3  
+C: Threaten Spd 3  
+S: Fortify Res 1  
+  
+Catria (5*+1 +spd -hp)  
+Weapon: Killer Lance+  
+Special: Luna  
+A: Armored Blow 3  
+B: Seal Atk 3  
+C: Threaten Spd 3  
+S: Attack 1  
+  
+Catria (5*+2 +spd -res)  
+Weapon: Killer Lance+  
+Special: Luna  
+A: Fury 3  
+B: Drag Back  
+C: Fortify Fliers  
+  
+Cecilia (4*+10 +spd -def)  
+Weapon: Gronnblade  
+Special: Draconic Aura  
+A: Life and Death 2  
+B: Escape Route 3  
+C: Fortify Cavalry  
+S: HP 3  
+  
+Cecilia (4*+5 +atk -hp)  
+Weapon: Gronnblade+  
+Special: Iceberg  
+A: Darting Blow 3  
+B: Escape Route 3  
+C: Hone Cavalry  
+S: Spur Def 1  
+  
+Cecilia (5*+5 +spd -hp)  
+Weapon: Gronnblade+  
+Special: Growing Wind  
+A: Death Blow 3  
+B: G Tomebreaker 3  
+C: Hone Cavalry  
+S: HP 3  
+  
+Cecilia (5*+1 +atk -def)  
+Weapon: Gronnblade+  
+Special: Draconic Aura  
+A: Fury 3  
+B: Escape Route 3  
+C: Hone Cavalry  
+S: Attack 1  
+  
+Cecilia (4*+10 +atk -spd)  
+Weapon: Gronnblade+  
+Special: Growing Flame  
+A: Fury 3  
+B: G Tomebreaker 3  
+C: Hone Cavalry  
+S: HP 3  
+  
+Cecilia (4*+10)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Triangle Adept 3  
+B: G Tomebreaker 3  
+C: Hone Cavalry  
+S: Speed 1  
+  
+Cecilia (5* +atk -res)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Triangle Adept 3  
+B: Vantage 3  
+C: Hone Cavalry  
+S: Breath of Life 1  
+  
+Cecilia (5*)  
+Weapon: Gronnraven+  
+Special: Luna  
+A: Attack 3  
+B: Bowbreaker 2  
+C: Fortify Def 3  
+  
+Cecilia (5*)  
+Weapon: Gronnraven+  
+Special: New Moon  
+A: Attack 3  
+B: Vantage 2  
+C: Hone Spd 3  
+S: Speed 1  
+  
+Cecilia (5* +def -hp)  
+Weapon: Gronnraven+  
+Special: Moonbow  
+A: Triangle Adept 3  
+B: Escape Route 3  
+C: Spur Def 3  
+S: Attack 1  
+  
+Celica (5* +atk -hp)  
+Weapon: Ragnarok  
+Special: Blazing Light  
+A: Distant Def 3  
+B: Poison Strike 2  
+C: Spur Def 2  
+  
+Celica (5*+1 +res -spd)  
+Weapon: Ragnarok  
+Special: Luna  
+A: Distant Def 3  
+B: Renewal 2  
+C: Hone Atk 3  
+  
+Celica (5* +spd -hp)  
+Weapon: Ragnarok  
+Special: Blazing Light  
+A: Distant Def 3  
+B: Renewal 3  
+C: Spur Def 3  
+S: Attack 1  
+  
+Celica (5*)  
+Weapon: Ragnarok  
+Special: Dragon Fang  
+A: Distant Def 3  
+B: Renewal 3  
+C: Spur Def 3  
+S: Speed 1  
+  
+Celica (5*+2 +spd -res)  
+Weapon: Ragnarok  
+Special: Dragon Fang  
+A: Distant Def 3  
+B: Renewal 3  
+C: Spur Def 3  
+S: Speed 1  
+  
+Celica (5*+4 +atk -def)  
+Weapon: Ragnarok  
+Special: Luna  
+A: Distant Def 3  
+B: Renewal 3  
+C: Hone Atk 3  
+S: Quickened Pulse  
+  
+Celica (5* +res -def)  
+Weapon: Ragnarok  
+Special: Draconic Aura  
+A: Fury 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: Speed 1  
+  
+Celica (5*+2)  
+Weapon: Ragnarok  
+Special: Luna  
+A: Fury 3  
+B: Desperation 3  
+C: Spur Def 3  
+S: Spur Def 1  
+  
+Celica (5*+1 +atk -res)  
+Weapon: Ragnarok  
+Special: Draconic Aura  
+A: Fury 3  
+B: Renewal 3  
+C: Hone Atk 3  
+S: Speed 1  
+  
+Celica (5*+2 +atk -def)  
+Weapon: Ragnarok  
+Special: Rising Light  
+A: Fury 3  
+B: Renewal 3  
+C: Fortify Res 3  
+  
+Celica (5* +spd -hp)  
+Weapon: Ragnarok  
+Special: Draconic Aura  
+A: Life and Death 3  
+B: Renewal 3  
+C: Hone Atk 3  
+  
+Celica (5*+2 +spd -res)  
+Weapon: Ragnarok  
+Special: Moonbow  
+A: Life and Death 3  
+B: Renewal 3  
+C: Threaten Res 3  
+S: Fortify Res 1  
+  
+Celica (5*+1 +spd -res)  
+Weapon: Ragnarok  
+Special: Rising Light  
+A: Life and Death 3  
+B: Renewal 3  
+C: Spur Def 3  
+S: Speed 1  
+  
+Charlotte (Bride) (5*+3 +spd -hp)  
+Weapon: First Bite+  
+Special: New Moon  
+A: Life and Death 2  
+B: Drag Back  
+C: Hone Atk 2  
+S: HP 3  
+  
+Charlotte (Bride) (5*+1 +atk -res)  
+Weapon: First Bite+  
+Special: Noontime  
+A: Wind Boost 3  
+B: Renewal 2  
+C: Savage Blow 3  
+S: HP 3  
+  
+Cherche (5* +atk -res)  
+Weapon: Hammer+  
+Special: Bonfire  
+A: Attack 3  
+B: Knock Back  
+C: Fortify Def 3  
+S: Spur Def 1  
+  
+Chrom (5*)  
+Weapon: Falchion  
+Special: Aether  
+A: Defiant Def 3  
+B: Axebreaker 2  
+C: Spur Def 3  
+  
+Chrom (5* +res -spd)  
+Weapon: Falchion  
+Special: Aether  
+A: Defiant Def 3  
+B: Obstruct 1  
+C: Spur Def 3  
+  
+Chrom (5* +spd -hp)  
+Weapon: Falchion  
+Special: Aether  
+A: Defiant Def 3  
+B: Poison Strike 3  
+C: Spur Def 3  
+S: Speed 1  
+  
+Chrom (5*+1 +atk -spd)  
+Weapon: Falchion  
+Special: Sol  
+A: Defiant Def 3  
+B: Seal Def 3  
+C: Spur Def 3  
+  
+Chrom (5*)  
+Weapon: Falchion  
+Special: Aether  
+A: Fury 3  
+B: Renewal 3  
+C: Spur Def 3  
+S: HP 3  
+  
+Cordelia (5*+1 +def -res)  
+Weapon: Brave Lance+  
+Special: Galeforce  
+A: Darting Blow 3  
+B: Drag Back  
+C: Hone Fliers  
+S: Attack 1  
+  
+Cordelia (5*+1 +spd -def)  
+Weapon: Brave Lance+  
+Special: Galeforce  
+A: Darting Blow 3  
+B: Hit and Run  
+C: Goad Fliers  
+  
+Cordelia (5* +atk -res)  
+Weapon: Brave Lance+  
+Special: Galeforce  
+A: Death Blow 3  
+B: Lancebreaker 3  
+C: Fortify Res 3  
+S: Quickened Pulse  
+  
+Cordelia (5* +spd -atk)  
+Weapon: Brave Lance+  
+Special: Galeforce  
+A: Life and Death 2  
+B: Drag Back  
+C: Goad Fliers  
+S: Attack 1  
+  
+Cordelia (5* +res -hp)  
+Weapon: Brave Lance+  
+Special: Galeforce  
+A: Triangle Adept 3  
+B: Hit and Run  
+C: Goad Fliers  
+  
+Cordelia (5* +atk -hp)  
+Weapon: Brave Lance+  
+Special: Galeforce  
+A: Triangle Adept 3  
+B: Lancebreaker 2  
+C: Goad Fliers  
+S: Fortify Res 1  
+  
+Cordelia (5*+2 +spd -hp)  
+Weapon: Brave Lance+  
+Special: Galeforce  
+A: Triangle Adept 3  
+B: Pass 3  
+C: Spur Atk 3  
+  
+Cordelia (5*+2)  
+Weapon: Brave Lance+  
+Special: Galeforce  
+A: Triangle Adept 3  
+B: Renewal 3  
+C: Hone Atk 3  
+  
+Cordelia (5* +atk -def)  
+Weapon: Brave Lance+  
+Special: Galeforce  
+A: Triangle Adept 3  
+B: Vantage 2  
+C: Breath of Life 2  
+S: Attack 1  
+  
+Cordelia (Bride) (5*+1 +atk -def)  
+Weapon: Brave Bow+  
+Special: Luna  
+A: Death Blow 3  
+B: Desperation 3  
+C: Breath of Life 2  
+S: Speed 1  
+  
+Cordelia (Bride) (5*+1 +res -def)  
+Weapon: Brave Bow+  
+Special: Luna  
+A: Death Blow 3  
+B: Quick Riposte 3  
+C: Fortify Def 3  
+S: Quickened Pulse  
+  
+Cordelia (Bride) (5*+1 +hp -spd)  
+Weapon: Brave Bow+  
+A: Death Blow 3  
+B: Swordbreaker 2  
+C: Threaten Spd 2  
+S: Speed 1  
+  
+Cordelia (Bride) (5* +def -hp)  
+Weapon: Brave Bow+  
+Special: Moonbow  
+A: Death Blow 3  
+B: Swordbreaker 2  
+C: Threaten Def 3  
+  
+Cordelia (Bride) (5*+2 +spd -def)  
+Weapon: Brave Bow+  
+Special: Draconic Aura  
+A: Life and Death 2  
+B: Desperation 3  
+C: Breath of Life 3  
+S: Breath of Life 1  
+  
+Cordelia (Bride) (5* +hp -atk)  
+Weapon: Brave Bow+  
+Special: Luna  
+A: Life and Death 3  
+B: Desperation 3  
+C: Fortify Def 3  
+S: Attack 1  
+  
+Cordelia (Bride) (5*+1 +atk -res)  
+Weapon: Brave Bow+  
+Special: Moonbow  
+A: Life and Death 3  
+B: Desperation 3  
+C: Threaten Def 3  
+S: Attack 1  
+  
+Cordelia (Bride) (5*+3 +atk -hp)  
+Weapon: Brave Bow+  
+Special: Luna  
+A: Swift Sparrow 2  
+B: Desperation 3  
+C: Threaten Spd 3  
+S: HP 3  
+  
+Cordelia (Bride) (5*+1 +atk -hp)  
+Weapon: Cupid Arrow+  
+Special: Draconic Aura  
+A: Death Blow 3  
+B: Escape Route 3  
+C: Fortify Res 3  
+S: HP 3  
+  
+Cordelia (Bride) (5*+3 +spd -def)  
+Weapon: Firesweep Bow+  
+Special: Luna  
+A: Life and Death 3  
+B: Desperation 3  
+C: Threaten Spd 3  
+  
+Cordelia (Bride) (5*+2 +spd -hp)  
+Weapon: Firesweep Bow+  
+Special: Luna  
+A: Life and Death 3  
+B: Wings of Mercy 3  
+C: Threaten Def 3  
+S: Speed 1  
+  
+Cordelia (Bride) (5*+2 +spd -hp)  
+Weapon: Firesweep Bow+  
+Special: Moonbow  
+A: Life and Death 3  
+B: Wings of Mercy 3  
+C: Breath of Life 3  
+S: Fortify Res 1  
+  
+Corrin(F) (4*+7 +spd -def)  
+Weapon: Dark Breath  
+Special: Draconic Aura  
+A: Darting Blow 3  
+B: Seal Atk 3  
+C: Hone Atk 3  
+  
+Corrin(F) (5*+1 +atk -res)  
+Weapon: Dark Breath+  
+Special: Bonfire  
+A: Fury 3  
+B: Seal Res 3  
+C: Hone Atk 3  
+S: Attack 1  
+  
+Corrin(F) (5*+1)  
+Weapon: Dark Breath+  
+Special: Ignis  
+A: Triangle Adept 3  
+B: Swordbreaker 3  
+C: Hone Atk 3  
+S: Fortify Res 1  
+  
+Corrin(F) (5*+3)  
+Weapon: Lightning Breath+  
+Special: Moonbow  
+A: Fury 3  
+B: Seal Res 3  
+C: Hone Atk 3  
+S: Attack 1  
+  
+Corrin(M) (5*+1 +res -hp)  
+Weapon: Yato  
+Special: Dragon Fang  
+A: Defense 3  
+B: Obstruct 3  
+C: Hone Atk 3  
+S: HP 3  
+  
+Corrin(M) (5* +spd -def)  
+Weapon: Yato  
+Special: Dragon Fang  
+A: Life and Death 2  
+B: Obstruct 3  
+C: Threaten Spd 3  
+S: Fortify Res 1  
+  
+Donnel (5*+3 +def -spd)  
+Weapon: Carrot Lance+  
+Special: Bonfire  
+A: Distant Counter  
+B: Quick Riposte 3  
+C: Fortify Def 3  
+  
+Effie (5* +def -hp)  
+Weapon: Brave Lance  
+Special: Bonfire  
+A: Death Blow 3  
+B: Wary Fighter 3  
+C: Ward Armor  
+S: Quickened Pulse  
+  
+Effie (5*+2 +def -spd)  
+Weapon: Brave Lance+  
+Special: Escutcheon  
+A: Death Blow 3  
+B: Wary Fighter 3  
+C: Threaten Def 3  
+S: Attack 1  
+  
+Effie (5*+3 +atk -spd)  
+Weapon: Brave Lance+  
+Special: Escutcheon  
+A: Death Blow 3  
+B: Wary Fighter 3  
+C: Spur Atk 3  
+S: HP 3  
+  
+Effie (5* +atk -hp)  
+Weapon: Brave Lance+  
+Special: Glimmer  
+A: Death Blow 3  
+B: Wary Fighter 3  
+C: Threaten Def 1  
+S: HP 3  
+  
+Effie (5* +atk -hp)  
+Weapon: Brave Lance+  
+Special: Pavise  
+A: Death Blow 3  
+B: Wary Fighter 3  
+C: Threaten Def 3  
+S: Attack 1  
+  
+Effie (5* +def -hp)  
+Weapon: Brave Lance+  
+Special: Bonfire  
+A: Distant Counter  
+B: Wary Fighter 3  
+C: Ward Armor  
+S: Attack 1  
+  
+Effie (5* +atk -spd)  
+Weapon: Brave Lance+  
+Special: Bonfire  
+A: Distant Counter  
+B: Wary Fighter 3  
+C: Fortify Armor  
+S: Attack 1  
+  
+Effie (5*+1 +atk -spd)  
+Weapon: Carrot Lance+  
+Special: Sol  
+A: Distant Counter  
+B: Wary Fighter 3  
+C: Ward Armor  
+S: Fortify Res 1  
+  
+Effie (5* +hp -spd)  
+Weapon: Silver Lance+  
+A: Death Blow 3  
+B: Wary Fighter 3  
+C: Threaten Def 2  
+S: HP 3  
+  
+Effie (5* +def -res)  
+Weapon: Silver Lance+  
+Special: Aegis  
+A: Death Blow 3  
+B: Wary Fighter 3  
+C: Threaten Def 3  
+S: Spur Def 1  
+  
+Effie (5* +atk -spd)  
+Weapon: Silver Lance+  
+Special: Bonfire  
+A: Death Blow 3  
+B: Wary Fighter 3  
+C: Hone Atk 3  
+S: Attack 1  
+  
+Effie (5* +spd -hp)  
+Weapon: Silver Lance+  
+Special: Bonfire  
+A: Death Blow 3  
+B: Wary Fighter 3  
+C: Fortify Armor  
+  
+Effie (5* +def -spd)  
+Weapon: Silver Lance+  
+Special: Bonfire  
+A: Death Blow 3  
+B: Wary Fighter 3  
+C: Ward Armor  
+S: Spur Def 1  
+  
+Effie (5* +res -spd)  
+Weapon: Silver Lance+  
+Special: Bonfire  
+A: Death Blow 3  
+B: Wary Fighter 3  
+C: Ward Armor  
+  
+Effie (5*+1 +atk -def)  
+Weapon: Silver Lance+  
+Special: Escutcheon  
+A: Death Blow 3  
+B: Wary Fighter 3  
+C: Threaten Atk 3  
+S: HP 3  
+  
+Effie (5* +atk -res)  
+Weapon: Silver Lance+  
+Special: Glowing Ember  
+A: Death Blow 3  
+B: Wary Fighter 3  
+S: HP 3  
+  
+Effie (5* +spd -hp)  
+Weapon: Silver Lance+  
+Special: Ignis  
+A: Death Blow 3  
+B: Wary Fighter 3  
+C: Hone Atk 3  
+S: HP 3  
+  
+Effie (5* +def -hp)  
+Weapon: Silver Lance+  
+Special: Moonbow  
+A: Death Blow 3  
+B: Wary Fighter 3  
+C: Hone Atk 2  
+  
+Effie (5* +spd -def)  
+Weapon: Silver Lance+  
+Special: New Moon  
+A: Death Blow 3  
+B: Wary Fighter 3  
+C: Fortify Def 2  
+  
+Effie (5* +hp -res)  
+Weapon: Silver Lance+  
+Special: Noontime  
+A: Death Blow 3  
+B: Wary Fighter 3  
+C: Spur Atk 1  
+S: Spur Def 1  
+  
+Effie (5*+1 +hp -spd)  
+Weapon: Silver Lance+  
+A: Distant Counter  
+B: Wary Fighter 3  
+C: Fortify Res 1  
+  
+Effie (5*)  
+Weapon: Silver Lance+  
+Special: Bonfire  
+A: Distant Counter  
+B: Wary Fighter 3  
+C: Fortify Armor  
+S: Attack 1  
+  
+Eirika (5*+1 +def -spd)  
+Weapon: Sieglinde  
+Special: Moonbow  
+A: Attack 1  
+B: Drag Back  
+C: Hone Spd 3  
+S: Spur Def 1  
+  
+Eirika (5*+1 +spd -def)  
+Weapon: Sieglinde  
+Special: Glacies  
+A: Fury 2  
+B: Desperation 3  
+C: Hone Spd 3  
+S: Spur Def 1  
+  
+Eirika (5* +atk -def)  
+Weapon: Sieglinde  
+Special: Draconic Aura  
+A: Fury 2  
+B: Drag Back  
+C: Hone Spd 3  
+S: Spur Def 1  
+  
+Eirika (5* +atk -hp)  
+Weapon: Sieglinde  
+Special: Moonbow  
+A: Fury 2  
+B: Drag Back  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Eirika (5*+1 +atk -res)  
+Weapon: Sieglinde  
+Special: Moonbow  
+A: Fury 3  
+B: Axebreaker 3  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Eirika (5*+2 +atk -res)  
+Weapon: Sieglinde  
+Special: Moonbow  
+A: Fury 3  
+B: Drag Back  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Eirika (5*+1 +res -def)  
+Weapon: Sieglinde  
+Special: Moonbow  
+A: Fury 3  
+B: Renewal 1  
+C: Hone Spd 3  
+  
+Eirika (5*+3 +spd -def)  
+Weapon: Sieglinde  
+A: Fury 3  
+B: Renewal 3  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Eirika (5*+2 +hp -def)  
+Weapon: Sieglinde  
+Special: Moonbow  
+A: Fury 3  
+B: Swordbreaker 3  
+C: Hone Spd 3  
+  
+Eirika (5* +atk -res)  
+Weapon: Sieglinde  
+Special: Moonbow  
+A: Fury 3  
+B: Wings of Mercy 1  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Eirika (5*+4 +def -hp)  
+Weapon: Sieglinde  
+Special: Bonfire  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Hone Spd 3  
+S: Spur Def 1  
+  
+Eirika (5*+4 +spd -def)  
+Weapon: Sieglinde  
+Special: Moonbow  
+A: HP 5  
+B: Swordbreaker 3  
+C: Hone Spd 3  
+  
+Eirika (5*+4 +spd -res)  
+Weapon: Sieglinde  
+Special: Luna  
+A: Speed 3  
+B: Drag Back  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Eirika (5*+3 +res -spd)  
+Weapon: Sieglinde  
+Special: Moonbow  
+A: Swift Sparrow 2  
+B: Swordbreaker 2  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Eldigan (5* +res -hp)  
+Weapon: Mystletainn  
+Special: Moonbow  
+A: Distant Counter  
+B: Renewal 3  
+C: Threaten Spd 3  
+S: Speed 1  
+  
+Eldigan (5*+3)  
+Weapon: Mystletainn  
+Special: Growing Light  
+A: Fury 3  
+B: Quick Riposte 1  
+C: Breath of Life 2  
+  
+Eldigan (5*+3 +def -spd)  
+Weapon: Mystletainn  
+Special: Aether  
+A: Fury 3  
+B: Renewal 3  
+C: Hone Cavalry  
+S: Attack 1  
+  
+Eldigan (5* +res -hp)  
+Weapon: Mystletainn  
+Special: Luna  
+A: Fury 3  
+B: Renewal 3  
+C: Hone Cavalry  
+S: Quickened Pulse  
+  
+Eldigan (5*+1 +spd -hp)  
+Weapon: Mystletainn  
+Special: Bonfire  
+A: Fury 3  
+B: Swordbreaker 3  
+C: Ward Cavalry  
+  
+Eldigan (5* +hp -res)  
+Weapon: Mystletainn  
+Special: Aether  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Cavalry  
+  
+Eldigan (5* +def -hp)  
+Weapon: Mystletainn  
+Special: Bonfire  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Cavalry  
+S: Attack 1  
+  
+Eliwood (5*+2 +def -hp)  
+Weapon: Durandal  
+Special: Dragon Fang  
+A: Death Blow 3  
+B: Swordbreaker 3  
+C: Hone Cavalry  
+S: Speed 1  
+  
+Ephraim (5*+3 +atk -spd)  
+Weapon: Siegmund  
+Special: Moonbow  
+B: Seal Def 3  
+C: Threaten Def 3  
+  
+Ephraim (5*+5 +atk -hp)  
+Weapon: Siegmund  
+Special: Moonbow  
+B: Seal Def 3  
+C: Threaten Def 3  
+  
+Ephraim (5*+1 +hp -res)  
+Weapon: Siegmund  
+Special: Moonbow  
+A: Death Blow 3  
+B: Lancebreaker 3  
+C: Threaten Def 3  
+S: HP 3  
+  
+Ephraim (5* +def -atk)  
+Weapon: Siegmund  
+Special: Moonbow  
+A: Distant Counter  
+B: Quick Riposte 3  
+C: Threaten Def 3  
+S: Attack 1  
+  
+Ephraim (5* +hp -def)  
+Weapon: Siegmund  
+Special: Moonbow  
+A: Distant Counter  
+B: Vantage 3  
+C: Threaten Def 3  
+  
+Ephraim (5*+1 +hp -def)  
+Weapon: Siegmund  
+Special: Moonbow  
+A: Fury 3  
+B: Seal Def 3  
+C: Threaten Def 3  
+  
+Ephraim (5*+1 +atk -def)  
+Weapon: Siegmund  
+Special: Moonbow  
+A: Fury 3  
+B: Swordbreaker 3  
+C: Threaten Def 3  
+  
+Ephraim (5*+1 +def -atk)  
+Weapon: Siegmund  
+Special: Moonbow  
+A: Speed 3  
+B: Seal Def 3  
+C: Threaten Def 3  
+  
+Ephraim (5*+1 +hp -spd)  
+Weapon: Siegmund  
+Special: Moonbow  
+A: Triangle Adept 2  
+B: Seal Def 3  
+C: Threaten Def 3  
+  
+Fae (5* +def -spd)  
+Weapon: Light Breath+  
+Special: Draconic Aura  
+A: Darting Blow 1  
+B: Renewal 3  
+C: Threaten Atk 3  
+  
+Fae (5*+1 +hp -res)  
+Weapon: Light Breath+  
+Special: Moonbow  
+A: HP 4  
+B: Renewal 3  
+C: Threaten Atk 3  
+  
+Fae (5* +hp -res)  
+Weapon: Lightning Breath+  
+Special: Draconic Aura  
+A: Fury 3  
+B: Renewal 3  
+C: Threaten Atk 3  
+S: Spur Def 1  
+  
+Fae (5*+1 +spd -def)  
+Weapon: Lightning Breath+  
+Special: Moonbow  
+A: Fury 3  
+B: Renewal 3  
+C: Hone Spd 3  
+  
+Fae (5* +res -spd)  
+Weapon: Lightning Breath+  
+Special: Iceberg  
+A: Resistance 3  
+B: Renewal 3  
+C: Threaten Atk 3  
+S: HP 3  
+  
+Florina (5* +spd -atk)  
+Weapon: Heavy Spear+  
+Special: Glacies  
+A: Darting Blow 3  
+B: Seal Spd 3  
+C: Breath of Life 3  
+  
+Frederick (5*+1 +def -res)  
+Weapon: Hammer+  
+Special: Luna  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Hone Cavalry  
+S: HP 3  
+  
+Gunter (4*+10 +def -spd)  
+Weapon: Killer Axe+  
+Special: Ignis  
+A: Death Blow 3  
+B: Quick Riposte 3  
+C: Hone Cavalry  
+S: Fortify Res 1  
+  
+Hector (5* +hp -spd)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+C: Hone Atk 2  
+S: HP 3  
+  
+Hector (5* +spd -res)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+C: Hone Atk 3  
+S: HP 3  
+  
+Hector (5* +def -spd)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+C: Goad Armor  
+  
+Hector (5* +res -atk)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Escape Route 2  
+C: Spur Atk 2  
+S: HP 3  
+  
+Hector (5* +atk -spd)  
+Weapon: Armads  
+Special: Ignis  
+A: Distant Counter  
+B: G Tomebreaker 1  
+C: Spur Atk 1  
+S: Attack 1  
+  
+Hector (5* +atk -res)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: G Tomebreaker 3  
+C: Goad Armor  
+S: HP 3  
+  
+Hector (5* +atk -res)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Obstruct 3  
+C: Spur Atk 2  
+  
+Hector (5* +atk -spd)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Renewal 3  
+C: Spur Atk 3  
+S: Spur Def 1  
+  
+Hector (5*)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Renewal 3  
+C: Fortify Def 2  
+S: HP 3  
+  
+Hector (5*)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Renewal 3  
+C: Spur Atk 2  
+S: Spur Def 1  
+  
+Hector (5*+2 +hp -res)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Seal Def 3  
+C: Hone Atk 2  
+S: HP 3  
+  
+Hector (5* +def -res)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Vantage 1  
+C: Spur Atk 2  
+S: HP 3  
+  
+Hector (5* +res -atk)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Vantage 2  
+C: Goad Armor  
+S: Fortify Res 1  
+  
+Hector (5* +def -res)  
+Weapon: Armads  
+Special: Aegis  
+A: Distant Counter  
+B: Vantage 3  
+C: Threaten Atk 3  
+S: Attack 1  
+  
+Hector (5*+1 +res -def)  
+Weapon: Armads  
+Special: Aegis  
+A: Distant Counter  
+B: Vantage 3  
+C: Threaten Spd 3  
+S: HP 3  
+  
+Hector (5* +atk -spd)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Vantage 3  
+C: Spur Atk 2  
+S: HP 3  
+  
+Hector (5* +res -atk)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Vantage 3  
+C: Threaten Atk 3  
+S: HP 3  
+  
+Hector (5* +hp -res)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Vantage 3  
+C: Ward Armor  
+S: HP 3  
+  
+Hector (5* +hp -res)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Vantage 3  
+C: Threaten Def 3  
+S: Spur Def 1  
+  
+Hector (5* +spd -def)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Vantage 3  
+C: Threaten Atk 3  
+S: HP 3  
+  
+Hector (5* +def -res)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Vantage 3  
+C: Threaten Atk 3  
+S: HP 3  
+  
+Hector (5* +res -spd)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Vantage 3  
+C: Spur Atk 2  
+S: Spur Def 1  
+  
+Hector (5* +spd -res)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Vantage 3  
+C: Threaten Def 2  
+S: HP 3  
+  
+Hector (5* +res -spd)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Vantage 3  
+C: Ward Armor  
+S: Attack 1  
+  
+Hector (5* +hp -spd)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Vantage 3  
+C: Spur Atk 3  
+S: HP 3  
+  
+Hector (5* +res -spd)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Vantage 3  
+C: Goad Armor  
+  
+Hector (5* +hp -def)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Vantage 3  
+C: Goad Armor  
+S: Attack 1  
+  
+Hector (5* +atk -hp)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Vantage 3  
+C: Goad Armor  
+S: Attack 1  
+  
+Hector (5* +hp -atk)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Vantage 3  
+C: Spur Spd 3  
+S: HP 3  
+  
+Hector (5*+1 +spd -hp)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Vantage 3  
+C: Spur Atk 2  
+S: Attack 1  
+  
+Hector (5*+1 +res -def)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Vantage 3  
+C: Hone Atk 3  
+S: Fortify Res 1  
+  
+Hector (5*+1 +atk -hp)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Vantage 3  
+C: Fortify Armor  
+S: Quickened Pulse  
+  
+Hector (5*+1 +res -def)  
+Weapon: Armads  
+Special: Dragon Fang  
+A: Distant Counter  
+B: Vantage 3  
+C: Spur Atk 2  
+  
+Hector (5* +res -def)  
+Weapon: Armads  
+Special: Escutcheon  
+A: Distant Counter  
+B: Vantage 3  
+C: Hone Atk 3  
+S: HP 3  
+  
+Hector (5* +spd -atk)  
+Weapon: Armads  
+Special: Glimmer  
+A: Distant Counter  
+B: Vantage 3  
+C: Spur Atk 2  
+S: HP 3  
+  
+Hector (5* +res -atk)  
+Weapon: Armads  
+Special: Ignis  
+A: Distant Counter  
+B: Vantage 3  
+C: Threaten Def 2  
+S: HP 3  
+  
+Hector (5* +def -hp)  
+Weapon: Armads  
+Special: Ignis  
+A: Distant Counter  
+B: Vantage 3  
+C: Hone Atk 3  
+S: HP 3  
+  
+Hector (5* +def -hp)  
+Weapon: Armads  
+Special: Ignis  
+A: Distant Counter  
+B: Vantage 3  
+C: Threaten Def 3  
+S: Attack 1  
+  
+Hector (5* +hp -res)  
+Weapon: Armads  
+Special: Ignis  
+A: Distant Counter  
+B: Vantage 3  
+C: Ward Armor  
+S: HP 3  
+  
+Hector (5* +spd -atk)  
+Weapon: Armads  
+Special: Luna  
+A: Distant Counter  
+B: Vantage 3  
+C: Spur Atk 2  
+S: Speed 1  
+  
+Hector (5* +atk -res)  
+Weapon: Armads  
+Special: Moonbow  
+A: Distant Counter  
+B: Vantage 3  
+C: Spur Spd 3  
+  
+Hector (5* +spd -def)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Vantage 3  
+C: Spur Atk 2  
+  
+Hector (5* +atk -spd)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Vantage 3  
+C: Threaten Def 3  
+  
+Hector (5* +atk -def)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Vantage 3  
+C: Goad Armor  
+  
+Hector (5* +def -hp)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Vantage 3  
+C: Spur Atk 2  
+  
+Hector (5* +spd -res)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Vantage 3  
+C: Threaten Atk 3  
+S: Speed 1  
+  
+Hector (5* +def -spd)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Vantage 3  
+C: Goad Armor  
+  
+Hector (5* +atk -hp)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Vantage 3  
+C: Goad Armor  
+S: Spur Def 1  
+  
+Hector (5* +def -res)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Vantage 3  
+C: Fortify Def 3  
+S: Fortify Res 1  
+  
+Hector (5* +spd -def)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Vantage 3  
+C: Hone Spd 3  
+  
+Hector (5* +atk -spd)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Vantage 3  
+C: Goad Armor  
+  
+Hector (5* +spd -res)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Vantage 3  
+C: Threaten Atk 3  
+S: Attack 1  
+  
+Hector (5* +def -spd)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Vantage 3  
+C: Goad Armor  
+  
+Hector (5*+1 +atk -def)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Vantage 3  
+C: Spur Atk 2  
+S: HP 3  
+  
+Hector (5*+1 +hp -res)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Vantage 3  
+C: Goad Armor  
+  
+Hector (5*+2 +spd -hp)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Vantage 3  
+C: Threaten Atk 3  
+S: HP 3  
+  
+Hector (5* +hp -atk)  
+Weapon: Armads  
+Special: Sol  
+A: Distant Counter  
+B: Vantage 3  
+C: Breath of Life 3  
+S: Attack 1  
+  
+Hector (5* +def -spd)  
+Weapon: Armads  
+Special: Sol  
+A: Distant Counter  
+B: Vantage 3  
+C: Threaten Def 3  
+S: HP 3  
+  
+Hector (5*)  
+Weapon: Armads  
+Special: Sol  
+A: Distant Counter  
+B: Vantage 3  
+C: Threaten Atk 3  
+S: HP 3  
+  
+Hector (5* +spd -atk)  
+Weapon: Armads  
+Special: Sol  
+A: Distant Counter  
+B: Vantage 3  
+C: Spur Atk 2  
+S: Attack 1  
+  
+Hector (5*+2 +def -hp)  
+Weapon: Armads  
+Special: Sol  
+A: Distant Counter  
+B: Vantage 3  
+C: Spur Atk 2  
+  
+Hector (5*+1 +def -atk)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Wary Fighter 3  
+C: Goad Armor  
+  
+Hector (5* +atk -res)  
+Weapon: Armads  
+Special: Astra  
+A: Distant Counter  
+B: Wings of Mercy 2  
+C: Spur Atk 2  
+  
+Hector (5* +atk -spd)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Wings of Mercy 2  
+C: Goad Armor  
+  
+Hector (5* +atk -def)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Wings of Mercy 3  
+C: Hone Spd 3  
+S: HP 3  
+  
+Hector (5*+1 +atk -spd)  
+Weapon: Armads  
+Special: Bonfire  
+A: Distant Counter  
+B: Wings of Mercy 3  
+C: Goad Armor  
+  
+Hector (5*+1 +atk -hp)  
+Weapon: Armads  
+Special: Ignis  
+A: Distant Counter  
+B: Wings of Mercy 3  
+C: Spur Atk 3  
+S: HP 3  
+  
+Hector (5*+3 +spd -atk)  
+Weapon: Armads  
+Special: Moonbow  
+A: Distant Counter  
+B: Wings of Mercy 3  
+C: Spur Atk 2  
+  
+Hector (5* +spd -def)  
+Weapon: Armads  
+Special: Noontime  
+A: Distant Counter  
+B: Wings of Mercy 3  
+C: Spur Atk 2  
+S: Spur Def 1  
+  
+Hector (5* +def -atk)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Wings of Mercy 3  
+C: Threaten Atk 3  
+S: Attack 1  
+  
+Hector (5* +spd -res)  
+Weapon: Armads  
+Special: Pavise  
+A: Distant Counter  
+B: Wings of Mercy 3  
+C: Spur Atk 2  
+S: Attack 1  
+  
+Hinoka (5* +atk -res)  
+Weapon: Brave Lance+  
+Special: Blazing Wind  
+A: Attack 3  
+B: Drag Back  
+C: Hone Spd 2  
+S: Attack 1  
+  
+Hinoka (5*+1 +spd -res)  
+Weapon: Brave Lance+  
+Special: Rising Wind  
+A: Death Blow 3  
+B: Drag Back  
+C: Hone Fliers  
+S: Attack 1  
+  
+Hinoka (5*+2 +spd -hp)  
+Weapon: Brave Lance+  
+Special: Luna  
+A: Death Blow 3  
+B: Hit and Run  
+C: Hone Fliers  
+S: Fortify Res 1  
+  
+Hinoka (5*+1 +atk -spd)  
+Weapon: Brave Lance+  
+Special: Blazing Wind  
+A: Defiant Def 3  
+B: Drag Back  
+C: Hone Fliers  
+S: Fortify Res 1  
+  
+Hinoka (5*+1 +spd -res)  
+Weapon: Brave Lance+  
+Special: Growing Wind  
+A: Fury 3  
+B: Drag Back  
+C: Hone Fliers  
+S: HP 3  
+  
+Hinoka (5* +res -spd)  
+Weapon: Brave Lance+  
+Special: Rising Wind  
+A: Fury 3  
+B: Quick Riposte 1  
+C: Hone Fliers  
+  
+Hinoka (5*+2 +spd -hp)  
+Weapon: Brave Lance+  
+Special: Rising Wind  
+A: Fury 3  
+B: Swordbreaker 3  
+C: Hone Fliers  
+  
+Hinoka (5* +atk -hp)  
+Weapon: Brave Lance+  
+Special: Luna  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Hone Fliers  
+S: Attack 1  
+  
+Hinoka (5*+1 +atk -spd)  
+Weapon: Brave Lance+  
+Special: Luna  
+A: Iote's Shield  
+B: Renewal 3  
+C: Hone Fliers  
+S: Speed 1  
+  
+Hinoka (5*+2 +def -atk)  
+Weapon: Brave Lance+  
+Special: Blazing Wind  
+A: Triangle Adept 2  
+B: Drag Back  
+C: Hone Fliers  
+  
+Ike (5* +spd -res)  
+Weapon: Ragnell  
+Special: Aether  
+A: Defense 3  
+B: Swordbreaker 3  
+C: Hone Spd 3  
+S: Speed 1  
+  
+Ike (5*+1 +def -res)  
+Weapon: Ragnell  
+Special: Luna  
+A: Fury 3  
+B: Swordbreaker 3  
+C: Threaten Spd 3  
+  
+Ike (5* +hp -def)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Axebreaker 3  
+C: Threaten Spd 2  
+S: Speed 1  
+  
+Ike (5* +res -def)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Brash Assault 2  
+C: Threaten Spd 3  
+S: Attack 1  
+  
+Ike (5* +spd -atk)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Quick Riposte 2  
+C: Threaten Atk 3  
+S: Speed 1  
+  
+Ike (5* +hp -res)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Quick Riposte 2  
+C: Spur Atk 2  
+S: HP 3  
+  
+Ike (5* +res -hp)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Quick Riposte 2  
+C: Threaten Atk 2  
+S: HP 3  
+  
+Ike (5*+1 +def -res)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Quick Riposte 3  
+C: Hone Atk 3  
+S: Spur Def 1  
+  
+Ike (5* +hp -res)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Renewal 2  
+S: Spur Def 1  
+  
+Ike (5* +res -hp)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Swordbreaker 2  
+C: Spur Atk 2  
+S: Quickened Pulse  
+  
+Ike (5* +def -atk)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Swordbreaker 3  
+C: Threaten Spd 3  
+S: Speed 1  
+  
+Ike (5* +atk -hp)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Swordbreaker 3  
+C: Fortify Res 2  
+S: HP 3  
+  
+Ike (5* +hp -res)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Swordbreaker 3  
+C: Threaten Spd 3  
+  
+Ike (5* +hp -def)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Swordbreaker 3  
+C: Threaten Def 3  
+  
+Ike (5* +atk -hp)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Swordbreaker 3  
+C: Hone Atk 3  
+S: Attack 1  
+  
+Ike (5*)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Swordbreaker 3  
+C: Threaten Spd 3  
+S: Speed 1  
+  
+Ike (5* +hp -def)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Swordbreaker 3  
+C: Threaten Atk 3  
+S: HP 3  
+  
+Ike (5* +atk -res)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Swordbreaker 3  
+C: Threaten Def 3  
+S: Speed 1  
+  
+Ike (5*+1 +spd -hp)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Swordbreaker 3  
+C: Hone Atk 3  
+  
+Ike (5*+1 +hp -res)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Swordbreaker 3  
+C: Fortify Def 2  
+  
+Ike (5* +atk -def)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Vantage 3  
+S: Speed 1  
+  
+Ike (5* +spd -hp)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Vantage 3  
+C: Threaten Spd 3  
+S: Attack 1  
+  
+Ike (5* +atk -hp)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Vantage 3  
+C: Threaten Spd 2  
+S: HP 3  
+  
+Ike (5* +hp -spd)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Vantage 3  
+C: Threaten Spd 2  
+S: Speed 1  
+  
+Ike (5* +atk -res)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Vantage 3  
+C: Threaten Def 3  
+S: Attack 1  
+  
+Ike (5*+1 +atk -hp)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Vantage 3  
+C: Threaten Def 3  
+S: Attack 1  
+  
+Ike (5*+1 +atk -res)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Vantage 3  
+C: Threaten Atk 3  
+S: HP 3  
+  
+Ike (5*+1 +atk -def)  
+Weapon: Ragnell  
+Special: Aether  
+A: Heavy Blade 3  
+B: Vantage 3  
+C: Threaten Atk 3  
+  
+Ike (5* +hp -def)  
+Weapon: Ragnell  
+Special: Galeforce  
+A: Heavy Blade 3  
+B: Vantage 3  
+C: Threaten Atk 3  
+S: Attack 1  
+  
+Ike (5* +spd -res)  
+Weapon: Ragnell  
+Special: Luna  
+A: Heavy Blade 3  
+B: Vantage 3  
+C: Breath of Life 3  
+S: Attack 1  
+  
+Ike (5*+2 +res -def)  
+Weapon: Ragnell  
+Special: Luna  
+A: Heavy Blade 3  
+B: Vantage 3  
+C: Threaten Spd 3  
+S: Speed 1  
+  
+Jaffar (5* +def -atk)  
+Weapon: Deathly Dagger  
+Special: Glimmer  
+A: Death Blow 2  
+B: Poison Strike 3  
+C: Savage Blow 3  
+S: Spur Def 1  
+  
+Jeorge (5* +atk -spd)  
+Weapon: Parthia  
+Special: Moonbow  
+A: Defiant Atk 3  
+B: R Tomebreaker 3  
+C: Spur Spd 3  
+S: Attack 1  
+  
+Jeorge (5*+1 +def -res)  
+Weapon: Parthia  
+Special: Rising Flame  
+A: Defiant Res 3  
+B: Vantage 2  
+C: Spur Spd 3  
+S: HP 3  
+  
+Julia (5*+1 +def -res)  
+Weapon: Naga  
+Special: Dragon Fang  
+A: Close Counter  
+B: Quick Riposte 2  
+C: Fortify Res 3  
+  
+Julia (5*+2 +def -res)  
+Weapon: Naga  
+Special: Draconic Aura  
+A: Death Blow 3  
+B: G Tomebreaker 3  
+C: Threaten Res 3  
+S: HP 3  
+  
+Julia (5*+1)  
+Weapon: Naga  
+Special: Iceberg  
+A: Death Blow 3  
+B: G Tomebreaker 3  
+C: Breath of Life 3  
+S: Breath of Life 1  
+  
+Julia (5*+1 +spd -hp)  
+Weapon: Naga  
+Special: Dragon Fang  
+A: Death Blow 3  
+B: Wings of Mercy 3  
+C: Spur Atk 3  
+S: HP 3  
+  
+Julia (5*+1)  
+Weapon: Naga  
+Special: Dragon Fang  
+A: Fury 2  
+B: Renewal 3  
+C: Breath of Life 3  
+S: HP 3  
+  
+Julia (5*+1 +atk -hp)  
+Weapon: Naga  
+Special: Dragon Fang  
+A: Fury 3  
+C: Hone Atk 3  
+S: Attack 1  
+  
+Julia (5*+2)  
+Weapon: Naga  
+Special: Dragon Fang  
+A: Fury 3  
+B: Bowbreaker 3  
+C: Breath of Life 3  
+S: Attack 1  
+  
+Julia (5*+1 +hp -def)  
+Weapon: Naga  
+Special: Glacies  
+A: Fury 3  
+B: Desperation 3  
+C: Breath of Life 3  
+S: Attack 1  
+  
+Julia (5* +atk -spd)  
+Weapon: Naga  
+Special: Dragon Fang  
+A: Fury 3  
+B: G Tomebreaker 3  
+C: Hone Spd 3  
+S: Attack 1  
+  
+Julia (5*+1 +def -res)  
+Weapon: Naga  
+Special: Dragon Fang  
+A: Fury 3  
+B: G Tomebreaker 3  
+C: Breath of Life 2  
+  
+Julia (5* +atk -spd)  
+Weapon: Naga  
+Special: Dragon Gaze  
+A: Fury 3  
+B: G Tomebreaker 3  
+C: Breath of Life 3  
+S: Breath of Life 1  
+  
+Julia (5*+3 +spd -def)  
+Weapon: Naga  
+Special: Glacies  
+A: Fury 3  
+B: G Tomebreaker 3  
+C: Hone Atk 3  
+S: Speed 1  
+  
+Julia (5*+1 +atk -spd)  
+Weapon: Naga  
+Special: Iceberg  
+A: Fury 3  
+B: G Tomebreaker 3  
+C: Breath of Life 3  
+  
+Julia (5*+2 +atk -res)  
+Weapon: Naga  
+Special: Moonbow  
+A: Fury 3  
+B: G Tomebreaker 3  
+C: Fortify Def 3  
+S: Attack 1  
+  
+Julia (5*+4 +spd -hp)  
+Weapon: Naga  
+Special: Moonbow  
+A: Fury 3  
+B: G Tomebreaker 3  
+C: Hone Spd 3  
+S: Attack 1  
+  
+Julia (5*+1 +atk -res)  
+Weapon: Naga  
+Special: Dragon Fang  
+A: Fury 3  
+B: Renewal 3  
+C: Breath of Life 3  
+S: Speed 1  
+  
+Julia (5*+3 +spd -res)  
+Weapon: Naga  
+Special: Moonbow  
+A: Fury 3  
+B: Renewal 3  
+C: Breath of Life 3  
+S: Speed 1  
+  
+Julia (5* +spd -def)  
+Weapon: Naga  
+Special: Dragon Fang  
+A: Resistance 3  
+C: Breath of Life 3  
+S: Fortify Res 1  
+  
+Julia (5*+5 +spd -res)  
+Weapon: Naga  
+Special: Dragon Fang  
+A: Resistance 3  
+C: Breath of Life 3  
+  
+Julia (5*+3 +atk -spd)  
+Weapon: Naga  
+Special: Dragon Fang  
+A: Resistance 3  
+B: Bowbreaker 3  
+C: Breath of Life 3  
+S: Spur Def 1  
+  
+Julia (5*+3 +atk -hp)  
+Weapon: Naga  
+Special: Dragon Fang  
+A: Resistance 3  
+B: Vantage 3  
+C: Breath of Life 3  
+S: HP 3  
+  
+Julia (5*+3 +atk -spd)  
+Weapon: Naga  
+Special: Dragon Fang  
+A: Speed 3  
+B: Wings of Mercy 3  
+C: Breath of Life 3  
+S: Fortify Res 1  
+  
+Julia (5* +hp -def)  
+Weapon: Naga  
+Special: Dragon Fang  
+A: Triangle Adept 3  
+B: G Tomebreaker 3  
+C: Breath of Life 3  
+  
+Julia (5*+5 +res -hp)  
+Weapon: Naga  
+Special: Dragon Fang  
+A: Triangle Adept 3  
+B: Renewal 3  
+C: Breath of Life 3  
+S: Breath of Life 1  
+  
+Kagero (5* +res -atk)  
+Weapon: Poison Dagger+  
+Special: Reprisal  
+A: Fury 3  
+B: Escape Route 3  
+C: Hone Atk 3  
+S: Spur Def 1  
+  
+Kagero (5* +spd -def)  
+Weapon: Poison Dagger+  
+Special: Reprisal  
+A: HP 4  
+B: Daggerbreaker 3  
+C: Spur Def 2  
+S: HP 3  
+  
+Kagero (5* +def -spd)  
+Weapon: Poison Dagger+  
+Special: Reprisal  
+A: Life and Death 2  
+B: Desperation 3  
+C: Hone Spd 3  
+  
+Kagero (5*+1 +atk -def)  
+Weapon: Poison Dagger+  
+Special: Luna  
+A: Life and Death 3  
+B: Bowbreaker 3  
+C: Savage Blow 3  
+S: Attack 1  
+  
+Kagero (5*+1 +res -def)  
+Weapon: Poison Dagger+  
+Special: Glimmer  
+A: Life and Death 3  
+B: Vantage 3  
+C: Threaten Def 3  
+S: Attack 1  
+  
+Kagero (5* +atk -def)  
+Weapon: Poison Dagger+  
+Special: Blazing Wind  
+A: Warding Blow 3  
+B: Daggerbreaker 3  
+C: Threaten Spd 3  
+S: Quickened Pulse  
+  
+Katarina (5* +res -def)  
+Weapon: Raudrowl+  
+Special: Glacies  
+A: Swift Sparrow 2  
+B: Desperation 3  
+C: Atk Ploy 3  
+S: HP 3  
+  
+Klein (5*+1 +atk -def)  
+Weapon: Brave Bow+  
+Special: Moonbow  
+A: Death Blow 3  
+B: Bowbreaker 3  
+C: Savage Blow 3  
+S: Attack 1  
+  
+Klein (5* +hp -spd)  
+Weapon: Brave Bow+  
+Special: Glacies  
+A: Death Blow 3  
+B: Quick Riposte 3  
+  
+Klein (5*+1 +res -spd)  
+Weapon: Brave Bow+  
+Special: Glacies  
+A: Death Blow 3  
+B: Watersweep 2  
+C: Spur Atk 3  
+S: Speed 1  
+  
+Lilina (5*+5 +atk -res)  
+Weapon: Raudrraven+  
+Special: Moonbow  
+A: Triangle Adept 3  
+B: Swordbreaker 3  
+C: Spur Atk 3  
+S: Attack 1  
+  
+Linde (5*+1 +res -def)  
+Weapon: Aura  
+Special: Luna  
+A: Darting Blow 3  
+B: Renewal 3  
+C: Fortify Res 3  
+S: Speed 1  
+  
+Linde (5*+1 +spd -hp)  
+Weapon: Aura  
+Special: Draconic Aura  
+A: Fury 3  
+B: Desperation 3  
+C: Threaten Res 3  
+S: Attack 1  
+  
+Linde (5* +atk -spd)  
+Weapon: Aura  
+Special: Moonbow  
+A: Fury 3  
+B: Desperation 3  
+C: Fortify Res 3  
+S: Attack 1  
+  
+Linde (5*+4 +spd -hp)  
+Weapon: Aura  
+Special: Moonbow  
+A: Fury 3  
+B: Desperation 3  
+C: Hone Spd 3  
+S: Quickened Pulse  
+  
+Linde (5* +hp -atk)  
+Weapon: Aura  
+Special: Glimmer  
+A: Speed 3  
+C: Fortify Res 3  
+S: Speed 1  
+  
+Linde (5*+1 +hp -spd)  
+Weapon: Aura  
+Special: New Moon  
+A: Speed 3  
+B: Bowbreaker 3  
+C: Fortify Res 2  
+  
+Linde (5* +hp -atk)  
+Weapon: Aura  
+Special: Dragon Fang  
+A: Speed 3  
+B: Desperation 3  
+C: Fortify Res 3  
+  
+Linde (5*+2 +def -atk)  
+Weapon: Aura  
+Special: Dragon Fang  
+A: Speed 3  
+B: Desperation 3  
+C: Fortify Res 3  
+S: Attack 1  
+  
+Linde (5*+1 +hp -spd)  
+Weapon: Aura  
+Special: Luna  
+A: Speed 3  
+B: Desperation 3  
+C: Fortify Res 3  
+S: Speed 1  
+  
+Linde (5*)  
+Weapon: Aura  
+Special: Miracle  
+A: Speed 3  
+B: Desperation 3  
+C: Fortify Res 3  
+S: Speed 1  
+  
+Linde (5*+2 +def -res)  
+Weapon: Blarblade+  
+Special: Moonbow  
+A: Defiant Atk 3  
+B: Desperation 3  
+C: Threaten Spd 3  
+S: Attack 1  
+  
+Linde (5*+2 +res -spd)  
+Weapon: Blarblade+  
+Special: Dragon Fang  
+A: Fury 3  
+B: Desperation 3  
+C: Fortify Res 3  
+S: HP 3  
+  
+Linde (5*+1 +def -res)  
+Weapon: Blarblade+  
+Special: Moonbow  
+A: Fury 3  
+B: Desperation 3  
+C: Fortify Res 3  
+S: Quickened Pulse  
+  
+Linde (5*+1 +spd -res)  
+Weapon: Blarblade+  
+Special: Moonbow  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Fortify Res 3  
+S: Speed 1  
+  
+Linde (5* +def -res)  
+Weapon: Blarblade+  
+Special: Moonbow  
+A: Life and Death 3  
+B: Desperation 3  
+C: Threaten Spd 3  
+S: Speed 1  
+  
+Linde (5*+1 +spd -def)  
+Weapon: Blarblade+  
+Special: Moonbow  
+A: Swift Sparrow 2  
+B: Wings of Mercy 3  
+C: Fortify Res 3  
+S: HP 3  
+  
+Lissa (4*+6 +def -res)  
+Weapon: Pain  
+Special: Heavenly Light  
+A: HP 5  
+B: Live to Serve 2  
+C: Threaten Atk 3  
+S: Quickened Pulse  
+  
+Lucina (5* +spd -def)  
+Weapon: Falchion  
+Special: Aether  
+S: Attack 1  
+  
+Lucina (5*+1 +atk -def)  
+Weapon: Falchion  
+Special: Luna  
+A: Darting Blow 3  
+B: Renewal 3  
+  
+Lucina (5*+1 +atk -spd)  
+Weapon: Falchion  
+Special: Aether  
+A: Defiant Spd 3  
+C: Spur Atk 3  
+S: Attack 1  
+  
+Lucina (5* +res -spd)  
+Weapon: Falchion  
+Special: Aether  
+A: Defiant Spd 3  
+B: Desperation 2  
+C: Spur Atk 3  
+  
+Lucina (5* +atk -hp)  
+Weapon: Falchion  
+Special: Aether  
+A: Defiant Spd 3  
+B: Drag Back  
+C: Spur Atk 3  
+S: Quickened Pulse  
+  
+Lucina (5*+2 +res -def)  
+Weapon: Falchion  
+Special: Aether  
+A: Defiant Spd 3  
+B: Drag Back  
+C: Spur Atk 3  
+  
+Lucina (5* +hp -def)  
+Weapon: Falchion  
+Special: Aether  
+A: Defiant Spd 3  
+B: Knock Back  
+C: Spur Atk 3  
+  
+Lucina (5*+1 +atk -res)  
+Weapon: Falchion  
+Special: Aether  
+A: Defiant Spd 3  
+B: Renewal 2  
+C: Spur Atk 3  
+S: Fortify Res 1  
+  
+Lucina (5* +atk -def)  
+Weapon: Falchion  
+Special: Luna  
+A: Fury 2  
+B: Vantage 3  
+C: Spur Atk 3  
+  
+Lucina (5*+1 +atk -hp)  
+Weapon: Falchion  
+Special: Luna  
+A: Fury 3  
+B: Desperation 3  
+C: Spur Atk 3  
+  
+Lucina (5* +hp -spd)  
+Weapon: Falchion  
+Special: Aether  
+A: Fury 3  
+B: Renewal 3  
+C: Spur Atk 3  
+S: HP 3  
+  
+Lucina (5*+2 +spd -res)  
+Weapon: Falchion  
+Special: Luna  
+A: Fury 3  
+B: Renewal 3  
+C: Spur Atk 3  
+S: Spur Def 1  
+  
+Lucina (5*+2)  
+Weapon: Falchion  
+Special: Luna  
+A: Fury 3  
+B: Renewal 3  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Lucina (5* +def -res)  
+Weapon: Falchion  
+Special: Aether  
+A: Fury 3  
+B: Swordbreaker 2  
+C: Spur Atk 3  
+S: Attack 1  
+  
+Lucina (5*+1 +atk -def)  
+Weapon: Falchion  
+Special: Aether  
+A: Fury 3  
+B: Swordbreaker 3  
+C: Spur Atk 3  
+S: Quickened Pulse  
+  
+Lucina (5*+1 +def -res)  
+Weapon: Falchion  
+Special: Moonbow  
+A: Fury 3  
+B: Swordbreaker 3  
+C: Spur Atk 3  
+S: Attack 1  
+  
+Lucina (5* +def -hp)  
+Weapon: Falchion  
+Special: Aether  
+A: Triangle Adept 3  
+B: Renewal 3  
+C: Spur Atk 3  
+S: Speed 1  
+  
+Lucina (Spring) (5* +res -def)  
+Weapon: Blarblade  
+Special: Moonbow  
+A: Swift Sparrow 2  
+B: Seal Spd 3  
+C: Spur Spd 2  
+S: Speed 1  
+  
+Lucina (Spring) (5* +spd -atk)  
+Weapon: Blarblade+  
+Special: Luna  
+A: Swift Sparrow 2  
+B: Seal Res 3  
+S: HP 3  
+  
+Lucius (5* +def -hp)  
+Weapon: Pain  
+Special: Miracle  
+A: HP 5  
+B: Renewal 3  
+C: Breath of Life 3  
+S: Fortify Res 1  
+  
+Lukas (5* +def -spd)  
+Weapon: Killer Lance+  
+Special: Ignis  
+A: Fortress Def 3  
+C: Fortify Res 2  
+S: Spur Def 1  
+  
+Lukas (5* +atk -res)  
+Weapon: Killer Lance+  
+Special: Ignis  
+A: Triangle Adept 3  
+B: Quick Riposte 3  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Lyn (5*+2 +atk -spd)  
+Weapon: Sol Katti  
+Special: Galeforce  
+A: Fury 3  
+B: Brash Assault 3  
+C: Spur Spd 3  
+S: Attack 1  
+  
+Lyn (Bride) (5* +hp -atk)  
+Weapon: Candlelight  
+Special: Swift-Winds Balm  
+A: HP 3  
+B: Dazzling Staff 3  
+C: Hone Atk 3  
+  
+Lyn (Bride) (5* +hp -res)  
+Weapon: Candlelight  
+Special: Swift-Winds Balm  
+A: HP 5  
+B: Dazzling Staff 3  
+C: Hone Atk 3  
+S: Breath of Life 1  
+  
+Lyn (Bride) (5*)  
+Weapon: Candlelight  
+Special: Swift-Winds Balm  
+A: Speed 3  
+B: Dazzling Staff 3  
+C: Fortify Def 3  
+  
+Mae (5*+2 +res -def)  
+Weapon: Blarowl+  
+Special: Glacies  
+A: Fury 3  
+B: Desperation 3  
+C: Threaten Spd 3  
+S: Speed 1  
+  
+Mae (5* +res -hp)  
+Weapon: Blarowl+  
+Special: Iceberg  
+A: Fury 3  
+B: Desperation 3  
+C: Fortify Res 3  
+S: Attack 1  
+  
+Marth (5* +def -spd)  
+Weapon: Falchion  
+Special: Pavise  
+A: HP 5  
+B: Escape Route 3  
+C: Spur Spd 3  
+  
+Marth (5*+1 +spd -atk)  
+Weapon: Falchion  
+Special: Pavise  
+A: HP 5  
+B: Escape Route 3  
+C: Spur Spd 3  
+S: Speed 1  
+  
+Merric (5*+2 +atk -hp)  
+Weapon: Excalibur  
+Special: Vengeance  
+A: Close Counter  
+B: Vantage 3  
+C: Threaten Atk 2  
+S: Fortify Res 1  
+  
+Merric (5* +spd -hp)  
+Weapon: Excalibur  
+Special: Growing Wind  
+A: HP 5  
+B: Bowbreaker 3  
+C: Spur Res 3  
+S: Spur Def 1  
+  
+Merric (5* +spd -atk)  
+Weapon: Excalibur  
+Special: Growing Wind  
+A: HP 5  
+B: Poison Strike 2  
+C: Spur Res 3  
+S: HP 3  
+  
+Michalis (5*+1)  
+Weapon: Hauteclere  
+Special: Bonfire  
+A: Fury 3  
+B: Drag Back  
+C: Threaten Def 3  
+S: Spur Def 1  
+  
+Michalis (5*)  
+Weapon: Hauteclere  
+Special: Blazing Thunder  
+A: Iote's Shield  
+B: Drag Back  
+C: Goad Fliers  
+  
+Michalis (5*)  
+Weapon: Hauteclere  
+Special: Blazing Thunder  
+A: Iote's Shield  
+B: Quick Riposte 2  
+C: Threaten Def 3  
+S: Attack 1  
+  
+Michalis (5*+1)  
+Weapon: Hauteclere  
+Special: Blazing Thunder  
+A: Iote's Shield  
+B: Renewal 3  
+C: Threaten Def 3  
+S: Fortify Res 1  
+  
+Michalis (5*+1)  
+Weapon: Hauteclere  
+Special: Blazing Thunder  
+A: Iote's Shield  
+B: Renewal 3  
+C: Threaten Def 3  
+S: Fortify Res 1  
+  
+Minerva (5*+2 +spd -hp)  
+Weapon: Hauteclere  
+Special: Draconic Aura  
+A: Fury 3  
+B: Desperation 3  
+C: Spur Def 3  
+S: HP 3  
+  
+Minerva (5*+1 +def -res)  
+Weapon: Hauteclere  
+Special: Draconic Aura  
+A: Fury 3  
+B: Drag Back  
+C: Fortify Fliers  
+S: Speed 1  
+  
+Minerva (5*+2 +hp -spd)  
+Weapon: Hauteclere  
+Special: Ignis  
+A: Iote's Shield  
+B: Vantage 3  
+C: Spur Def 3  
+S: Attack 1  
+  
+Minerva (5* +res -atk)  
+Weapon: Hauteclere  
+Special: Moonbow  
+A: Life and Death 3  
+B: Desperation 3  
+C: Ward Fliers  
+S: Spur Def 1  
+  
+Minerva (5*)  
+Weapon: Hauteclere  
+Special: Moonbow  
+A: Life and Death 3  
+B: Desperation 3  
+C: Threaten Spd 3  
+S: Attack 1  
+  
+Minerva (5*+2 +spd -res)  
+Weapon: Hauteclere  
+Special: Luna  
+A: Life and Death 3  
+B: Drag Back  
+C: Fortify Res 3  
+S: Quickened Pulse  
+  
+Minerva (5*+1 +atk -def)  
+Weapon: Hauteclere  
+Special: Holy Vestments  
+A: Life and Death 3  
+B: Vantage 3  
+C: Ward Fliers  
+  
+Minerva (5* +res -def)  
+Weapon: Hauteclere  
+Special: Moonbow  
+A: Life and Death 3  
+B: Vantage 3  
+C: Ward Fliers  
+  
+Ninian (5* +hp -spd)  
+Weapon: Light Breath+  
+Special: Daylight  
+B: Vantage 3  
+C: Fortify Res 3  
+S: Attack 1  
+  
+Ninian (5* +hp -spd)  
+Weapon: Light Breath+  
+Special: Daylight  
+B: Vantage 3  
+C: Fortify Res 3  
+S: Attack 1  
+  
+Ninian (5* +def -hp)  
+Weapon: Light Breath+  
+B: Wings of Mercy 3  
+C: Hone Atk 3  
+S: HP 3  
+  
+Ninian (5*+1)  
+Weapon: Light Breath+  
+Special: Aegis  
+A: Fury 2  
+B: Wings of Mercy 3  
+C: Fortify Dragons  
+S: HP 3  
+  
+Ninian (5* +spd -def)  
+Weapon: Light Breath+  
+Special: Moonbow  
+A: Fury 3  
+B: Escape Route 3  
+C: Hone Atk 3  
+S: Fortify Res 1  
+  
+Ninian (5* +res -hp)  
+Weapon: Light Breath+  
+A: Fury 3  
+B: Wings of Mercy 2  
+C: Fortify Def 2  
+S: HP 3  
+  
+Ninian (5* +atk -res)  
+Weapon: Light Breath+  
+Special: Draconic Aura  
+A: HP 5  
+B: Escape Route 3  
+C: Fortify Def 2  
+  
+Ninian (5*+1 +spd -atk)  
+Weapon: Light Breath+  
+A: Triangle Adept 1  
+B: Escape Route 3  
+C: Fortify Def 2  
+S: Fortify Res 1  
+  
+Ninian (5*+1 +atk -hp)  
+Weapon: Light Breath+  
+Special: Moonbow  
+A: Triangle Adept 3  
+B: Swordbreaker 3  
+C: Fortify Def 3  
+S: Fortify Res 1  
+  
+Ninian (5*+1 +hp -res)  
+Weapon: Light Breath+  
+Special: New Moon  
+A: Triangle Adept 3  
+B: Wings of Mercy 2  
+C: Fortify Def 2  
+S: Fortify Res 1  
+  
+Ninian (5*+1 +def -atk)  
+Weapon: Lightning Breath+  
+Special: Bonfire  
+A: Defiant Atk 3  
+B: Vantage 3  
+S: Attack 1  
+  
+Ninian (5*+1 +atk -spd)  
+Weapon: Lightning Breath+  
+Special: Moonbow  
+A: Triangle Adept 3  
+B: Quick Riposte 2  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Ninian (5*+1)  
+Weapon: Lightning Breath+  
+Special: Luna  
+A: Triangle Adept 3  
+B: Wings of Mercy 3  
+C: Fortify Def 3  
+S: HP 3  
+  
+Ninian (5*+4 +spd -hp)  
+Weapon: Lightning Breath+  
+Special: Moonbow  
+A: Triangle Adept 3  
+B: Wings of Mercy 3  
+C: Fortify Def 3  
+S: Fortify Res 1  
+  
+Nino (5* +res -def)  
+Weapon: Gronnblade+  
+Special: Glacies  
+A: Darting Blow 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: HP 3  
+  
+Nino (5*+1 +hp -def)  
+Weapon: Gronnblade+  
+Special: Iceberg  
+A: Darting Blow 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: Attack 1  
+  
+Nino (5*+1 +atk -res)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Darting Blow 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: HP 3  
+  
+Nino (5* +res -hp)  
+Weapon: Gronnblade+  
+Special: New Moon  
+A: Darting Blow 3  
+B: Vantage 3  
+C: Threaten Spd 3  
+S: Attack 1  
+  
+Nino (5*+2 +spd -def)  
+Weapon: Gronnblade+  
+Special: Iceberg  
+A: Death Blow 3  
+B: Vantage 3  
+C: Hone Atk 3  
+S: HP 3  
+  
+Nino (5* +spd -res)  
+Weapon: Gronnblade+  
+A: Fury 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: Spur Def 1  
+  
+Nino (5* +def -res)  
+Weapon: Gronnblade+  
+Special: Dragon Gaze  
+A: Fury 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: Speed 1  
+  
+Nino (5*+4 +spd -hp)  
+Weapon: Gronnblade+  
+Special: Iceberg  
+A: Fury 3  
+B: Desperation 3  
+C: Savage Blow 3  
+S: HP 3  
+  
+Nino (5* +atk -res)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Fury 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: Speed 1  
+  
+Nino (5* +spd -res)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Fury 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: Speed 1  
+  
+Nino (5* +spd -hp)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Fury 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: HP 3  
+  
+Nino (5*+2 +spd -def)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Fury 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: HP 3  
+  
+Nino (5*+2 +spd -def)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Fury 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: Speed 1  
+  
+Nino (5*+2 +atk -hp)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Fury 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: HP 3  
+  
+Nino (5*+2 +spd -res)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Fury 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: Speed 1  
+  
+Nino (5*+2 +spd -res)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Fury 3  
+B: Desperation 3  
+C: Fortify Res 3  
+S: Speed 1  
+  
+Nino (5*+3 +spd -hp)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Fury 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: HP 3  
+  
+Nino (5*+6 +atk -hp)  
+Weapon: Gronnblade+  
+Special: Reprisal  
+A: Fury 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: HP 3  
+  
+Nino (5*+2 +atk -res)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Fury 3  
+B: Vantage 3  
+C: Savage Blow 3  
+S: Attack 1  
+  
+Nino (5*)  
+Weapon: Gronnblade+  
+Special: Dragon Fang  
+A: Life and Death 3  
+B: Brash Assault 2  
+C: Hone Atk 3  
+S: Attack 1  
+  
+Nino (5*+3 +spd -res)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Life and Death 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: HP 3  
+  
+Nino (5* +atk -res)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Resistance 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: HP 3  
+  
+Nino (5* +res -spd)  
+Weapon: Gronnblade+  
+Special: Growing Flame  
+A: Resistance 3  
+B: Vantage 3  
+C: Hone Atk 3  
+S: Breath of Life 1  
+  
+Nino (5*+2 +hp -def)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Resistance 3  
+B: Vantage 3  
+C: Hone Atk 3  
+S: Speed 1  
+  
+Nowi (5* +res -def)  
+Weapon: Lightning Breath+  
+Special: Moonbow  
+A: Armored Blow 3  
+B: Vantage 3  
+C: Threaten Res 3  
+S: Fortify Res 1  
+  
+Nowi (5* +atk -spd)  
+Weapon: Lightning Breath+  
+Special: Bonfire  
+A: Defense 3  
+B: Poison Strike 2  
+C: Threaten Res 1  
+S: Breath of Life 1  
+  
+Nowi (5* +spd -res)  
+Weapon: Lightning Breath+  
+Special: Ignis  
+A: Defense 3  
+B: Swordbreaker 2  
+C: Threaten Res 3  
+  
+Nowi (5* +def -atk)  
+Weapon: Lightning Breath+  
+Special: Glowing Ember  
+A: Defense 3  
+B: Vantage 3  
+C: Threaten Res 3  
+S: HP 3  
+  
+Nowi (5*+1 +hp -def)  
+Weapon: Lightning Breath+  
+Special: Moonbow  
+A: Fury 3  
+B: Quick Riposte 2  
+C: Threaten Res 3  
+S: HP 3  
+  
+Nowi (5*+1 +atk -res)  
+Weapon: Lightning Breath+  
+Special: Draconic Aura  
+A: Fury 3  
+B: Swordbreaker 3  
+C: Threaten Res 3  
+S: Speed 1  
+  
+Nowi (5* +spd -hp)  
+Weapon: Lightning Breath+  
+Special: Moonbow  
+A: Fury 3  
+B: Swordbreaker 3  
+C: Threaten Res 3  
+S: Fortify Res 1  
+  
+Nowi (5*+1 +spd -res)  
+Weapon: Lightning Breath+  
+Special: Moonbow  
+A: Fury 3  
+B: Swordbreaker 3  
+C: Threaten Res 2  
+S: Spur Def 1  
+  
+Nowi (5*+2 +spd -res)  
+Weapon: Lightning Breath+  
+Special: Moonbow  
+A: Fury 3  
+B: Swordbreaker 3  
+C: Threaten Res 3  
+S: Attack 1  
+  
+Nowi (5*+2 +hp -res)  
+Weapon: Lightning Breath+  
+Special: Noontime  
+A: Fury 3  
+B: Swordbreaker 3  
+C: Threaten Res 3  
+S: HP 3  
+  
+Nowi (5*+1 +spd -res)  
+Weapon: Lightning Breath+  
+Special: Moonbow  
+A: Fury 3  
+B: Vantage 3  
+C: Threaten Res 3  
+  
+Nowi (5*+3 +spd -hp)  
+Weapon: Lightning Breath+  
+Special: Moonbow  
+A: Fury 3  
+B: Vantage 3  
+C: Threaten Res 3  
+S: Attack 1  
+  
+Nowi (5* +def -hp)  
+Weapon: Lightning Breath+  
+Special: Night Sky  
+A: Speed 3  
+B: Vantage 2  
+C: Threaten Res 2  
+S: Speed 1  
+  
+Nowi (5*+1 +hp -atk)  
+Weapon: Lightning Breath+  
+Special: Moonbow  
+A: Triangle Adept 2  
+B: Wings of Mercy 1  
+C: Threaten Res 3  
+  
+Nowi (5* +spd -atk)  
+Weapon: Lightning Breath+  
+A: Triangle Adept 3  
+C: Threaten Res 3  
+S: HP 3  
+  
+Nowi (5*+1 +spd -hp)  
+Weapon: Lightning Breath+  
+Special: Bonfire  
+A: Triangle Adept 3  
+B: Quick Riposte 2  
+C: Fortify Res 3  
+S: Spur Def 1  
+  
+Nowi (5* +spd -atk)  
+Weapon: Lightning Breath+  
+Special: Moonbow  
+A: Triangle Adept 3  
+B: Quick Riposte 3  
+C: Threaten Res 3  
+S: HP 3  
+  
+Nowi (5*+1 +def -hp)  
+Weapon: Lightning Breath+  
+Special: Moonbow  
+A: Triangle Adept 3  
+B: Quick Riposte 3  
+C: Hone Spd 3  
+  
+Nowi (5*+2 +atk -res)  
+Weapon: Lightning Breath+  
+Special: Moonbow  
+A: Triangle Adept 3  
+B: Quick Riposte 3  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Nowi (5* +spd -def)  
+Weapon: Lightning Breath+  
+Special: Moonbow  
+A: Triangle Adept 3  
+B: Swordbreaker 2  
+C: Threaten Res 3  
+S: Fortify Res 1  
+  
+Olivia (4*+10 +spd -atk)  
+Weapon: Brave Sword+  
+Special: Pavise  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Hone Atk 3  
+S: Attack 1  
+  
+Olivia (5*)  
+Weapon: Ruby Sword  
+Special: Aether  
+A: Fury 3  
+B: Wings of Mercy 2  
+C: Hone Atk 3  
+S: Fortify Res 1  
+  
+Olivia (4*+7 +spd -res)  
+Weapon: Ruby Sword  
+Special: Moonbow  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Hone Atk 3  
+S: Fortify Res 1  
+  
+Olivia (4*+9 +res -atk)  
+Weapon: Ruby Sword+  
+Special: Moonbow  
+A: Distant Counter  
+B: Wings of Mercy 3  
+C: Hone Atk 3  
+S: Fortify Res 1  
+  
+Olivia (4*+9 +spd -atk)  
+Weapon: Silver Sword  
+Special: Moonbow  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Hone Atk 3  
+  
+Olivia (4*+7 +spd -def)  
+Weapon: Silver Sword  
+Special: Moonbow  
+A: Triangle Adept 2  
+B: Wings of Mercy 2  
+C: Hone Atk 3  
+S: Fortify Res 1  
+  
+Olivia (4*+10 +hp -atk)  
+Weapon: Silver Sword  
+Special: Iceberg  
+A: Triangle Adept 3  
+B: Wings of Mercy 3  
+C: Hone Atk 3  
+  
+Olivia (5* +res -spd)  
+Weapon: Silver Sword+  
+B: Knock Back  
+C: Hone Atk 3  
+  
+Olivia (5*)  
+Weapon: Silver Sword+  
+Special: Bonfire  
+A: Fury 3  
+B: Escape Route 2  
+C: Spur Res 3  
+S: Spur Def 1  
+  
+Olivia (5*)  
+Weapon: Silver Sword+  
+Special: Moonbow  
+A: Triangle Adept 3  
+B: Wings of Mercy 2  
+C: Hone Atk 3  
+S: Fortify Res 1  
+  
+Olivia (5*+1 +atk -res)  
+Weapon: Wo Dao+  
+Special: Moonbow  
+A: Distant Counter  
+B: Wings of Mercy 3  
+C: Hone Atk 3  
+S: Quickened Pulse  
+  
+Olwen (5*+4 +atk -hp)  
+Weapon: Blarblade+  
+Special: Luna  
+A: Fury 3  
+B: Desperation 3  
+C: Ward Cavalry  
+S: Speed 1  
+  
+Olwen (5*+3 +spd -def)  
+Weapon: Blarblade+  
+Special: Aether  
+A: Life and Death 3  
+B: Desperation 3  
+C: Hone Cavalry  
+S: Speed 1  
+  
+Olwen (5*+1 +def -res)  
+Weapon: Dire Thunder  
+Special: Moonbow  
+A: Darting Blow 3  
+B: Wings of Mercy 1  
+C: Ward Cavalry  
+  
+Olwen (5*+2 +atk -spd)  
+Weapon: Dire Thunder  
+Special: Luna  
+A: Death Blow 3  
+B: Lancebreaker 3  
+C: Ward Cavalry  
+  
+Olwen (5*+3 +spd -def)  
+Weapon: Dire Thunder  
+Special: Glacies  
+A: Death Blow 3  
+B: Vantage 3  
+C: Ward Cavalry  
+S: HP 3  
+  
+Olwen (5*+1 +atk -def)  
+Weapon: Dire Thunder  
+Special: Iceberg  
+A: Fury 3  
+B: B Tomebreaker 3  
+C: Ward Cavalry  
+S: Spur Def 1  
+  
+Olwen (5*+1 +res -hp)  
+Weapon: Dire Thunder  
+Special: Iceberg  
+A: Fury 3  
+B: Desperation 3  
+C: Ward Cavalry  
+  
+Palla (5* +atk -res)  
+Weapon: Ruby Sword+  
+Special: Moonbow  
+A: Darting Blow 3  
+B: Wings of Mercy 3  
+C: Goad Fliers  
+  
+Palla (5* +spd -atk)  
+Weapon: Ruby Sword+  
+Special: Moonbow  
+A: Darting Blow 3  
+B: Wings of Mercy 3  
+C: Goad Fliers  
+S: Spur Def 1  
+  
+Palla (4*+10)  
+Weapon: Ruby Sword+  
+Special: Moonbow  
+A: Distant Counter  
+B: R Tomebreaker 3  
+C: Fortify Fliers  
+S: HP 3  
+  
+Palla (5*+4 +spd -hp)  
+Weapon: Ruby Sword+  
+Special: Moonbow  
+A: Fury 3  
+B: Drag Back  
+C: Fortify Fliers  
+S: Spur Def 1  
+  
+Palla (5* +atk -def)  
+Weapon: Ruby Sword+  
+Special: Moonbow  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Goad Fliers  
+  
+Palla (5*+1 +atk -hp)  
+Weapon: Ruby Sword+  
+Special: Moonbow  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Goad Fliers  
+S: Speed 1  
+  
+Palla (5* +def -hp)  
+Weapon: Ruby Sword+  
+Special: Moonbow  
+A: Iote's Shield  
+B: Wings of Mercy 3  
+C: Goad Fliers  
+S: Quickened Pulse  
+  
+Palla (5* +def -res)  
+Weapon: Ruby Sword+  
+Special: New Moon  
+A: Life and Death 2  
+B: Wings of Mercy 3  
+C: Goad Fliers  
+S: Speed 1  
+  
+Palla (5*+2 +atk -res)  
+Weapon: Ruby Sword+  
+Special: Luna  
+A: Life and Death 3  
+B: Wings of Mercy 3  
+C: Spur Atk 3  
+S: Quickened Pulse  
+  
+Peri (5* +spd -res)  
+Weapon: Killer Lance+  
+Special: Glimmer  
+A: Resistance 3  
+C: Threaten Def 3  
+  
+Peri (5*)  
+Weapon: Killer Lance+  
+Special: Glimmer  
+A: Resistance 3  
+B: Lancebreaker 1  
+C: Threaten Def 3  
+  
+Priscilla (5*+4 +spd -res)  
+Weapon: Assault  
+Special: Heavenly Light  
+A: Attack 3  
+B: Wrathful Staff 3  
+C: Goad Cavalry  
+S: Breath of Life 1  
+  
+Rebecca (5* +atk -def)  
+Weapon: Silver Bow+  
+A: Darting Blow 3  
+B: Seal Atk 3  
+  
+Rebecca (5*+1 +spd -res)  
+Weapon: Silver Bow+  
+Special: Vengeance  
+A: Darting Blow 3  
+B: Seal Atk 3  
+C: Spur Atk 1  
+  
+Reinhardt (5*+1 +res -spd)  
+Weapon: Dire Thunder  
+Special: Iceberg  
+A: Attack 2  
+B: Vantage 3  
+C: Goad Cavalry  
+S: Attack 1  
+  
+Reinhardt (5* +hp -spd)  
+Weapon: Dire Thunder  
+Special: Moonbow  
+A: Attack 3  
+B: Lancebreaker 2  
+C: Fortify Cavalry  
+S: Quickened Pulse  
+  
+Reinhardt (5*+1 +atk -res)  
+Weapon: Dire Thunder  
+Special: Draconic Aura  
+A: Attack 3  
+B: Lancebreaker 3  
+C: Spur Atk 3  
+S: Attack 1  
+  
+Reinhardt (5* +spd -def)  
+Weapon: Dire Thunder  
+Special: Luna  
+A: Attack 3  
+B: Quick Riposte 3  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Reinhardt (5* +def -res)  
+Weapon: Dire Thunder  
+Special: Blazing Thunder  
+A: Death Blow 2  
+B: Vantage 3  
+C: Goad Cavalry  
+  
+Reinhardt (5* +atk -spd)  
+Weapon: Dire Thunder  
+Special: Moonbow  
+A: Death Blow 2  
+B: Vantage 3  
+C: Goad Cavalry  
+S: Attack 1  
+  
+Reinhardt (5*+1 +atk -res)  
+Weapon: Dire Thunder  
+Special: Moonbow  
+A: Death Blow 2  
+B: Vantage 3  
+C: Goad Cavalry  
+S: Quickened Pulse  
+  
+Reinhardt (5*+2 +atk -res)  
+Weapon: Dire Thunder  
+Special: Moonbow  
+A: Death Blow 2  
+B: Wings of Mercy 2  
+C: Goad Cavalry  
+S: Quickened Pulse  
+  
+Reinhardt (5*+2 +atk -res)  
+Weapon: Dire Thunder  
+Special: Draconic Aura  
+A: Death Blow 3  
+B: Lancebreaker 2  
+C: Goad Cavalry  
+S: Attack 1  
+  
+Reinhardt (5*+2 +atk -def)  
+Weapon: Dire Thunder  
+Special: Moonbow  
+A: Death Blow 3  
+B: Lancebreaker 2  
+C: Fortify Res 3  
+S: Quickened Pulse  
+  
+Reinhardt (5*+1 +atk -spd)  
+Weapon: Dire Thunder  
+Special: Blazing Thunder  
+A: Death Blow 3  
+B: Lancebreaker 3  
+C: Hone Cavalry  
+S: Attack 1  
+  
+Reinhardt (5*+4)  
+Weapon: Dire Thunder  
+Special: Bonfire  
+A: Death Blow 3  
+B: Lancebreaker 3  
+C: Ward Cavalry  
+S: Attack 1  
+  
+Reinhardt (5* +atk -hp)  
+Weapon: Dire Thunder  
+Special: Luna  
+A: Death Blow 3  
+B: Lancebreaker 3  
+C: Hone Atk 3  
+S: HP 3  
+  
+Reinhardt (5*+1 +atk -def)  
+Weapon: Dire Thunder  
+Special: Luna  
+A: Death Blow 3  
+B: Lancebreaker 3  
+C: Spur Atk 3  
+S: Attack 1  
+  
+Reinhardt (5*+1 +hp -def)  
+Weapon: Dire Thunder  
+Special: Luna  
+A: Death Blow 3  
+B: Lancebreaker 3  
+C: Savage Blow 3  
+S: Attack 1  
+  
+Reinhardt (5* +hp -spd)  
+Weapon: Dire Thunder  
+Special: Moonbow  
+A: Death Blow 3  
+B: Lancebreaker 3  
+C: Hone Spd 3  
+S: Quickened Pulse  
+  
+Reinhardt (5*+1 +atk -hp)  
+Weapon: Dire Thunder  
+Special: Moonbow  
+A: Death Blow 3  
+B: Lancebreaker 3  
+C: Fortify Cavalry  
+S: Quickened Pulse  
+  
+Reinhardt (5*+4 +atk -def)  
+Weapon: Dire Thunder  
+Special: Moonbow  
+A: Death Blow 3  
+B: Lancebreaker 3  
+C: Fortify Cavalry  
+S: Quickened Pulse  
+  
+Reinhardt (5*)  
+Weapon: Dire Thunder  
+Special: Moonbow  
+A: Death Blow 3  
+B: Quick Riposte 3  
+C: Goad Cavalry  
+S: Attack 1  
+  
+Reinhardt (5*+1 +def -spd)  
+Weapon: Dire Thunder  
+Special: Blazing Thunder  
+A: Death Blow 3  
+B: R Tomebreaker 3  
+C: Hone Atk 3  
+S: Attack 1  
+  
+Reinhardt (5*)  
+Weapon: Dire Thunder  
+Special: Draconic Aura  
+A: Death Blow 3  
+B: Vantage 3  
+C: Goad Cavalry  
+S: Attack 1  
+  
+Reinhardt (5*+1 +hp -res)  
+Weapon: Dire Thunder  
+Special: Draconic Aura  
+A: Death Blow 3  
+B: Vantage 3  
+C: Spur Atk 2  
+S: Attack 1  
+  
+Reinhardt (5*+2 +atk -def)  
+Weapon: Dire Thunder  
+Special: Draconic Aura  
+A: Death Blow 3  
+B: Vantage 3  
+C: Goad Cavalry  
+S: Quickened Pulse  
+  
+Reinhardt (5* +def -spd)  
+Weapon: Dire Thunder  
+Special: Moonbow  
+A: Death Blow 3  
+B: Vantage 3  
+C: Fortify Cavalry  
+S: Quickened Pulse  
+  
+Reinhardt (5*+2 +atk -def)  
+Weapon: Dire Thunder  
+Special: Moonbow  
+A: Death Blow 3  
+B: Vantage 3  
+C: Fortify Cavalry  
+S: Quickened Pulse  
+  
+Reinhardt (5*+3 +atk -def)  
+Weapon: Dire Thunder  
+Special: Moonbow  
+A: Death Blow 3  
+B: Vantage 3  
+C: Goad Cavalry  
+  
+Reinhardt (5* +hp -def)  
+Weapon: Dire Thunder  
+Special: Aether  
+A: Death Blow 3  
+B: Wings of Mercy 3  
+C: Hone Cavalry  
+S: Attack 1  
+  
+Reinhardt (5*+2 +atk -spd)  
+Weapon: Dire Thunder  
+Special: Blazing Thunder  
+A: Death Blow 3  
+B: Wings of Mercy 3  
+C: Fortify Cavalry  
+S: Spur Def 1  
+  
+Reinhardt (5*+2 +atk -def)  
+Weapon: Dire Thunder  
+Special: Draconic Aura  
+A: Death Blow 3  
+B: Wings of Mercy 3  
+C: Goad Cavalry  
+  
+Reinhardt (5* +atk -def)  
+Weapon: Dire Thunder  
+Special: Luna  
+A: Death Blow 3  
+B: Wings of Mercy 3  
+C: Goad Cavalry  
+S: Fortify Res 1  
+  
+Reinhardt (5*+2 +atk -hp)  
+Weapon: Dire Thunder  
+Special: Luna  
+A: Death Blow 3  
+B: Wings of Mercy 3  
+C: Spur Atk 3  
+S: Attack 1  
+  
+Reinhardt (5*+1 +res -spd)  
+Weapon: Dire Thunder  
+Special: Moonbow  
+A: Death Blow 3  
+B: Wings of Mercy 3  
+C: Fortify Cavalry  
+S: Quickened Pulse  
+  
+Reinhardt (5* +spd -atk)  
+Weapon: Dire Thunder  
+Special: Blazing Thunder  
+A: Defiant Atk 3  
+B: Vantage 3  
+C: Spur Atk 3  
+S: Attack 1  
+  
+Reinhardt (5*+3 +atk -hp)  
+Weapon: Dire Thunder  
+Special: Moonbow  
+A: Fury 3  
+B: Wings of Mercy 3  
+C: Goad Cavalry  
+  
+Reinhardt (5* +res -spd)  
+Weapon: Dire Thunder  
+Special: Blazing Thunder  
+A: Warding Blow 3  
+B: Vantage 3  
+C: Spur Atk 2  
+  
+Robin(F) (Summer) (5* +hp -def)  
+Weapon: Deft Harpoon+  
+Special: Glacies  
+A: Fury 3  
+B: Drag Back  
+C: Lance Valor 3  
+S: Speed 1  
+  
+Robin(F) (Summer) (5*+4 +atk -res)  
+Weapon: Deft Harpoon+  
+Special: Moonbow  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Atk 3  
+S: Quickened Pulse  
+  
+Robin(M) (5*+4 +spd -res)  
+Weapon: Blarraven+  
+Special: Bonfire  
+A: Darting Blow 3  
+B: Swordbreaker 2  
+C: Savage Blow 3  
+S: Breath of Life 1  
+  
+Robin(M) (5* +atk -spd)  
+Weapon: Blarraven+  
+Special: Bonfire  
+A: Defiant Spd 3  
+B: Bowbreaker 3  
+C: Spur Def 3  
+  
+Robin(M) (5*+1 +hp -def)  
+Weapon: Blarraven+  
+Special: Bonfire  
+A: Defiant Spd 3  
+B: Bowbreaker 3  
+C: Spur Def 3  
+S: HP 3  
+  
+Robin(M) (5*+2)  
+Weapon: Blarraven+  
+Special: Bonfire  
+A: Defiant Spd 3  
+B: Vantage 2  
+C: Fortify Def 3  
+  
+Robin(M) (5*+1 +hp -res)  
+Weapon: Blarraven+  
+Special: Bonfire  
+A: Triangle Adept 3  
+B: B Tomebreaker 3  
+C: Spur Def 3  
+S: Fortify Res 1  
+  
+Robin(M) (5*+5 +spd -res)  
+Weapon: Blarraven+  
+Special: Bonfire  
+A: Triangle Adept 3  
+B: B Tomebreaker 3  
+C: Spur Def 3  
+S: Fortify Res 1  
+  
+Robin(M) (5*+2 +spd -hp)  
+Weapon: Blarraven+  
+Special: Bonfire  
+A: Triangle Adept 3  
+B: Quick Riposte 2  
+C: Hone Atk 3  
+S: HP 3  
+  
+Robin(M) (5*+3 +spd -hp)  
+Weapon: Blarraven+  
+Special: Bonfire  
+A: Triangle Adept 3  
+B: R Tomebreaker 3  
+C: Hone Atk 3  
+S: Attack 1  
+  
+Robin(M) (5*+4 +atk -hp)  
+Weapon: Blarraven+  
+Special: Bonfire  
+A: Triangle Adept 3  
+B: Wings of Mercy 3  
+C: Savage Blow 3  
+S: Spur Def 1  
+  
+Roderick (5* +atk -def)  
+Weapon: Firesweep Lance+  
+A: Darting Blow 3  
+B: Drag Back  
+C: Drive Def 2  
+  
+Roy (5*+2 +hp -spd)  
+Weapon: Binding Blade  
+Special: Glacies  
+A: Death Blow 2  
+B: Seal Def 3  
+C: Spur Res 2  
+S: Fortify Res 1  
+  
+Roy (5* +hp -res)  
+Weapon: Binding Blade  
+Special: Aether  
+A: Distant Counter  
+B: Quick Riposte 3  
+C: Spur Def 3  
+  
+Roy (5*+2 +def -atk)  
+Weapon: Binding Blade  
+Special: Moonbow  
+A: Fury 3  
+B: Seal Def 3  
+C: Threaten Spd 3  
+S: Attack 1  
+  
+Ryoma (5*+3 +spd -res)  
+Weapon: Raijinto  
+Special: Astra  
+A: Attack 2  
+B: Vantage 3  
+C: Hone Spd 3  
+  
+Ryoma (5* +spd -def)  
+Weapon: Raijinto  
+Special: Astra  
+A: Defiant Atk 3  
+B: Desperation 2  
+C: Hone Spd 3  
+  
+Ryoma (5* +def -hp)  
+Weapon: Raijinto  
+Special: Astra  
+A: Defiant Atk 3  
+B: Desperation 3  
+C: Hone Spd 3  
+  
+Ryoma (5* +def -hp)  
+Weapon: Raijinto  
+Special: Astra  
+A: Defiant Atk 3  
+B: Drag Back  
+C: Hone Spd 3  
+S: HP 3  
+  
+Ryoma (5* +hp -def)  
+Weapon: Raijinto  
+Special: Astra  
+A: Defiant Atk 3  
+B: Poison Strike 3  
+C: Hone Spd 3  
+  
+Ryoma (5*+3 +spd -hp)  
+Weapon: Raijinto  
+Special: Astra  
+A: Defiant Atk 3  
+B: Seal Def 3  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Ryoma (5* +atk -res)  
+Weapon: Raijinto  
+Special: Astra  
+A: Defiant Atk 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Ryoma (5* +res -atk)  
+Weapon: Raijinto  
+Special: Astra  
+A: Defiant Atk 3  
+B: Vantage 3  
+C: Threaten Spd 3  
+S: Speed 1  
+  
+Ryoma (5*+1 +atk -def)  
+Weapon: Raijinto  
+Special: Astra  
+A: Defiant Atk 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: HP 3  
+  
+Ryoma (5*)  
+Weapon: Raijinto  
+Special: Draconic Aura  
+A: Defiant Atk 3  
+B: Vantage 3  
+C: Threaten Spd 3  
+S: Speed 1  
+  
+Ryoma (5* +spd -def)  
+Weapon: Raijinto  
+Special: Draconic Aura  
+A: Defiant Atk 3  
+B: Vantage 3  
+C: Threaten Spd 2  
+  
+Ryoma (5*+3 +res -hp)  
+Weapon: Raijinto  
+Special: Moonbow  
+A: Defiant Atk 3  
+B: Vantage 3  
+C: Hone Spd 3  
+  
+Ryoma (5*+1 +res -spd)  
+Weapon: Raijinto  
+Special: Sol  
+A: Defiant Atk 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Ryoma (5* +hp -atk)  
+Weapon: Raijinto  
+Special: Astra  
+A: Fury 2  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Attack 1  
+  
+Ryoma (5*+2 +res -atk)  
+Weapon: Raijinto  
+Special: Draconic Aura  
+A: Fury 2  
+B: Vantage 3  
+C: Hone Spd 3  
+  
+Ryoma (5* +res -atk)  
+Weapon: Raijinto  
+Special: Draconic Aura  
+A: Fury 3  
+B: Desperation 3  
+C: Hone Spd 3  
+  
+Ryoma (5*+3 +atk -hp)  
+Weapon: Raijinto  
+Special: Dragon Fang  
+A: Fury 3  
+B: Desperation 3  
+C: Threaten Spd 3  
+S: HP 3  
+  
+Ryoma (5*)  
+Weapon: Raijinto  
+Special: Astra  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Attack 1  
+  
+Ryoma (5* +spd -def)  
+Weapon: Raijinto  
+Special: Astra  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Speed 1  
+  
+Ryoma (5* +spd -res)  
+Weapon: Raijinto  
+Special: Astra  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Speed 1  
+  
+Ryoma (5*+1 +def -hp)  
+Weapon: Raijinto  
+Special: Astra  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Ryoma (5*+1 +spd -res)  
+Weapon: Raijinto  
+Special: Astra  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Speed 1  
+  
+Ryoma (5*+1)  
+Weapon: Raijinto  
+Special: Astra  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Speed 1  
+  
+Ryoma (5*+2 +atk -hp)  
+Weapon: Raijinto  
+Special: Astra  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: HP 3  
+  
+Ryoma (5*+3 +spd -res)  
+Weapon: Raijinto  
+Special: Astra  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Speed 1  
+  
+Ryoma (5* +atk -hp)  
+Weapon: Raijinto  
+Special: Draconic Aura  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: HP 3  
+  
+Ryoma (5* +atk -res)  
+Weapon: Raijinto  
+Special: Draconic Aura  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Atk 3  
+S: Quickened Pulse  
+  
+Ryoma (5*+1)  
+Weapon: Raijinto  
+Special: Draconic Aura  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Ryoma (5*+2 +atk -def)  
+Weapon: Raijinto  
+Special: Glimmer  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Speed 1  
+  
+Ryoma (5*+1 +hp -atk)  
+Weapon: Raijinto  
+Special: Growing Thunder  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+  
+Ryoma (5*+3 +spd -def)  
+Weapon: Raijinto  
+Special: Luna  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: HP 3  
+  
+Ryoma (5* +spd -def)  
+Weapon: Raijinto  
+Special: Moonbow  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Speed 1  
+  
+Ryoma (5*+1 +atk -res)  
+Weapon: Raijinto  
+Special: Moonbow  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Speed 1  
+  
+Ryoma (5*+1 +def -hp)  
+Weapon: Raijinto  
+Special: Moonbow  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Speed 1  
+  
+Ryoma (5*+1 +atk -res)  
+Weapon: Raijinto  
+Special: Moonbow  
+A: Fury 3  
+B: Vantage 3  
+C: Threaten Def 3  
+  
+Ryoma (5*+2 +atk -hp)  
+Weapon: Raijinto  
+Special: Moonbow  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+  
+Ryoma (5*+2 +hp -def)  
+Weapon: Raijinto  
+Special: Moonbow  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Spur Def 1  
+  
+Ryoma (5*+3)  
+Weapon: Raijinto  
+Special: Moonbow  
+A: Fury 3  
+B: Vantage 3  
+C: Threaten Spd 3  
+  
+Ryoma (5*+4 +spd -hp)  
+Weapon: Raijinto  
+Special: Moonbow  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Speed 1  
+  
+Ryoma (5* +spd -atk)  
+Weapon: Raijinto  
+Special: Sol  
+A: Life and Death 3  
+B: Quick Riposte 2  
+C: Threaten Def 2  
+S: HP 3  
+  
+Ryoma (5*+2 +res -def)  
+Weapon: Raijinto  
+Special: Luna  
+A: Triangle Adept 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Speed 1  
+  
+Ryoma (5*+3 +hp -def)  
+Weapon: Raijinto  
+Special: Astra  
+A: Wind Boost 2  
+B: Vantage 3  
+C: Hone Spd 3  
+  
+Sakura (5*+2 +res -def)  
+Weapon: Pain  
+Special: Heavenly Light  
+A: Defense 1  
+B: Wings of Mercy 3  
+C: Fortify Def 3  
+  
+Sanaki (5*+1 +def -res)  
+Weapon: Cymbeline  
+Special: Glacies  
+A: Triangle Adept 3  
+B: Axebreaker 2  
+C: Hone Atk 3  
+S: Fortify Res 1  
+  
+Sanaki (5* +spd -def)  
+Weapon: Cymbeline  
+Special: Chilling Wind  
+A: Triangle Adept 3  
+B: Bowbreaker 1  
+C: Hone Atk 3  
+S: Spur Def 1  
+  
+Sanaki (5* +def -res)  
+Weapon: Cymbeline  
+Special: New Moon  
+A: Triangle Adept 3  
+B: Vantage 3  
+C: Hone Atk 3  
+S: Attack 1  
+  
+Sanaki (5*+3 +res -hp)  
+Weapon: Raudrraven+  
+Special: Glimmer  
+A: Triangle Adept 3  
+B: Swordbreaker 2  
+C: Hone Atk 3  
+S: Attack 1  
+  
+Shanna (4*+10 +spd -def)  
+Weapon: Firesweep Lance+  
+Special: Moonbow  
+A: Life and Death 3  
+B: Swordbreaker 3  
+C: Hone Fliers  
+S: Quickened Pulse  
+  
+Sharena (5*)  
+Weapon: Brave Lance+  
+Special: Bonfire  
+A: Speed 3  
+B: Lancebreaker 3  
+C: Fortify Def 3  
+S: Fortify Res 1  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Luna  
+A: Distant Counter  
+B: Quick Riposte 3  
+C: Fortify Def 3  
+S: Speed 1  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Galeforce  
+A: Distant Counter  
+B: Renewal 3  
+C: Fortify Def 3  
+S: Speed 1  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Galeforce  
+A: Distant Counter  
+B: Renewal 3  
+C: Fortify Def 3  
+S: Speed 1  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Bonfire  
+A: Fury 3  
+B: Lancebreaker 3  
+C: Fortify Def 3  
+S: Fortify Res 1  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Moonbow  
+A: Fury 3  
+B: Quick Riposte 2  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Moonbow  
+A: Fury 3  
+B: Swordbreaker 2  
+C: Fortify Def 3  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Astra  
+A: Speed 3  
+B: Desperation 3  
+C: Fortify Def 3  
+S: Speed 1  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Luna  
+A: Speed 3  
+B: Drag Back  
+C: Fortify Def 3  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Growing Thunder  
+A: Speed 3  
+B: Knock Back  
+C: Fortify Def 3  
+S: HP 3  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+A: Speed 3  
+B: Lancebreaker 2  
+C: Fortify Def 3  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Moonbow  
+A: Speed 3  
+B: Obstruct 3  
+C: Fortify Def 3  
+S: Fortify Res 1  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Luna  
+A: Speed 3  
+B: Quick Riposte 2  
+C: Fortify Def 3  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+A: Speed 3  
+B: Renewal 2  
+C: Fortify Def 3  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Galeforce  
+A: Speed 3  
+B: Renewal 3  
+C: Fortify Def 3  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: New Moon  
+A: Speed 3  
+B: Swordbreaker 2  
+C: Fortify Def 3  
+S: Speed 1  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Escutcheon  
+A: Speed 3  
+B: Swordbreaker 3  
+C: Fortify Def 3  
+S: Fortify Res 1  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Moonbow  
+A: Speed 3  
+B: Swordbreaker 3  
+C: Fortify Def 3  
+S: Spur Def 1  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Moonbow  
+A: Speed 3  
+B: Vantage 3  
+C: Spur Atk 3  
+S: Fortify Res 1  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Moonbow  
+A: Speed 3  
+B: Wings of Mercy 3  
+C: Fortify Def 3  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Moonbow  
+A: Speed 3  
+B: Wings of Mercy 3  
+C: Fortify Def 3  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Moonbow  
+A: Triangle Adept 3  
+B: Swordbreaker 3  
+C: Fortify Def 3  
+S: Fortify Res 1  
+  
+Sharena (5*)  
+Weapon: Fensalir  
+Special: Moonbow  
+A: Triangle Adept 3  
+B: Vantage 3  
+C: Spur Atk 3  
+S: Spur Def 1  
+  
+Sheena (5* +spd -hp)  
+Weapon: Killer Axe+  
+Special: Bonfire  
+A: Distant Counter  
+B: Wary Fighter 3  
+C: Ward Armor  
+S: Spur Def 1  
+  
+Sheena (5* +def -hp)  
+Weapon: Killer Axe+  
+Special: Bonfire  
+A: Svalinn Shield  
+B: Wary Fighter 3  
+C: Fortify Armor  
+S: HP 3  
+  
+Sophia (5*+3 +atk -res)  
+Weapon: Raudrblade+  
+Special: Draconic Aura  
+A: Attack 3  
+B: G Tomebreaker 3  
+C: Fortify Res 3  
+S: Attack 1  
+  
+Soren (5*+1 +def -res)  
+Weapon: Gronnblade+  
+Special: Moonbow  
+A: Fury 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: Speed 1  
+  
+Soren (5*+3 +atk -hp)  
+Weapon: Gronnraven+  
+Special: Glacies  
+A: Triangle Adept 3  
+B: G Tomebreaker 3  
+C: Fortify Res 3  
+S: Speed 1  
+  
+Soren (5*+3 +spd -atk)  
+Weapon: Gronnraven+  
+Special: Growing Wind  
+A: Triangle Adept 3  
+B: Vantage 3  
+C: Threaten Res 3  
+  
+Subaki (5* +atk -def)  
+Weapon: Sapphire Lance+  
+Special: Growing Flame  
+A: Attack 2  
+B: Quick Riposte 3  
+C: Spur Atk 3  
+S: Spur Def 1  
+  
+Takumi (5*+4 +spd -hp)  
+Weapon: Brave Bow+  
+Special: Luna  
+A: Life and Death 3  
+B: Swordbreaker 2  
+C: Hone Spd 3  
+S: Attack 1  
+  
+Takumi (5*+1 +atk -hp)  
+Weapon: Brave Bow+  
+Special: Draconic Aura  
+A: Life and Death 3  
+B: Vantage 3  
+C: Threaten Spd 3  
+S: Quickened Pulse  
+  
+Takumi (5* +spd -hp)  
+Weapon: Clarisse's Bow+  
+Special: Moonbow  
+A: Close Counter  
+B: Vantage 3  
+C: Fortify Res 3  
+S: Speed 1  
+  
+Takumi (5*+1 +spd -res)  
+Weapon: Fujin Yumi  
+Special: Vengeance  
+A: Close Counter  
+C: Threaten Spd 3  
+  
+Takumi (5* +def -res)  
+Weapon: Fujin Yumi  
+Special: Astra  
+A: Close Counter  
+B: Renewal 3  
+C: Threaten Spd 3  
+  
+Takumi (5* +spd -def)  
+Weapon: Fujin Yumi  
+Special: Vengeance  
+A: Close Counter  
+B: Seal Def 2  
+C: Threaten Spd 3  
+  
+Takumi (5* +def -res)  
+Weapon: Fujin Yumi  
+Special: Vengeance  
+A: Close Counter  
+B: Seal Def 2  
+C: Threaten Spd 3  
+  
+Takumi (5*+1 +spd -hp)  
+Weapon: Fujin Yumi  
+Special: Vengeance  
+A: Close Counter  
+B: Swordbreaker 3  
+C: Threaten Spd 3  
+S: HP 3  
+  
+Takumi (5* +atk -res)  
+Weapon: Fujin Yumi  
+Special: Vengeance  
+A: Close Counter  
+B: Vantage 1  
+C: Threaten Spd 3  
+  
+Takumi (5* +hp -res)  
+Weapon: Fujin Yumi  
+Special: Vengeance  
+A: Close Counter  
+B: Vantage 2  
+C: Threaten Spd 3  
+  
+Takumi (5* +spd -def)  
+Weapon: Fujin Yumi  
+Special: Blazing Flame  
+A: Close Counter  
+B: Vantage 3  
+C: Savage Blow 3  
+S: Quickened Pulse  
+  
+Takumi (5* +atk -res)  
+Weapon: Fujin Yumi  
+Special: Blazing Thunder  
+A: Close Counter  
+B: Vantage 3  
+C: Threaten Spd 3  
+  
+Takumi (5*+2 +hp -def)  
+Weapon: Fujin Yumi  
+Special: Glimmer  
+A: Close Counter  
+B: Vantage 3  
+C: Threaten Spd 3  
+  
+Takumi (5* +hp -res)  
+Weapon: Fujin Yumi  
+Special: Luna  
+A: Close Counter  
+B: Vantage 3  
+C: Threaten Spd 3  
+S: Speed 1  
+  
+Takumi (5* +res -spd)  
+Weapon: Fujin Yumi  
+Special: Moonbow  
+A: Close Counter  
+B: Vantage 3  
+C: Threaten Spd 3  
+  
+Takumi (5* +atk -spd)  
+Weapon: Fujin Yumi  
+Special: Vengeance  
+A: Close Counter  
+B: Vantage 3  
+C: Threaten Spd 3  
+S: Attack 1  
+  
+Takumi (5* +spd -def)  
+Weapon: Fujin Yumi  
+Special: Vengeance  
+A: Close Counter  
+B: Vantage 3  
+C: Threaten Spd 3  
+  
+Takumi (5* +spd -def)  
+Weapon: Fujin Yumi  
+Special: Vengeance  
+A: Close Counter  
+B: Vantage 3  
+C: Threaten Spd 3  
+S: Spur Def 1  
+  
+Takumi (5* +res -spd)  
+Weapon: Fujin Yumi  
+Special: Vengeance  
+A: Close Counter  
+B: Vantage 3  
+C: Threaten Spd 3  
+S: Breath of Life 1  
+  
+Takumi (5*+1 +spd -hp)  
+Weapon: Fujin Yumi  
+Special: Vengeance  
+A: Close Counter  
+B: Vantage 3  
+C: Threaten Spd 3  
+S: Speed 1  
+  
+Takumi (5*+1 +atk -def)  
+Weapon: Fujin Yumi  
+Special: Vengeance  
+A: Close Counter  
+B: Vantage 3  
+C: Threaten Spd 3  
+S: Breath of Life 1  
+  
+Takumi (5*+2 +atk -res)  
+Weapon: Fujin Yumi  
+Special: Vengeance  
+A: Close Counter  
+B: Vantage 3  
+C: Breath of Life 3  
+S: Attack 1  
+  
+Takumi (5*+3 +res -def)  
+Weapon: Fujin Yumi  
+Special: Vengeance  
+A: Close Counter  
+B: Vantage 3  
+C: Threaten Spd 3  
+S: HP 3  
+  
+Tharja (5* +atk -def)  
+Weapon: Raudrblade+  
+Special: Moonbow  
+A: Darting Blow 3  
+B: Desperation 3  
+C: Fortify Res 3  
+S: Speed 1  
+  
+Tharja (5*+1 +spd -res)  
+Weapon: Raudrblade+  
+Special: Moonbow  
+A: Darting Blow 3  
+B: Desperation 3  
+C: Spur Res 3  
+S: Quickened Pulse  
+  
+Tharja (5*+3 +spd -hp)  
+Weapon: Raudrblade+  
+Special: Moonbow  
+A: Darting Blow 3  
+B: Desperation 3  
+C: Hone Atk 3  
+S: Speed 1  
+  
+Tharja (5*)  
+Weapon: Raudrblade+  
+Special: Vengeance  
+A: Darting Blow 3  
+B: Desperation 3  
+C: Spur Res 3  
+S: Speed 1  
+  
+Tharja (5* +spd -hp)  
+Weapon: Raudrblade+  
+Special: Vengeance  
+A: Darting Blow 3  
+B: Poison Strike 2  
+C: Spur Res 3  
+S: Speed 1  
+  
+Tharja (5* +spd -atk)  
+Weapon: Raudrblade+  
+Special: Vengeance  
+A: Darting Blow 3  
+B: Vantage 3  
+C: Spur Res 3  
+S: Attack 1  
+  
+Tiki(A) (Summer) (5* +atk -def)  
+Weapon: Melon Crusher+  
+Special: Daylight  
+A: Close Def 3  
+B: Renewal 3  
+C: Axe Valor 3  
+S: Speed 1  
+  
+Tiki(Y) (5* +atk -hp)  
+Weapon: Flametongue+  
+Special: Growing Flame  
+A: Armored Blow 3  
+C: Breath of Life 3  
+  
+Tiki(Y) (5* +atk -hp)  
+Weapon: Flametongue+  
+Special: Growing Flame  
+A: Armored Blow 3  
+B: Desperation 2  
+C: Threaten Spd 2  
+  
+Tiki(Y) (5* +atk -res)  
+Weapon: Flametongue+  
+Special: Growing Flame  
+A: Armored Blow 3  
+B: Obstruct 1  
+C: Breath of Life 3  
+S: Attack 1  
+  
+Tiki(Y) (5*+2 +res -hp)  
+Weapon: Flametongue+  
+Special: Growing Flame  
+A: Armored Blow 3  
+B: Renewal 3  
+C: Breath of Life 3  
+S: Speed 1  
+  
+Tiki(Y) (5* +atk -hp)  
+Weapon: Flametongue+  
+Special: Growing Flame  
+A: Armored Blow 3  
+B: Seal Res 3  
+C: Breath of Life 3  
+  
+Tiki(Y) (5* +def -spd)  
+Weapon: Flametongue+  
+Special: Growing Flame  
+A: Armored Blow 3  
+B: Swordbreaker 3  
+C: Breath of Life 3  
+S: Fortify Res 1  
+  
+Tiki(Y) (5* +atk -res)  
+Weapon: Flametongue+  
+Special: Growing Flame  
+A: Armored Blow 3  
+B: Vantage 2  
+C: Breath of Life 3  
+S: Fortify Res 1  
+  
+Tiki(Y) (5*+2 +spd -res)  
+Weapon: Flametongue+  
+Special: Moonbow  
+A: Triangle Adept 3  
+B: Quick Riposte 2  
+C: Hone Spd 3  
+S: HP 3  
+  
+Tiki(Y) (5*+1 +spd -def)  
+Weapon: Lightning Breath+  
+Special: Growing Flame  
+A: Fury 3  
+B: G Tomebreaker 2  
+C: Hone Atk 3  
+S: Speed 1  
+  
+Tiki(Y) (5*+2 +spd -hp)  
+Weapon: Lightning Breath+  
+Special: Noontime  
+A: Fury 3  
+B: Vantage 3  
+C: Breath of Life 3  
+S: Spur Def 1  
+  
+Titania (5*+1 +def -res)  
+Weapon: Emerald Axe+  
+Special: Bonfire  
+A: Armored Blow 3  
+B: G Tomebreaker 3  
+C: Hone Atk 3  
+S: HP 3  
+  
+Titania (5* +spd -res)  
+Weapon: Emerald Axe+  
+Special: Moonbow  
+A: Death Blow 3  
+B: Guard 3  
+C: Hone Cavalry  
+S: Quickened Pulse  
+  
+Titania (5*+1 +res -spd)  
+Weapon: Emerald Axe+  
+Special: Iceberg  
+A: Distant Counter  
+B: G Tomebreaker 3  
+C: Hone Cavalry  
+S: Fortify Res 1  
+  
+Titania (5*+1 +hp -def)  
+Weapon: Emerald Axe+  
+Special: Moonbow  
+A: Distant Counter  
+B: Quick Riposte 2  
+C: Fortify Cavalry  
+S: HP 3  
+  
+Ursula (5*)  
+Weapon: Blarblade+  
+Special: Moonbow  
+A: Death Blow 3  
+B: Wings of Mercy 3  
+C: Hone Cavalry  
+S: Speed 1  
+  
+Xander (5*)  
+Weapon: Siegfried  
+Special: Blazing Light  
+A: Armored Blow 3  
+B: Axebreaker 3  
+C: Spur Def 3  
+S: Speed 1  
+  
+Xander (5*)  
+Weapon: Siegfried  
+Special: Blazing Light  
+A: Armored Blow 3  
+B: Axebreaker 3  
+C: Spur Def 3  
+S: Fortify Res 1  
+  
+Xander (5*+1)  
+Weapon: Siegfried  
+Special: Blazing Light  
+A: Armored Blow 3  
+B: Quick Riposte 3  
+C: Spur Def 3  
+S: HP 3  
+  
+Xander (5*+1)  
+Weapon: Siegfried  
+Special: Blazing Light  
+A: Armored Blow 3  
+B: Quick Riposte 3  
+C: Spur Def 3  
+S: HP 3  
+  
+Xander (5*+1)  
+Weapon: Siegfried  
+Special: Bonfire  
+A: Attack Def 2  
+B: Quick Riposte 3  
+C: Hone Cavalry  
+S: Attack 1  
+  
+Xander (5*)  
+Weapon: Siegfried  
+Special: Ignis  
+A: Death Blow 3  
+B: Vantage 3  
+C: Hone Spd 3  
+S: Fortify Res 1  
+  
+Xander (5*)  
+Weapon: Siegfried  
+Special: Moonbow  
+A: Earth Boost 3  
+B: Quick Riposte 2  
+C: Fortify Cavalry  
+S: HP 3  
+  
+Xander (5*)  
+Weapon: Siegfried  
+Special: Blazing Light  
+A: Fury 3  
+B: Quick Riposte 2  
+C: Hone Cavalry  
+S: Speed 1  
+  
+Xander (5*)  
+Weapon: Siegfried  
+Special: Bonfire  
+A: Fury 3  
+B: Quick Riposte 2  
+C: Hone Cavalry  
+  
+Xander (5*+1)  
+Weapon: Siegfried  
+Special: Bonfire  
+A: Fury 3  
+B: Quick Riposte 2  
+C: Hone Cavalry  
+S: Spur Def 1  
+  
+Xander (5*+1)  
+Weapon: Siegfried  
+Special: Bonfire  
+A: Fury 3  
+B: Quick Riposte 3  
+C: Ward Cavalry  
+  
+Xander (5*+1)  
+Weapon: Siegfried  
+Special: Bonfire  
+A: Fury 3  
+B: Quick Riposte 3  
+C: Hone Spd 3  
+S: HP 3  
+  
+Xander (5*)  
+Weapon: Siegfried  
+Special: Bonfire  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Cavalry  
+S: HP 3  
+  
+Xander (5*)  
+Weapon: Siegfried  
+Special: Bonfire  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Cavalry  
+S: Quickened Pulse  
+  
+Xander (5*+1)  
+Weapon: Siegfried  
+Special: Bonfire  
+A: Fury 3  
+B: Vantage 3  
+C: Fortify Cavalry  
+S: Spur Def 1  
+  
+Xander (5*)  
+Weapon: Siegfried  
+Special: Rising Light  
+A: Fury 3  
+B: Vantage 3  
+C: Hone Cavalry  
+  
+Xander (5*+1)  
+Weapon: Siegfried  
+Special: Ignis  
+A: Triangle Adept 3  
+B: Quick Riposte 3  
+C: Hone Cavalry  
+S: HP 3  
+  
+Zephiel (5*+1)  
+Weapon: Eckesachs  
+Special: Moonbow  
+A: Distant Counter  
+B: Quick Riposte 2  
+C: Fortify Armor  
+S: Attack 1  
+  
+Zephiel (5*+1)  
+Weapon: Eckesachs  
+Special: Aether  
+A: Distant Counter  
+B: Wary Fighter 3  
+C: Goad Armor  
+  
+Zephiel (5*)  
+Weapon: Eckesachs  
+Special: Bonfire  
+A: Distant Counter  
+B: Wary Fighter 3  
+C: Spur Def 2  
+S: Spur Def 1  
+  
+Zephiel (5*)  
+Weapon: Eckesachs  
+Special: Bonfire  
+A: Distant Counter  
+B: Wary Fighter 3  
+C: Hone Armor  
+S: HP 3  
+  
+Zephiel (5*+1)  
+Weapon: Eckesachs  
+Special: Bonfire  
+A: Distant Counter  
+B: Wary Fighter 3  
+C: Ward Armor  
+S: Spur Def 1  
+  
+Zephiel (5*)  
+Weapon: Eckesachs  
+Special: Draconic Aura  
+A: Distant Counter  
+B: Wary Fighter 3  
+C: Goad Armor  
+S: Spur Def 1  
+  
+Zephiel (5*)  
+Weapon: Eckesachs  
+Special: Bonfire  
+A: Earth Boost 3  
+B: Wary Fighter 3  
+C: Ward Armor  
+S: HP 3  
+  
+Zephiel (5*)  
+Weapon: Eckesachs  
+Special: Reprisal  
+A: Life and Death 3  
+B: Wary Fighter 3  
+C: Threaten Atk 2  
+  
+Zephiel (5*)  
+Weapon: Eckesachs  
+Special: Reprisal  
+A: Life and Death 3  
+B: Wary Fighter 3  
+C: Threaten Atk 3  
+  
+Zephiel (5*)  
+Weapon: Eckesachs  
+Special: Glowing Ember  
+A: Svalinn Shield  
+B: Wary Fighter 3  
+C: Ward Armor  
+S: Fortify Res 1

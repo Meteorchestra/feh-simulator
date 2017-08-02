@@ -6,7 +6,7 @@ GENERAL NOTES ON OPTIONS:
 
 CHALLENGER: Replace this with the name of any hero
 - For a complete list of hero names, see heroes.py (or the duel results)
-challenger = Abel
+challenger = Reinhardt
 
 BOON/BANE: Replace these with any stat name (hp/atk/spd/def/res/none)
 boon = atk
@@ -18,25 +18,25 @@ rarity = 5
 enemyrarity = 5
 
 MERGE: Replace this with a numerical merge value (1-10 are officially supported)
-merge = 10
-enemymerge = 10
+#merge = 10
+#enemymerge = 10
 
 SKILLSET: Replace these with any skill name (will be reset to default if invalid)
 - For a complete list of skill names, see skills.py
-A = Triangle Adept 3
-B = Cancel Affinity 1
-C = Spur Spd 3
-S = Quickened Pulse
-Special = Luna
-Weapon = Sol Katti
+#A = Triangle Adept 3
+#B = Cancel Affinity 1
+#C = Spur Spd 3
+#S = Quickened Pulse
+#Special = Escutcheon
+#Weapon = Wo Dao
 
 DAMAGE TAKEN: Replace this with any numerical value - if higher than the unit's HP, unit will start at 1 HP
-damage = 25
-enemydamage = 6
+#damage = 25
+#enemydamage = 6
 
 PRECHARGE: Precharge value for unit's special (if higher than charge required, special will start ready to activate)
-precharge = 1
-enemyprecharge = 72
+#precharge = 5
+#enemyprecharge = 72
 
 OUTPUT STYLE:
 - "Verbose": Show full text of each duel
@@ -55,7 +55,7 @@ SCENARIOS: Different combinations of round initiations to analyze
 - Each scenario can be listed as a combination of "C" and "E"
 - A "C" indicates a round that the challenger initiates
 - An "E" indicates a round that the enemy initiates
-scenarios = CECE
+scenarios = CECECECE
 
 ENEMY FILTERS: Mark any category as 'exclude' to exclude units of that type
 melee = include
@@ -74,68 +74,69 @@ staff = include
 nonstaff = include
 
 THREATEN/PLOY EFFECT: Who threatens and ploys affect on the first turn (Both/Neither/Attacker/Defender)
-threatenrule = Both
+#threatenrule = Both
 
 PLOY BEHAVIOR: Whether ranged attackers will attack diagonally to dodge ploys (Diagonal/Orthogonal)
-ployangle = Orthogonal
+#ployangle = Orthogonal
 
 GALEFORCE: Whether to initiate again if Galeforce triggers
 usegaleforce = True
 
 ENEMY SKILLSET DEFAULTS: Enemies will gain these skills if they have no skill in the specified slot
-defaultA = Fury 3
-defaultB = Quick Riposte 3
-defaultC = Threaten Spd 3
-defaultS = Quickened Pulse
-defaultSpecial = Moonbow
-defaultWeapon = Dire Thunder
+#defaultA = Fury 3
+#defaultB = Quick Riposte 3
+#defaultC = Threaten Spd 3
+#defaultS = Quickened Pulse
+#defaultSpecial = Moonbow
+#defaultWeapon = Dire Thunder
 
 ENEMY SKILLSET OVERRIDES: Enemies will gain these skills (if valid) even if they already have a skill in the specified slot
-overrideA = Fury 3
-overrideB = Quick Riposte 3
-overrideC = Threaten Spd 3
-overrideS = Quickened Pulse
-overrideSpecial = Moonbow
-overrideWeapon = Brave Bow+
+#overrideA = Fury 3
+#overrideB = Quick Riposte 3
+#overrideC = Threaten Spd 3
+#overrideS = Quickened Pulse
+#overrideSpecial = Moonbow
+#overrideWeapon = Brave Bow+
 
 CUSTOM ENEMY LISTS:
 - "usecustomenemylist": A filepath for a custom enemy list
-usecustomenemylist = enemybuilds.csv
+usecustomenemylist = seasons18-24arenadata.txt
 - "customenemylistformat": The format of the custom enemy list
 - "Names": One hero name per line (repeated entries will be ignored)
 - "Builds": Builds of the format ID,NAME,BOON,BANE,MERGE,A,B,C,S,SPECIAL,WEAPON
 - IDs must be unique, but names do not have to be (so multiple builds for a unit can be included)
-customenemylistformat = Builds
+- "Legacy": An exported custom enemy list from the original mass duel simulator
+customenemylistformat = Legacy
 
 BUFFS: Buff values for each stat
-atkbuff = 6
-spdbuff = 6
-defbuff = 0
-resbuff = 0
-enemyatkbuff = 2
-enemyspdbuff = 2
-enemydefbuff = 2
-enemyresbuff = 2
+#atkbuff = 6
+#spdbuff = 6
+#defbuff = 0
+#resbuff = 0
+#enemyatkbuff = 2
+#enemyspdbuff = 2
+#enemydefbuff = 2
+#enemyresbuff = 2
 
 DEBUFFS: Debuff values for each stat
-atkdebuff = -3
-spddebuff = -3
-defdebuff = -3
-resdebuff = -3
-enemyatkdebuff = -1
-enemyspddebuff = -1
-enemydefdebuff = -1
-enemyresdebuff = -1
+#atkdebuff = -3
+#spddebuff = -3
+#defdebuff = -3
+#resdebuff = -3
+#enemyatkdebuff = -1
+#enemyspddebuff = -1
+#enemydefdebuff = -1
+#enemyresdebuff = -1
 
 SPURS: Spur values for each stat
-atkspur = 4
-spdspur = 4
-defspur = 4
-resspur = 4
-enemyatkspur = 3
-enemyspdspur = 3
-enemydefspur = 3
-enemyresspur = 3
+#atkspur = 4
+#spdspur = 4
+#defspur = 4
+#resspur = 4
+#enemyatkspur = 3
+#enemyspdspur = 3
+#enemydefspur = 3
+#enemyresspur = 3
 
 ADJACENT ALLIES: By default, owl tomes will appear weaker than other tomes because there are no nearby allies.
 To adjust this, set this value to a chosen number of adjacent allies.
