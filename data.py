@@ -281,6 +281,7 @@ def initEnemyList():
 				print enemyName
 				fl["list"][enemyName] = getDefaultEnemyWithName(enemyName)
 		elif options["customEnemyListFormat"] == "Builds":
+			alreadyHasSkills = True
 			for enemy in enemyList:
 				enemyDetails = enemy.split(",")
 				fl["list"][enemyDetails[0]] = {
@@ -305,7 +306,31 @@ def initEnemyList():
 					"precharge": fl["precharge"],
 					"damage": fl["damage"],
 					"name":enemyDetails[1]
-				}	
+				}
+		elif options["customEnemyListFormat"] == "Legacy":
+			alreadyHasSkills = True
+			#Parse a custom enemy list from the original mass duel simulator
+			for line in enemyList:
+				if "*" in line:
+					splitData = line.split("*")
+					name = splitData[0].rstrip(" (12345")
+					parenSplits = splitData[0].split("(")
+					rarity = parenSplits[len(parenSplits) - 1]
+					index = name + str(len(fl["list"]))
+					fl["list"][index] = getDefaultEnemyWithName(name)
+					fl["list"][index]["rarity"] = int(rarity)
+					firstLineData = splitData[1].rstrip(" ").split(" ")
+					mergeValue = firstLineData[0].rstrip(")").lstrip("+")
+					if len(mergeValue) > 0:
+						fl["list"][index]["merge"] = int(mergeValue)
+					if len(firstLineData) > 1:
+						#Boon and bane are present
+						fl["list"][index]["boon"] = firstLineData[1].lstrip("+")
+						fl["list"][index]["bane"] = firstLineData[2].rstrip(")").lstrip("-")
+				elif ":" in line:
+					keyvalue = line.split(": ")
+					if keyvalue[0].lower() in data["skillSlots"]:
+						fl["list"][index][keyvalue[0].lower()] = keyvalue[1].rstrip(" ")
 			
 	else:
 		for hero in heroes:
@@ -336,7 +361,8 @@ def initEnemyList():
 		enemy["included"] = confirmed
 		
 		if(confirmed):
-			setSkills(enemy)
+			if not alreadyHasSkills:
+				setSkills(enemy)
 
 			#Find if skill needs replacement based on inputs
 			for slot in data["skillSlots"]:
