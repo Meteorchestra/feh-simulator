@@ -5,6 +5,56 @@ import math
 # Initial logic and code by /r/AnduCrandu
 # Python conversion and revisions by /r/Meteorchestra
 
+heroes = heroes.heroList
+skills = skills.skillList
+#Dummy empty skill
+skills["None"] = {
+		"sp":-10,
+		"slot":"none",
+		"inheritrule":""}
+		
+data = {}
+data["weaponTypes"] = ["sword","lance","axe","redtome",
+		"bluetome","greentome","dragon","bow","dagger","staff"]
+data["rangedWeapons"] = ["redtome","bluetome","greentome","bow","dagger","staff"]
+data["meleeWeapons"] = ["sword","lance","axe","dragon"]
+data["physicalWeapons"] = ["sword","lance","axe","bow","dagger"]
+data["magicalWeapons"] = ["redtome","bluetome","greentome","dragon","staff"]
+data["moveTypes"] = ["infantry","armored","flying","cavalry"]
+data["colors"] = ["red","blue","green","gray"]
+data["skillSlots"] = ["weapon","special","a","b","c","s"]
+data["buffTypes"] = ["buffs","debuffs","spur"]
+data["buffStats"] = ["atk","spd","def","res"]
+data["stats"] = ["hp","atk","spd","def","res"]
+data["growths"] = [[6,8,9,11,13,14,16,18,19,21,23,24],
+		[7,8,10,12,14,15,17,19,21,23,25,26],
+		[7,9,11,13,15,17,19,21,23,25,27,29],
+		[8,10,12,14,16,18,20,22,24,26,28,31],
+		[8,10,13,15,17,19,22,24,26,28,30,33]]
+		
+#Holder for options that aren't hero-specific
+options = {}
+options["autoCalculate"] = True
+options["startTurn"] = 0
+options["useGaleforce"] = True
+options["threatenRule"] = "Neither"
+options["ployBehavior"] = "Diagonal"
+options["showOnlyMaxSkills"] = True
+options["hideUnaffectingSkills"] = True
+options["useCustomEnemyList"] = None
+options["customEnemyListFormat"] = "Builds"
+options["viewFilter"] = "all"
+options["sortOrder"] = 1
+options["roundInitiators"] = "CE"
+options["output"] = "Verbose"
+options["stats"] = ["Wins", "Losses", "Inconclusive"]
+options["debug"] = None
+options["comparebuildsslots"] = data["skillSlots"]
+options["comparebuildstopskills"] = 4
+options["comparebuildsresultslimit"] = 100
+options["exportbuilds"] = 0
+options["adjacentallies"] = 0
+
 #Applies some default values to skills
 def buildSkillWithDefaults(baseSkill):
 	fieldsToDefaultToZero = ["charge", "affectsduel", "ismax", "hp", "atk", "spd",
@@ -97,11 +147,11 @@ def isRelevantForBuilds(skillName):
 	return skills[skillName]["affectsduel"] and skills[skillName]["ismax"]
 	
 #Build all possible skillsets from the lists of valid skills for this hero
-def buildSkillsets(hero):
+def buildSkillsets(hero, slots=options["comparebuildsslots"]):
 	skillsets = []
 	skillsetOptions = {}
 	for slot in data["skillSlots"]:
-		if slot in options["comparebuildsslots"]:
+		if slot in slots:
 			skillsetOptions[slot] = filter(isRelevantForBuilds, hero["validSkills"][slot])
 		else:
 			skillsetOptions[slot] = [hero[slot]]
@@ -372,60 +422,9 @@ def initEnemyList():
 						enemy[slot] = enemies["fl"][slot]
 			
 			setStats(enemy)
-			
-
-heroes = heroes.heroList
-skills = skills.skillList
-#Dummy empty skill
-skills["None"] = {
-		"sp":-10,
-		"slot":"none",
-		"inheritrule":"",
-	}
-	
-#Holder for options that aren't hero-specific
-options = {}
-options["autoCalculate"] = True
-options["startTurn"] = 0
-options["useGaleforce"] = True
-options["threatenRule"] = "Neither"
-options["ployBehavior"] = "Diagonal"
-options["showOnlyMaxSkills"] = True
-options["hideUnaffectingSkills"] = True
-options["useCustomEnemyList"] = None
-options["customEnemyListFormat"] = "Builds"
-options["viewFilter"] = "all"
-options["sortOrder"] = 1
-options["roundInitiators"] = "CE"
-options["output"] = "Verbose"
-options["stats"] = ["Wins", "Losses", "Inconclusive"]
-options["debug"] = None
-options["comparebuildstopskills"] = 4
-options["comparebuildsresultslimit"] = 100
-options["exportbuilds"] = 0
-options["adjacentallies"] = 0
 	
 for skill in skills:
 	skills[skill] = buildSkillWithDefaults(skills[skill])
-		
-data = {}
-data["weaponTypes"] = ["sword","lance","axe","redtome",
-		"bluetome","greentome","dragon","bow","dagger","staff"]
-data["rangedWeapons"] = ["redtome","bluetome","greentome","bow","dagger","staff"]
-data["meleeWeapons"] = ["sword","lance","axe","dragon"]
-data["physicalWeapons"] = ["sword","lance","axe","bow","dagger"]
-data["magicalWeapons"] = ["redtome","bluetome","greentome","dragon","staff"]
-data["moveTypes"] = ["infantry","armored","flying","cavalry"]
-data["colors"] = ["red","blue","green","gray"]
-data["skillSlots"] = ["weapon","special","a","b","c","s"]
-data["buffTypes"] = ["buffs","debuffs","spur"]
-data["buffStats"] = ["atk","spd","def","res"]
-data["stats"] = ["hp","atk","spd","def","res"]
-data["growths"] = [[6,8,9,11,13,14,16,18,19,21,23,24],
-		[7,8,10,12,14,15,17,19,21,23,25,26],
-		[7,9,11,13,15,17,19,21,23,25,27,29],
-		[8,10,12,14,16,18,20,22,24,26,28,31],
-		[8,10,13,15,17,19,22,24,26,28,30,33]]
 
 #Find hero skills
 for hero in heroes:
@@ -522,8 +521,8 @@ def parseOptions(optionsFile="options.txt"):
 	for option in optionList:
 		opt = option.split(" = ")
 		if len(opt) == 2:
-			if opt[0] == "challenger":
-				challenger["name"] = opt[1]
+			if opt[0] == "challengers":
+				options["heronames"] = opt[1].split(",")
 			elif opt[0] == "boon":
 				challenger["boon"] = opt[1]
 			elif opt[0] == "bane":

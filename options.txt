@@ -4,13 +4,14 @@ GENERAL NOTES ON OPTIONS:
 	to conveniently disable it
 - Options are case-sensitive
 
-CHALLENGER: Replace this with the name of any hero
+CHALLENGERS: A comma-separated list of hero names to run this analysis on
+- Use 'allheroes' instead of a name to run this analysis on all heroes
 - For a complete list of hero names, see heroes.py (or the duel results)
-challenger = Reinhardt
+challengers = Elise (Summer),Lyn,Roderick
 
 BOON/BANE: Replace these with any stat name (hp/atk/spd/def/res/none)
-boon = atk
-bane = res
+boon = none
+bane = none
 
 RARITY: Replace with a rarity value (1-5 are officially supported)
 - Skillsets may behave unexpectedly for a hero/rarity combination that doesn't exist
@@ -23,7 +24,7 @@ MERGE: Replace this with a numerical merge value (1-10 are officially supported)
 
 SKILLSET: Replace these with any skill name (will be reset to default if invalid)
 - For a complete list of skill names, see skills.py
-#A = Triangle Adept 3
+A = Triangle Adept 3
 #B = Cancel Affinity 1
 #C = Spur Spd 3
 #S = Quickened Pulse
@@ -43,7 +44,7 @@ OUTPUT STYLE:
 - "Summary": Show victor/rounds/overkill for each duel
 - "Totals": Show only total stats
 - "CompareBuilds": Show comparison of results for different skillsets (see additional options below)
-output = Verbose
+output = Totals
 
 STATS: Comma-separated list of total stats to display for each scenario
 - "Wins": Cases where the challenger defeats a foe utterly

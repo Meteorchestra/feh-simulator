@@ -970,14 +970,15 @@ def sumStatAcrossScenarios(statsByScenario, stat):
 	return statTotal
 	
 #Calculate and evaluate duel results for each possible build
-def calculateForEachBuild(skillsets):
+def calculateForEachBuild(slots=data.options["comparebuildsslots"]):
 	results = {}
 	startTime = time.clock()
 	focusSlot = None
 	#If we're specifically looking at options for one slot, note it
-	if len(data.options["comparebuildsslots"]) == 1:
-		focusSlot = data.options["comparebuildsslots"][0]
+	if len(slots) == 1:
+		focusSlot = slots[0]
 		slotresults = {}
+	skillsets = data.buildSkillsets(data.challenger, slots)
 	for skillset in skillsets:
 		for slot in data.data["skillSlots"]:
 			data.challenger[slot] = skillset[slot]
