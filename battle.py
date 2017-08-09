@@ -989,7 +989,8 @@ def calculateForEachBuild(slots=data.options["comparebuildsslots"]):
 		results[skillsetString] = calculateForEachScenario(data.options["scenarios"])
 		if focusSlot:
 			slotresults[skillset[focusSlot]] = results[skillsetString]
-		print "Calculating... (" + str(len(results)) + "/" + str(len(skillsets)) + ")"
+		if data.options["showProgress"]:
+			print "Calculating... (" + str(len(results)) + "/" + str(len(skillsets)) + ")"
 	skillsetStrings = list(results.keys())
 	endTime = time.clock()
 	

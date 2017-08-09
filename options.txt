@@ -159,3 +159,5 @@ comparebuildstopskills = 6
 comparebuildsresultslimit = 100
 - "exportbuilds" = Number of top builds to print in a format to use in a custom enemy list
 exportbuilds = 10
+- "showprogress" = Whether to show progress as each build is calculated
+showprogress = True

@@ -39,7 +39,7 @@ heroList = {
 			"Darting Blow 3":5,
 			"Fortify Res 1":4,
 			"Fortify Res 2":4,
-			"Fortify Res 3":5
+			"Fortify Fliers":4
 		},
 	},
 	"Cain":{

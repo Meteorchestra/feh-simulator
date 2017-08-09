@@ -54,6 +54,7 @@ options["comparebuildstopskills"] = 4
 options["comparebuildsresultslimit"] = 100
 options["exportbuilds"] = 0
 options["adjacentallies"] = 0
+options["showProgress"] = True
 
 #Applies some default values to skills
 def buildSkillWithDefaults(baseSkill):
@@ -322,6 +323,7 @@ def getDefaultEnemyWithName(name):
 def initEnemyList():
 	fl = enemies["fl"]
 	includes = fl["include"]
+	alreadyHasSkills = False
 	
 	if options["useCustomEnemyList"]:
 		enemyFile = open(options["useCustomEnemyList"])
@@ -669,4 +671,9 @@ def parseOptions(optionsFile="options.txt"):
 				options["customEnemyListFormat"] = opt[1]
 			elif opt[0] == "exportbuilds":
 				options["exportbuilds"] = int(opt[1])
+			elif opt[0] == "showprogress":
+				if opt[1] == "True":
+					options["showProgress"] = True
+				else:
+					options["showProgress"] = False
 			
