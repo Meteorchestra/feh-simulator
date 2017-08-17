@@ -1339,7 +1339,7 @@ heroList = {
 			"Drag Back":3,
 			"Hone Atk 1":3,
 			"Hone Atk 2":3,
-			"Hone Atk 3":4
+			"Hone Armor":4
 		},
 	},
 	"Hinoka":{
