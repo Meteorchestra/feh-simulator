@@ -52,9 +52,9 @@ options["debug"] = None
 options["comparebuildsslots"] = data["skillSlots"]
 options["comparebuildstopskills"] = 4
 options["comparebuildsresultslimit"] = 100
+options["compareBuildsOutputFormat"] = "complete"
 options["exportbuilds"] = 0
 options["adjacentallies"] = 0
-options["showProgress"] = True
 
 #Applies some default values to skills
 def buildSkillWithDefaults(baseSkill):
@@ -671,9 +671,6 @@ def parseOptions(optionsFile="options.txt"):
 				options["customEnemyListFormat"] = opt[1]
 			elif opt[0] == "exportbuilds":
 				options["exportbuilds"] = int(opt[1])
-			elif opt[0] == "showprogress":
-				if opt[1] == "True":
-					options["showProgress"] = True
-				else:
-					options["showProgress"] = False
+			elif opt[0] == "comparebuildsoutputformat":
+				options["compareBuildsOutputFormat"] = opt[1]
 			

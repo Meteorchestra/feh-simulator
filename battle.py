@@ -989,7 +989,7 @@ def calculateForEachBuild(slots=data.options["comparebuildsslots"]):
 		results[skillsetString] = calculateForEachScenario(data.options["scenarios"])
 		if focusSlot:
 			slotresults[skillset[focusSlot]] = results[skillsetString]
-		if data.options["showProgress"]:
+		if data.options["compareBuildsOutputFormat"] == "complete":
 			print "Calculating... (" + str(len(results)) + "/" + str(len(skillsets)) + ")"
 	skillsetStrings = list(results.keys())
 	endTime = time.clock()
@@ -1011,7 +1011,8 @@ def calculateForEachBuild(slots=data.options["comparebuildsslots"]):
 	for scenario in data.options["scenarios"]:
 		resultsHeader = resultsHeader + scenario + "\t"
 	resultsHeader += "TOTAL\tBUILD"
-	print resultsHeader
+	if data.options["compareBuildsOutputFormat"] != "exportsonly":
+		print resultsHeader
 		
 	for i in range(min(len(skillsetStrings), data.options["comparebuildsresultslimit"])):
 		skillsetString = skillsetStrings[i]
@@ -1021,12 +1022,14 @@ def calculateForEachBuild(slots=data.options["comparebuildsslots"]):
 				resultsString += str(results[skillsetString][scenario][data.options["stats"][0]]) + "\t"
 			resultsString += str(getStatTotalAcrossScenariosToSort(skillsetString))
 			resultsString = resultsString + "\t" + skillsetString
-		print resultsString
+		if data.options["compareBuildsOutputFormat"] != "exportsonly":
+			print resultsString
 		
 	for i in range(min(len(skillsetStrings), data.options["exportbuilds"])):
 		print (data.challenger["name"] + "Build" + str(i) + "," + data.challenger["name"] + ","
 				+ data.challenger["boon"] + "," + data.challenger["bane"] + "," + str(data.challenger["merge"])
-				+ "," + skillsetStrings[i])
+				+ "," + skillsetStrings[i] + ","
+				+ str(getStatTotalAcrossScenariosToSort(skillsetStrings[i])))
 	
 	if data.options["debug"] == "full":
 		print "DEBUG INFO"
