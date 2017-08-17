@@ -1,5 +1,5 @@
-# Initial data by /r/AnduCrandu
-# Python conversion and revisions by /r/Meteorchestra
+# Initial data by github.com/Andu2
+# Python conversion and revisions by github.com/Meteorchestra
 
 #####
 # SKILL ATTRIBUTES

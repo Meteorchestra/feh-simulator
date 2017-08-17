@@ -2,8 +2,8 @@ import data
 import math
 import time
 
-# Initial logic and code by /r/AnduCrandu
-# Python conversion and revisions by /r/Meteorchestra
+# Initial logic and code by github.com/Andu2
+# Python conversion and github.com/Meteorchestra
 
 class ActiveHero:
 
