@@ -7,7 +7,7 @@ GENERAL NOTES ON OPTIONS:
 CHALLENGERS: A comma-separated list of hero names to run this analysis on
 - Use 'allheroes' instead of a name to run this analysis on all heroes
 - For a complete list of hero names, see heroes.py (or the duel results)
-challengers = Elise (Summer),Lyn
+challengers = Clive,Tana,Innes,Seth,Amelia
 
 BOON/BANE: Replace these with any stat name (hp/atk/spd/def/res/none)
 boon = none
@@ -24,10 +24,10 @@ MERGE: Replace this with a numerical merge value (1-10 are officially supported)
 
 SKILLSET: Replace these with any skill name (will be reset to default if invalid)
 - For a complete list of skill names, see skills.py
-A = Triangle Adept 3
-B = Windsweep 3
+#A = Triangle Adept 3
+#B = Windsweep 3
 #C = Spur Spd 3
-S = Phantom Spd 1
+#S = Phantom Spd 1
 #Special = Escutcheon
 #Weapon = Wo Dao
 
@@ -142,7 +142,7 @@ SPURS: Spur values for each stat
 
 ADJACENT ALLIES: By default, owl tomes will appear weaker than other tomes because there are no nearby allies.
 To adjust this, set this value to a chosen number of adjacent allies.
-adjacentallies = 0
+adjacentallies = 1
 
 COMPAREBUILDS OPTIONS:
 - "comparebuildsslots" = skill slots to iterate through (separated by commas)
