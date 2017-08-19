@@ -360,7 +360,7 @@ class ActiveHero:
 					dmgBoost += self.skillAttributes["specialboost"][skill]
 					if self.verbose:
 						damageText += (self.name + " gains " + str(self.skillAttributes["specialboost"][skill])
-									+ " damage from " + skill + ". ")
+									+ " damage from " + skill + ".\n")
 
 			#Do AOE specials
 			if (AOE):

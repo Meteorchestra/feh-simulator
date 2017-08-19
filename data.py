@@ -55,6 +55,12 @@ options["comparebuildsresultslimit"] = 100
 options["compareBuildsOutputFormat"] = "complete"
 options["exportbuilds"] = 0
 options["adjacentallies"] = 0
+options["a"] = "None"
+options["b"] = "None"
+options["c"] = "None"
+options["s"] = "None"
+options["weapon"] = "None"
+options["special"] = "None"
 
 #Applies some default values to skills
 def buildSkillWithDefaults(baseSkill):
@@ -424,9 +430,6 @@ def initEnemyList():
 						enemy[slot] = enemies["fl"][slot]
 			
 			setStats(enemy)
-	
-for skill in skills:
-	skills[skill] = buildSkillWithDefaults(skills[skill])
 
 #Find hero skills
 for hero in heroes:
@@ -532,17 +535,17 @@ def parseOptions(optionsFile="options.txt"):
 			elif opt[0] == "merge":
 				challenger["merge"] = int(opt[1])
 			elif opt[0] == "A":
-				challenger["a"] = opt[1]
+				options["a"] = opt[1]
 			elif opt[0] == "B":
-				challenger["b"] = opt[1]
+				options["b"] = opt[1]
 			elif opt[0] == "C":
-				challenger["c"] = opt[1]
+				options["c"] = opt[1]
 			elif opt[0] == "S":
-				challenger["s"] = opt[1]
+				options["s"] = opt[1]
 			elif opt[0] == "Special":
-				challenger["special"] = opt[1]
+				options["special"] = opt[1]
 			elif opt[0] == "Weapon":
-				challenger["weapon"] = opt[1]
+				options["weapon"] = opt[1]
 			elif opt[0] == "enemymerge":
 				enemies["fl"]["merge"] = int(opt[1])
 			elif opt[0] == "output":
@@ -673,4 +676,7 @@ def parseOptions(optionsFile="options.txt"):
 				options["exportbuilds"] = int(opt[1])
 			elif opt[0] == "comparebuildsoutputformat":
 				options["compareBuildsOutputFormat"] = opt[1]
+				
+	for skill in skills:
+		skills[skill] = buildSkillWithDefaults(skills[skill])
 			

@@ -35,6 +35,8 @@ for heroname in data.options["heronames"]:
 	data.challenger["name"] = heroname
 
 	hero = data.challenger
+	for slot in data.data["skillSlots"]:
+		data.challenger[slot] = data.options[slot]
 	data.initHero(data.challenger, True)
 	data.challenger["activeHero"] = battle.ActiveHero(data.challenger)
 			
