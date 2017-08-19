@@ -10,7 +10,7 @@ else:
 	
 #If there's another argument, set it as the challenger name
 if len(sys.argv) > 2:
-	data.options["heronames"] = sys.argv[2]
+	data.options["heronames"] = [sys.argv[2]]
 
 #Initialize enemies
 data.initEnemyList()
