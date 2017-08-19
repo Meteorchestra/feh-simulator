@@ -69,6 +69,8 @@
 # brash: Gain an automatic follow-up attack when below a certain HP threshold and attacking an enemy that can counter
 # brave: Attack twice consecutively when initiating combat
 # galeforce: Initiate again if special is charged
+# phantom: Stat modifiers that only affect stat comparison checks
+# hardy: Negates skills that change attack priority (desperation/vantage)
 # condition: Condition that must be met for skill to activate
 #####
 
@@ -4645,5 +4647,46 @@ skillList = {
 		"ismax":1,
 		"spur":{"spd":4, "res":4},
 		"condition":{"type":"init"},
+	},
+	"Squad Ace A 1":{
+		"slot":"s",
+		"sp":0,
+		"hp":3,
+		"inheritrule":"",
+		"affectsduel":1,
+		"ismax":1,
+	},
+	"Squad Ace B 1":{
+		"slot":"s",
+		"sp":0,
+		"def":1,
+		"inheritrule":"",
+		"affectsduel":1,
+		"ismax":1,
+	},
+	"Resistance 1 (Seal)":{
+		"slot":"s",
+		"sp":0,
+		"res":1,
+		"inheritrule":"",
+		"affectsduel":1,
+		"ismax":1,
+	},
+	"Phantom Spd 1":{
+		"slot":"s",
+		"sp":0,
+		"inheritrule":"",
+		"affectsduel":1,
+		"ismax":1,
+		"phantom":{"spd":5},
+	},
+	"Hardy Bearing 1":{
+		"slot":"s",
+		"sp":0,
+		"hardy":1,
+		"condition":{"type":"hpmin", "value":1},
+		"inheritrule":"",
+		"affectsduel":1,
+		"ismax":1,
 	},
 }

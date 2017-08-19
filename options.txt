@@ -7,7 +7,7 @@ GENERAL NOTES ON OPTIONS:
 CHALLENGERS: A comma-separated list of hero names to run this analysis on
 - Use 'allheroes' instead of a name to run this analysis on all heroes
 - For a complete list of hero names, see heroes.py (or the duel results)
-challengers = Elise (Summer),Lyn,Roderick
+challengers = Elise (Summer),Lyn
 
 BOON/BANE: Replace these with any stat name (hp/atk/spd/def/res/none)
 boon = none
@@ -25,9 +25,9 @@ MERGE: Replace this with a numerical merge value (1-10 are officially supported)
 SKILLSET: Replace these with any skill name (will be reset to default if invalid)
 - For a complete list of skill names, see skills.py
 A = Triangle Adept 3
-#B = Cancel Affinity 1
+B = Windsweep 3
 #C = Spur Spd 3
-#S = Quickened Pulse
+S = Phantom Spd 1
 #Special = Escutcheon
 #Weapon = Wo Dao
 
@@ -44,7 +44,7 @@ OUTPUT STYLE:
 - "Summary": Show victor/rounds/overkill for each duel
 - "Totals": Show only total stats
 - "CompareBuilds": Show comparison of results for different skillsets (see additional options below)
-output = Totals
+output = Verbose
 
 STATS: Comma-separated list of total stats to display for each scenario
 - "Wins": Cases where the challenger defeats a foe utterly
@@ -101,12 +101,13 @@ ENEMY SKILLSET OVERRIDES: Enemies will gain these skills (if valid) even if they
 
 CUSTOM ENEMY LISTS:
 - "usecustomenemylist": A filepath for a custom enemy list
-usecustomenemylist = seasons18-24arenadata.txt
+#usecustomenemylist = seasons18-24arenadata.txt
 - "customenemylistformat": The format of the custom enemy list
 - "Names": One hero name per line (repeated entries will be ignored)
 - "Builds": Builds of the format ID,NAME,BOON,BANE,MERGE,A,B,C,S,SPECIAL,WEAPON
 - IDs must be unique, but names do not have to be (so multiple builds for a unit can be included)
 - "Legacy": An exported custom enemy list from the original mass duel simulator
+- Note that the star symbol from legacy lists should be replaced with "*"
 customenemylistformat = Legacy
 
 BUFFS: Buff values for each stat

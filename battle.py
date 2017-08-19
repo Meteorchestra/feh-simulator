@@ -138,6 +138,9 @@ class ActiveHero:
 		if attribute in self.skillAttributes:
 			return self.skillAttributes[attribute].keys()
 		return []
+		
+	def checkHardiness(self, enemy):
+		return any(self.getActiveSkillsWithAttribute("hardy")) or any(enemy.getSkillsWithAttribute("hardy"))
 
 	def threaten(self, enemy):
 		threatenText = ""
@@ -599,8 +602,8 @@ class ActiveHero:
 		if "special" in self.skillAttributes and self.skillAttributes["special"][self.special]["type"] == "AOE":
 			roundText += self.doDamage(enemy, self.range, False, True)
 
-		vantage = any(enemy.getActiveSkillsWithAttribute("vantage"))
-		desperation = any(self.getActiveSkillsWithAttribute("desperation"))
+		vantage = any(enemy.getActiveSkillsWithAttribute("vantage")) and not self.checkHardiness(enemy)
+		desperation = any(self.getActiveSkillsWithAttribute("desperation")) and not enemy.checkHardiness(self)
 		
 		enemyCanCounter = ((self.range == enemy.range or anyRangeCounter) and not 
 				(any(self.getActiveSkillsWithAttribute("noenemycounter", enemy)) 
@@ -735,7 +738,11 @@ def checkBreaker(self, enemy, condition, attribute):
 	return enemy.weaponType == condition["weapon"] and checkHpMin(self, enemy, condition, attribute)
 
 def checkStatComp(self, enemy, condition, attribute):
-	return self.stats[condition["stat"]] - condition["margin"] >= enemy.stats[condition["stat"]]
+	phantom = 0
+	for skill in self.getSkillsWithAttribute("phantom"):
+		if condition["stat"] in self.skillAttributes["phantom"][skill]:
+			phantom += self.skillAttributes["phantom"][skill][condition["stat"]]
+	return self.stats[condition["stat"]] + phantom - condition["margin"] >= enemy.stats[condition["stat"]]
 	
 def checkSweep(self, enemy, condition, attribute):
 	return ((attribute == "noselffollow" and self.initiator) 
