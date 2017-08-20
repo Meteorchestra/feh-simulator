@@ -24,9 +24,9 @@ The provided options.txt is a sample options file and contains information about
 
 1. Click the green button on this page to download the files from this repository as a ZIP. Extract the files to some location FILEPATH.
 
-2. Open a Command Prompt / Terminal window and use the command 'cd FILEPATH/dist/battleSim' to get to the directory where the executable is.
+2. Navigate to FILEPATH/dist/battleSim.
 
-3. Use the command 'battleSim.exe' to run the executable.
+3. Run battleSim.exe - this will use options from options.txt and output results to output.txt by default (output file can be changed in the options file). To use a different options file, specify it as an additional argument from the command line.
 
 # Step By Step Instructions (Python)
 
