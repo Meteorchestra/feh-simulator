@@ -48,7 +48,7 @@ output = Verbose
 
 OUTPUT FILE:
 - Set a file name here to print all output to it, otherwise all output will be printed to the console
-outputfile = sampleoutput.txt
+#outputfile = sampleoutput.txt
 
 STATS: Comma-separated list of total stats to display for each scenario
 - "Wins": Cases where the challenger defeats a foe utterly
