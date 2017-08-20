@@ -1,3 +1,5 @@
+from __future__ import division
+from __future__ import print_function
 import data
 import math
 import time
@@ -5,7 +7,7 @@ import time
 # Initial logic and code by github.com/Andu2
 # Python conversion and github.com/Meteorchestra
 
-class ActiveHero:
+class ActiveHero(object):
 
 	def __init__(self, hero):
 		self.combatBuffs = {"atk":0,"spd":0,"def":0,"res":0}
@@ -130,7 +132,7 @@ class ActiveHero:
 		
 	def getActiveSkillsWithAttribute(self, attribute, enemy=None):
 		if attribute in self.skillAttributes:
-			return (skill for skill in self.skillAttributes[attribute].keys() 
+			return (skill for skill in self.skillAttributes[attribute].keys()
 					if checkCondition(self, skill, enemy, attribute))
 		return []
 		
@@ -726,13 +728,13 @@ def checkNone(self, enemy, condition, attribute):
 	return True
 	
 def checkHpMax(self, enemy, condition, attribute):
-	return float(self.stats["hp"]) / float(self.maxHp) <= condition["value"]
+	return self.stats["hp"] / self.maxHp <= condition["value"]
 	
 def checkHpMin(self, enemy, condition, attribute):
-	return float(self.stats["hp"]) / float(self.maxHp) >= condition["value"]
+	return self.stats["hp"] / self.maxHp >= condition["value"]
 	
 def checkHpStartMin(self, enemy, condition, attribute):
-	return float(self.combatStartHp) / float(self.maxHp) >= condition["value"]
+	return self.combatStartHp / self.maxHp >= condition["value"]
 	
 def checkBreaker(self, enemy, condition, attribute):
 	return enemy.weaponType == condition["weapon"] and checkHpMin(self, enemy, condition, attribute)
@@ -771,7 +773,7 @@ def checkEcho(self, enemy, condition, attribute):
 	return (self.didAttack or attribute == "spur") and (self.combatStartHp >= self.maxHp or attribute == "seal")
 
 def checkChivalry(self, enemy, condition, attribute):
-	return float(enemy.combatStartHp) / float(enemy.maxHp) >= condition["value"]
+	return enemy.combatStartHp / enemy.maxHp >= condition["value"]
 	
 def checkAdjacency(self, enemy, condition, attribute):
 	#Handled in skill setup
@@ -891,17 +893,17 @@ def calculate():
 	
 	#Clean up output if each result is being displayed
 	if data.options["output"] == "Verbose" or data.options["output"] == "Summary":
-		print "-- " + data.challenger["name"] + " vs. ALL --"
+		print("-- " + data.challenger["name"] + " vs. ALL --")
 		fightResults.sort(key=sortByName)
 
 	#Print results as necessary and calculate summary stats
 	for result in fightResults:
 		if data.options["output"] == "Verbose":
-			print "\n\n" + data.challenger["name"].upper() + " vs. " + result["enemy"].name.upper()
-			print result["fightText"]
-			print result["resultText"]
+			print("\n\n" + data.challenger["name"].upper() + " vs. " + result["enemy"].name.upper())
+			print(result["fightText"])
+			print(result["resultText"])
 		elif data.options["output"] == "Summary":
-			print result["enemy"].name + ": " + result["resultText"]
+			print(result["enemy"].name + ": " + result["resultText"])
 		if (result["outcome"] == "loss"):
 			losses += 1
 		elif (result["outcome"] == "win"):
@@ -921,21 +923,21 @@ def calculate():
 		stats = stats + str(statsByName[stat]) + "\t"
 
 	if data.options["output"] == "Verbose" or data.options["output"] == "Summary":
-		print "\nTOTAL STATS"
-		print statsHeader
+		print("\nTOTAL STATS")
+		print(statsHeader)
 	if data.options["output"] != "CompareBuilds":
-		print stats
+		print(stats)
 	return statsByName
 		
 #Calculate duel results for each specified scenario and determine summary stats
 def calculateForEachScenario(scenarios):
 	if data.options["output"] == "Totals":
-		print "-- " + data.challenger["name"].upper() + " vs. ALL --"
+		print("-- " + data.challenger["name"].upper() + " vs. ALL --")
 		statsHeader = "SCENARIO\t"
 		for stat in data.options["stats"]:
 			statsHeader = statsHeader + stat + "\t"
-		print "\nTOTAL STATS"
-		print statsHeader
+		print("\nTOTAL STATS")
+		print(statsHeader)
 		
 	totalStats = {}
 	statsByScenario = {}
@@ -954,7 +956,7 @@ def calculateForEachScenario(scenarios):
 	for stat in data.options["stats"]:
 		totalsLine = totalsLine + str(totalStats[stat]) + "\t"
 	if data.options["output"] != "CompareBuilds":
-		print totalsLine
+		print(totalsLine)
 	return statsByScenario
 	
 #Track how long a function call takes if the debug flag is set
@@ -997,7 +999,7 @@ def calculateForEachBuild(slots=data.options["comparebuildsslots"]):
 		if focusSlot:
 			slotresults[skillset[focusSlot]] = results[skillsetString]
 		if data.options["compareBuildsOutputFormat"] == "complete":
-			print "Calculating... (" + str(len(results)) + "/" + str(len(skillsets)) + ")"
+			print("Calculating... (" + str(len(results)) + "/" + str(len(skillsets)) + ")")
 	skillsetStrings = list(results.keys())
 	endTime = time.clock()
 	
@@ -1019,7 +1021,7 @@ def calculateForEachBuild(slots=data.options["comparebuildsslots"]):
 		resultsHeader = resultsHeader + scenario + "\t"
 	resultsHeader += "TOTAL\tBUILD"
 	if data.options["compareBuildsOutputFormat"] != "exportsonly":
-		print resultsHeader
+		print(resultsHeader)
 		
 	for i in range(min(len(skillsetStrings), data.options["comparebuildsresultslimit"])):
 		skillsetString = skillsetStrings[i]
@@ -1030,7 +1032,7 @@ def calculateForEachBuild(slots=data.options["comparebuildsslots"]):
 			resultsString += str(getStatTotalAcrossScenariosToSort(skillsetString))
 			resultsString = resultsString + "\t" + skillsetString
 		if data.options["compareBuildsOutputFormat"] != "exportsonly":
-			print resultsString
+			print(resultsString)
 		
 	for i in range(min(len(skillsetStrings), data.options["exportbuilds"])):
 		print (data.challenger["name"] + "Build" + str(i) + "," + data.challenger["name"] + ","
@@ -1039,9 +1041,9 @@ def calculateForEachBuild(slots=data.options["comparebuildsslots"]):
 				+ str(getStatTotalAcrossScenariosToSort(skillsetStrings[i])))
 	
 	if data.options["debug"] == "full":
-		print "DEBUG INFO"
-		print "Builds Analyzed: " + str(len(skillsets))
-		print "Time Taken: " + str(endTime - startTime)
-		print "Average Time per Build: " + str(float(endTime - startTime) / float(len(skillsets)))
+		print("DEBUG INFO")
+		print("Builds Analyzed: " + str(len(skillsets)))
+		print("Time Taken: " + str(endTime - startTime))
+		print("Average Time per Build: " + str((endTime - startTime) / len(skillsets)))
 	if focusSlot:
 		return slotoptions

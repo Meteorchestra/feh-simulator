@@ -1,3 +1,4 @@
+from __future__ import print_function
 import heroes
 import skills
 import math
@@ -159,7 +160,7 @@ def buildSkillsets(hero, slots=options["comparebuildsslots"]):
 	skillsetOptions = {}
 	for slot in data["skillSlots"]:
 		if slot in slots:
-			skillsetOptions[slot] = filter(isRelevantForBuilds, hero["validSkills"][slot])
+			skillsetOptions[slot] = list(filter(isRelevantForBuilds, hero["validSkills"][slot]))
 		else:
 			skillsetOptions[slot] = [hero[slot]]
 		
@@ -336,7 +337,7 @@ def initEnemyList():
 		enemyList = enemyFile.read().splitlines()
 		if options["customEnemyListFormat"] == "Names":
 			for enemyName in enemyList:
-				print enemyName
+				print(enemyName)
 				fl["list"][enemyName] = getDefaultEnemyWithName(enemyName)
 		elif options["customEnemyListFormat"] == "Builds":
 			alreadyHasSkills = True
@@ -679,4 +680,3 @@ def parseOptions(optionsFile="options.txt"):
 				
 	for skill in skills:
 		skills[skill] = buildSkillWithDefaults(skills[skill])
-			
