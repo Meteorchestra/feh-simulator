@@ -46,6 +46,10 @@ OUTPUT STYLE:
 - "CompareBuilds": Show comparison of results for different skillsets (see additional options below)
 output = Verbose
 
+OUTPUT FILE:
+- Set a file name here to print all output to it, otherwise all output will be printed to the console
+outputfile = sampleoutput.txt
+
 STATS: Comma-separated list of total stats to display for each scenario
 - "Wins": Cases where the challenger defeats a foe utterly
 - "Losses": Cases where the challenger is defeated utterly

@@ -2,6 +2,7 @@ from __future__ import print_function
 import heroes
 import skills
 import math
+import sys
 
 # Initial logic and code by github.com/Andu2
 # Python conversion and github.com/Meteorchestra
@@ -682,6 +683,8 @@ def parseOptions(optionsFile="options.txt"):
 				options["exportbuilds"] = int(opt[1])
 			elif opt[0] == "comparebuildsoutputformat":
 				options["compareBuildsOutputFormat"] = opt[1]
+			elif opt[0] == "outputfile":
+				sys.stdout = open(opt[1], mode='a')
 				
 	for skill in skills:
 		skills[skill] = buildSkillWithDefaults(skills[skill])
