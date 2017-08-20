@@ -313,9 +313,9 @@ def getDefaultEnemyWithName(name):
 			"b":"None",
 			"c":"None",
 			"s":"None",
-			"buffs": fl["buffs"],
-			"debuffs": fl["debuffs"],
-			"spur": fl["spur"],
+			"buffs": fl["buffs"].copy(),
+			"debuffs": fl["debuffs"].copy(),
+			"spur": fl["spur"].copy(),
 			"boon": fl["boon"],
 			"bane": fl["bane"],
 			"merge": fl["merge"],
@@ -389,6 +389,11 @@ def initEnemyList():
 					keyvalue = line.split(": ")
 					if keyvalue[0].lower() in data["skillSlots"]:
 						fl["list"][index][keyvalue[0].lower()] = keyvalue[1].rstrip(" ")
+					elif keyvalue[0].lower() in fl:
+						statuses = keyvalue[1].rstrip(" ").split(", ")
+						for status in statuses:
+							statvalue = status.split(" ")
+							fl["list"][index][keyvalue[0].lower()][statvalue[0]] = int(statvalue[1])					
 			
 	else:
 		for hero in heroes:
