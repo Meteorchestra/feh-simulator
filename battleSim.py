@@ -1,3 +1,5 @@
+from __future__ import division
+from __future__ import print_function
 import data
 import battle
 import sys
@@ -29,7 +31,7 @@ if "comparebuildsslots" in data.options:
 	
 #Process input hero names
 if "allheroes" in data.options["heronames"]:
-	data.options["heronames"] = data.heroes.keys()
+	data.options["heronames"] = list(data.heroes.keys())
 	
 for heroname in data.options["heronames"]:
 	data.challenger["name"] = heroname
@@ -67,4 +69,4 @@ for heroname in data.options["heronames"]:
 for function in data.trackedCalls:
 	totalTime = sum(data.trackedCalls[function])
 	calls = len(data.trackedCalls[function])
-	print function + ": " + str(totalTime/calls) + " average over " + str(calls) + " calls (" + str(totalTime) + " total)"
+	print(function + ": " + str(totalTime/calls) + " average over " + str(calls) + " calls (" + str(totalTime) + " total)")
