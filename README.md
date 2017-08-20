@@ -14,13 +14,21 @@ Upcoming features:
 - Additional modes to better evaluate resiliency of builds over multiple battles
 - Team evaluation capabilities
 
-Run with 'python battleSim.py OPTIONSFILEPATH' - will default to options.txt if no filepath is given.
+Run with 'battleSim.exe OPTIONSFILEPATH' from the dist/battleSim directory - will default to options.txt if no filepath is given. Use 'python battleSim.py OPTIONSFILEPATH' from the main directory to run the Python script directly.
 
 Also try 'python battleSim.py findbuilds.txt HERONAME' - you can specify the hero name as an additional argument to easily use the same options for multiple heroes.
 
 The provided options.txt is a sample options file and contains information about the currently available options.
 
-# Step By Step Instructions
+# Step By Step Instructions (executable)
+
+1. Click the green button on this page to download the files from this repository as a ZIP. Extract the files to some location FILEPATH.
+
+2. Open a Command Prompt / Terminal window and use the command 'cd FILEPATH/dist/battleSim' to get to the directory where the executable is.
+
+3. Use the command 'battleSim.exe' to run the executable.
+
+# Step By Step Instructions (Python)
 
 1. Install Python, if you don't have it already - the latest 2.x version or the latest 3.x version from https://www.python.org should each work
 
