@@ -4817,4 +4817,15 @@ skillList = {
 		"ismax":1,
 		"seal":{"atk":-5, "def":-5},
 	},
+	"Cursed Lance":{
+		"slot":"weapon",
+		"sp":400,
+		"inheritrule":"unique",
+		"affectsduel":1,
+		"ismax":1,
+		"atk":18,
+		"spd":2,
+		"charge":1,
+		"fury":4,
+	},
 }

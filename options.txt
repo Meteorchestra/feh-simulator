@@ -7,7 +7,7 @@ GENERAL NOTES ON OPTIONS:
 CHALLENGERS: A comma-separated list of hero names to run this analysis on
 - Use 'allheroes' instead of a name to run this analysis on all heroes
 - For a complete list of hero names, see heroes.py (or the duel results)
-challengers = Clive,Tana,Innes,Seth,Amelia
+challengers = Seth,Valter
 
 BOON/BANE: Replace these with any stat name (hp/atk/spd/def/res/none)
 boon = none
@@ -60,7 +60,7 @@ SCENARIOS: Different combinations of round initiations to analyze
 - Each scenario can be listed as a combination of "C" and "E"
 - A "C" indicates a round that the challenger initiates
 - An "E" indicates a round that the enemy initiates
-scenarios = CECECECE,ECECECEC,C,E
+scenarios = CECECE,ECECEC
 
 ENEMY FILTERS: Mark any category as 'exclude' to exclude units of that type
 melee = include
