@@ -373,6 +373,8 @@ class ActiveHero(object):
 				multiplier = self.skillAttributes["special"][self.special]["multiplier"]
 				AOEDamage = enemy.getNonlethalDamage(dmgBoost
 						+ math.floor(multiplier * (AOEEffectiveAtk - relevantDef)))
+				AOEDamage = max(enemy.getNonlethalDamage(dmgBoost
+						+ math.floor(multiplier * (AOEEffectiveAtk - relevantDef))), 0)
 				self.resetCharge()
 				enemy.stats["hp"] -= AOEDamage
 				if self.verbose:
