@@ -371,8 +371,6 @@ class ActiveHero(object):
 				AOEEffectiveAtk = selfEffectiveStats["atk"] - self.spur["atk"] - self.combatSpur["atk"]
 				
 				multiplier = self.skillAttributes["special"][self.special]["multiplier"]
-				AOEDamage = enemy.getNonlethalDamage(dmgBoost
-						+ math.floor(multiplier * (AOEEffectiveAtk - relevantDef)))
 				AOEDamage = max(enemy.getNonlethalDamage(dmgBoost
 						+ math.floor(multiplier * (AOEEffectiveAtk - relevantDef))), 0)
 				self.resetCharge()
