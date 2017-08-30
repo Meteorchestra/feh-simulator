@@ -39,7 +39,7 @@ options = {}
 options["autoCalculate"] = True
 options["startTurn"] = 0
 options["useGaleforce"] = True
-options["threatenRule"] = "Neither"
+options["threatenRule"] = "Both"
 options["ployBehavior"] = "Diagonal"
 options["showOnlyMaxSkills"] = True
 options["hideUnaffectingSkills"] = True
@@ -47,7 +47,8 @@ options["useCustomEnemyList"] = None
 options["customEnemyListFormat"] = "Builds"
 options["viewFilter"] = "all"
 options["sortOrder"] = 1
-options["roundInitiators"] = "CE"
+options["scenarios"] = ["C"]
+options["roundInitiators"] = "C"
 options["output"] = "Verbose"
 options["stats"] = ["Wins", "Losses", "Inconclusive"]
 options["debug"] = None
@@ -55,6 +56,8 @@ options["comparebuildsslots"] = data["skillSlots"]
 options["comparebuildstopskills"] = 4
 options["comparebuildsresultslimit"] = 100
 options["compareBuildsOutputFormat"] = "complete"
+options["combatMode"] = "duel"
+options["shuffleSeed"] = "default"
 options["exportbuilds"] = 0
 options["adjacentallies"] = 0
 options["a"] = "None"
@@ -685,6 +688,10 @@ def parseOptions(optionsFile="options.txt"):
 				options["compareBuildsOutputFormat"] = opt[1]
 			elif opt[0] == "outputfile":
 				sys.stdout = open(opt[1], mode='a')
+			elif opt[0] == "combatmode":
+				options["combatMode"] = opt[1]
+			elif opt[0] == "shuffleseed":
+				options["shuffleSeed"] = opt[1]
 				
 	for skill in skills:
 		skills[skill] = buildSkillWithDefaults(skills[skill])

@@ -3,6 +3,7 @@ from __future__ import print_function
 import data
 import math
 import time
+import random
 
 # Initial logic and code by github.com/Andu2
 # Python conversion and github.com/Meteorchestra
@@ -820,7 +821,10 @@ def fight(enemyName):
 
 	#Find the challenger and enemy and prepare them for battle
 	ahChallenger = data.challenger["activeHero"]
-	ahChallenger.reset()
+	
+	#Don't reset after victories in Gauntlet mode
+	if data.options["combatMode"] == "duel" or ahChallenger.stats["hp"] <= 0:
+		ahChallenger.reset()
 
 	ahEnemy = data.enemies["fl"]["activeHeroes"][enemyName]
 	ahEnemy.reset()
@@ -885,16 +889,23 @@ def calculate():
 
 	fightResults = []
 
-	enemyList = data.enemies["fl"]["list"]
+	enemyList = list(data.enemies["fl"]["list"].keys())
+	
+	#If consecutive battles affect each other, shuffle the enemy list for more representative results
+	if data.options["combatMode"] == "gauntlet":
+		random.seed(data.options["shuffleSeed"])
+		random.shuffle(enemyList)
 	
 	for enemy in enemyList:
-		if enemyList[enemy]["included"]:
+		if data.enemies["fl"]["list"][enemy]["included"]:
 			fightResults.append(fight(enemy))
 	
 	#Clean up output if each result is being displayed
 	if data.options["output"] == "Verbose" or data.options["output"] == "Summary":
 		print("-- " + data.challenger["name"] + " vs. ALL --")
-		fightResults.sort(key=sortByName)
+		#Keep results in order in Gauntlet mode
+		if data.options["combatMode"] == "duel":
+			fightResults.sort(key=sortByName)
 
 	#Print results as necessary and calculate summary stats
 	for result in fightResults:
