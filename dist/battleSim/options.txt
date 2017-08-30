@@ -28,7 +28,7 @@ SKILLSET: Replace these with any skill name (will be reset to default if invalid
 #B = Windsweep 3
 #C = Spur Spd 3
 #S = Phantom Spd 1
-#Special = Escutcheon
+#Special = Growing Thunder
 #Weapon = Wo Dao
 
 DAMAGE TAKEN: Replace this with any numerical value - if higher than the unit's HP, unit will start at 1 HP
@@ -54,13 +54,25 @@ STATS: Comma-separated list of total stats to display for each scenario
 - "Wins": Cases where the challenger defeats a foe utterly
 - "Losses": Cases where the challenger is defeated utterly
 - "Inconclusive": Cases where both the challenger and the enemy survive the specified rounds
-stats = Wins,Losses,Inconclusive
+- "Damage Dealt": Damage dealt by the challenger (technically, net damage taken by the enemy)
+- "Damage Taken": Net damage taken by the challenger
+- "Damage Ratio": Ratio between damage dealt and damage taken
+- Note that damage values do not include overkill
+stats = Wins,Losses,Inconclusive,Damage Dealt,Damage Taken,Damage Ratio
 
 SCENARIOS: Different combinations of round initiations to analyze
 - Each scenario can be listed as a combination of "C" and "E"
 - A "C" indicates a round that the challenger initiates
 - An "E" indicates a round that the enemy initiates
 scenarios = CECECE,ECECEC
+
+COMBAT MODE: Style of combat to use (defaults to 'duel')
+- "Duel": Each battle is independent
+- "Gauntlet": Challenger's state after each battle they win carries over to the next
+combatmode = gauntlet
+- When using Gauntlet mode, the order of the enemy list is shuffled for more representative results.
+- To ensure a consistent ordering of enemies across multiple tests, set a shuffleseed value (it can be anything)
+#shuffleseed = MagicIsEverything
 
 ENEMY FILTERS: Mark any category as 'exclude' to exclude units of that type
 melee = include
