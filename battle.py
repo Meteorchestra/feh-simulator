@@ -828,6 +828,10 @@ def fight(enemyName):
 
 	ahEnemy = data.enemies["fl"]["activeHeroes"][enemyName]
 	ahEnemy.reset()
+	
+	#Grab HP values at the start of the battle to track damage dealt
+	challengerStartHp = ahChallenger.stats["hp"]
+	enemyStartHp = ahEnemy.stats["hp"]
 
 	rounds = 0
 
@@ -873,9 +877,12 @@ def fight(enemyName):
 		"rounds":rounds,
 		"resultText":resultText,
 		"fightText":fightText,
-		"enemy":ahEnemy,
-		"challenger":ahChallenger,
-		"outcome":outcome}
+		"enemy":ahEnemy.name,
+		"challenger":ahChallenger.name,
+		"outcome":outcome,
+		"damageDealt":enemyStartHp - ahEnemy.stats["hp"],
+		"damageTaken":challengerStartHp - ahChallenger.stats["hp"]
+	}
 		
 def sortByName(fightResult):
 	return fightResult["enemy"].name
@@ -906,26 +913,34 @@ def calculate():
 		#Keep results in order in Gauntlet mode
 		if data.options["combatMode"] == "duel":
 			fightResults.sort(key=sortByName)
+			
+	damageDealt = 0
+	damageTaken = 0
 
 	#Print results as necessary and calculate summary stats
 	for result in fightResults:
 		if data.options["output"] == "Verbose":
-			print("\n\n" + data.challenger["name"].upper() + " vs. " + result["enemy"].name.upper())
+			print("\n\n" + result["challenger"].upper() + " vs. " + result["enemy"].upper())
 			print(result["fightText"])
 			print(result["resultText"])
 		elif data.options["output"] == "Summary":
-			print(result["enemy"].name + ": " + result["resultText"])
+			print(result["enemy"] + ": " + result["resultText"])
 		if (result["outcome"] == "loss"):
 			losses += 1
 		elif (result["outcome"] == "win"):
 			wins += 1
 		else:
 			inconclusive += 1
+		damageDealt += result["damageDealt"]
+		damageTaken += result["damageTaken"]
 
 	statsByName = {
 		"Wins": wins,
 		"Losses": losses,
-		"Inconclusive": inconclusive
+		"Inconclusive": inconclusive,
+		"Damage Dealt": damageDealt,
+		"Damage Taken": damageTaken,
+		"Damage Ratio": damageDealt/damageTaken,
 	}
 	statsHeader = "SCENARIO\t"
 	stats = data.options["roundInitiators"] + "\t\t"
@@ -939,6 +954,13 @@ def calculate():
 	if data.options["output"] != "CompareBuilds":
 		print(stats)
 	return statsByName
+	
+#Determine how a stat should be sorted
+#True for stats where higher values are better
+def shouldReverseSorting(stat):
+	if stat == "Damage Taken":
+		return False
+	return True
 		
 #Calculate duel results for each specified scenario and determine summary stats
 def calculateForEachScenario(scenarios):
@@ -1022,10 +1044,12 @@ def calculateForEachBuild(slots=data.options["comparebuildsslots"]):
 		return sumStatAcrossScenarios(slotresults[skill], data.options["stats"][0])
 	
 	if data.options["comparebuildsstatformat"] == "StatTotalAcrossScenarios":
-		skillsetStrings.sort(key=getStatTotalAcrossScenariosToSort, reverse=True)
+		skillsetStrings.sort(key=getStatTotalAcrossScenariosToSort,
+			reverse=shouldReverseSorting(data.options["stats"][0]))
 		if focusSlot:
 			slotoptions = list(slotresults.keys())
-			slotoptions.sort(key=getStatTotalAcrossScenariosToSortForSlotOptions, reverse=True)
+			slotoptions.sort(key=getStatTotalAcrossScenariosToSortForSlotOptions, 
+				reverse=shouldReverseSorting(data.options["stats"][0]))
 		
 	resultsHeader = ""
 	for scenario in data.options["scenarios"]:
