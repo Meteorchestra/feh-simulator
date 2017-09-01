@@ -71,6 +71,9 @@
 # galeforce: Initiate again if special is charged
 # phantom: Stat modifiers that only affect stat comparison checks
 # hardy: Negates skills that change attack priority (desperation/vantage)
+# blockconsecutive: Negates a fraction of damage from consecutive attacks
+# steady: Gain bonus charge when defending
+# negatebuffs: Negate buffs on certain classes of enemies
 # condition: Condition that must be met for skill to activate
 #####
 
@@ -110,6 +113,7 @@
 #	1. If the unit is attacking, prevent the unit from making a followup attack
 #	2. Prevent the enemy from countering if the enemy attack type is right and the speed margin is met
 # - attacktype = the attack type (magical/physical) that the enemy must have
+# - enemyweapon = the enemy must have a weapon type in the list
 # - stat = stat to compare for whether the enemy can counter
 # - margin = necessary stat margin to prevent the enemy from countering
 # defensivespecial: Check that the unit has a defensive special
@@ -4827,5 +4831,132 @@ skillList = {
 		"spd":2,
 		"charge":1,
 		"fury":4,
+	},
+	"Urvan":{
+		"slot":"weapon",
+		"sp":400,
+		"inheritrule":"unique",
+		"affectsduel":1,
+		"ismax":1,
+		"atk":16,
+		"charge":1,
+		"blockconsecutive":.8,
+	},
+	"Steady Stance 1":{
+		"slot":"a",
+		"sp":50,
+		"inheritrule":"",
+		"affectsduel":1,
+		"def":2,
+		"condition":{"type":"def"},
+	},
+	"Steady Stance 2":{
+		"slot":"a",
+		"sp":100,
+		"inheritrule":"",
+		"affectsduel":1,
+		"def":4,
+		"condition":{"type":"def"},
+	},
+	"Steady Breath":{
+		"slot":"a",
+		"sp":240,
+		"inheritrule":"melee,infantry,armored",
+		"affectsduel":1,
+		"ismax":1,
+		"steady":1,
+		"def":4,
+		"condition":{"type":"def"},
+	},
+	"Beorc's Blessing":{
+		"slot":"b",
+		"sp":300,
+		"inheritrule":"unique",
+		"affectsduel":1,
+		"ismax":1,
+		"negatebuffs":["cavalry", "flying"],
+	},
+	"Mulagir":{
+		"slot":"weapon",
+		"sp":400,
+		"inheritrule":"unique",
+		"affectsduel":1,
+		"ismax":1,
+		"atk":14,
+		"spd":3,
+		"effective":"flying",
+		"negatebuffs":["bluetome", "greentome", "redtome"],
+	},
+	"Sacae's Blessing":{
+		"slot":"b",
+		"sp":300,
+		"inheritrule":"unique",
+		"affectsduel":1,
+		"ismax":1,
+		"noenemycounter":1,
+		"condition":{"type":"enemyweapon", "value":["lance", "sword", "axe"]},
+	},
+	"Atk Smoke 1":{
+		"slot":"c",
+		"sp":60,
+		"inheritrule":"nonstaff",
+	},
+	"Atk Smoke 2":{
+		"slot":"c",
+		"sp":120,
+		"inheritrule":"nonstaff",
+	},
+	"Atk Smoke 3":{
+		"slot":"c",
+		"sp":240,
+		"inheritrule":"nonstaff",
+		"ismax":1,
+	},
+	#TODO: Confirm the Heavy Blade effect, the wording is slightly different
+	"Blazing Durandal":{
+		"slot":"weapon",
+		"sp":400,
+		"inheritrule":"unique",
+		"ismax":1,
+		"affectsduel":1,
+		"atk":19,
+		"heavy":{"stat":"atk", "margin":1, "value":1},
+	},
+	"Steady Blow 1":{
+		"slot":"a",
+		"sp":120,
+		"inheritrule":"nonstaff",
+		"affectsduel":1,
+		"spur":{"spd":2, "def":2},
+		"condition":{"type":"init"},
+	},
+	"Steady Blow 2":{
+		"slot":"a",
+		"sp":240,
+		"inheritrule":"nonstaff",
+		"affectsduel":1,
+		"ismax":1,
+		"spur":{"spd":4, "def":4},
+		"condition":{"type":"init"},
+	},
+	"Drive Spd 1":{
+		"slot":"c",
+		"sp":120,
+		"inheritrule":"",
+	},
+	"Drive Spd 2":{
+		"slot":"c",
+		"sp":240,
+		"inheritrule":"nonstaff",
+		"ismax":1,
+	},
+	"Geirskogul":{
+		"slot":"weapon",
+		"sp":400,
+		"inheritrule":"unique",
+		"ismax":1,
+		"affectsduel":1,
+		"atk":16,
+		"def":3,
 	},
 }

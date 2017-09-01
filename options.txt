@@ -7,7 +7,7 @@ GENERAL NOTES ON OPTIONS:
 CHALLENGERS: A comma-separated list of hero names to run this analysis on
 - Use 'allheroes' instead of a name to run this analysis on all heroes
 - For a complete list of hero names, see heroes.py (or the duel results)
-challengers = Seth,Valter
+challengers = Ike (CYL),Lyn (CYL),Roy (CYL),Lucina (CYL)
 
 BOON/BANE: Replace these with any stat name (hp/atk/spd/def/res/none)
 boon = none

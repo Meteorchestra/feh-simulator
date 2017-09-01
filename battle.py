@@ -295,19 +295,25 @@ class ActiveHero(object):
 		return postCombatHealText
 		
 	#Get stat modifications for a particular stat
-	def getStatMods(self, stat):
+	#TODO: Confirm interaction between nullifiers and panics
+	def getStatMods(self, stat, enemy):
 		if self.panicked:
 			return (0 - max(self.buffs[stat],self.combatBuffs[stat]) 
 					+ min(self.debuffs[stat],self.combatDebuffs[stat])
 					+ self.spur[stat] + self.combatSpur[stat])
 		else:
+			for skill in enemy.getSkillsWithAttribute("negatebuffs"):
+				if (self.moveType in enemy.skillAttributes["negatebuffs"][skill] or 
+						self.weaponType in enemy.skillAttributes["negatebuffs"][skill]):
+					return (min(self.debuffs[stat],self.combatDebuffs[stat]) 
+							+ self.spur[stat] + self.combatSpur[stat])
 			return (max(self.buffs[stat],self.combatBuffs[stat]) 
 					+ min(self.debuffs[stat],self.combatDebuffs[stat]) 
 					+ self.spur[stat] + self.combatSpur[stat])
 			
 
 	#Represents one attack of combat
-	def doDamage(self, enemy, range, brave=False, AOE=False):
+	def doDamage(self, enemy, range, brave=False, AOE=False, consecutive=False):
 		#Record whether a unit actually attacked for checking daggers and pain
 		self.didAttack = True
 
@@ -315,14 +321,15 @@ class ActiveHero(object):
 		effectiveBonus = 1.0
 		dmgMultiplier = 1.0
 		dmgBoost = 0
+		dmgBlock = 0
 		absorbPct = 0
 
 		damageText = ""
 		selfEffectiveStats = {}
 		enemyEffectiveStats = {}
 		for stat in ["atk", "def", "res"]:
-			selfEffectiveStats[stat] = self.stats[stat] + self.getStatMods(stat)
-			enemyEffectiveStats[stat] = enemy.stats[stat] + enemy.getStatMods(stat)
+			selfEffectiveStats[stat] = self.stats[stat] + self.getStatMods(stat, enemy)
+			enemyEffectiveStats[stat] = enemy.stats[stat] + enemy.getStatMods(stat, self)
 
 		if (self.attackType == "magical"):
 			relevantDef = enemyEffectiveStats["res"]
@@ -451,7 +458,7 @@ class ActiveHero(object):
 						dmgReduction = effect["value"]
 						
 						for skill in enemy.getSkillsWithAttribute("specialshield"):
-							dmgBoost -= enemy.skillAttributes["specialshield"][skill]
+							dmgBlock += enemy.skillAttributes["specialshield"][skill]
 							if self.verbose:
 								damageText += (enemy.name + " blocks "
 										+ str(enemy.skillAttributes["specialshield"][skill]) 
@@ -461,9 +468,6 @@ class ActiveHero(object):
 					miracle = True
 
 			if defensiveSpecialActivated:
-				if self.verbose and (dmgReduction < 1):
-					damageText += (enemy.name + " multiplies damage by " + str(1-dmgReduction)
-							+ " with " + enemy.special + ".\n")
 				enemy.resetCharge()
 
 			#Weapon mod for healers
@@ -479,15 +483,24 @@ class ActiveHero(object):
 			#This is currently just Absorb
 			for skill in self.getSkillsWithAttribute("absorb"):
 				absorbPct += self.skillAttributes["absorb"][skill]
+				
+			#Currently just Urvan
+			#TODO: Confirm interaction with defensive specials
+			if consecutive:
+				for skill in enemy.getSkillsWithAttribute("blockconsecutive"):
+					dmgReduction = max(dmgReduction, enemy.skillAttributes["blockconsecutive"][skill])
+			
+			if self.verbose and (dmgReduction > 0):
+				damageText += (enemy.name + " multiplies damage by " + format(1-dmgReduction, ".1f") + " with defensive skills.\n")
 
 			#Damage calculation from http://feheroes.wiki/Damage_Calculation
 			#Doing calculation in steps to see the formula more clearly
 			rawDmg = (math.trunc(selfEffectiveStats["atk"] * effectiveBonus)
-					+ math.trunc(math.trunc(selfEffectiveStats["atk"] * effectiveBonus) * weaponAdvantageBonus)
-					+ math.trunc(dmgBoost))
+					+ math.trunc(math.trunc(selfEffectiveStats["atk"] * effectiveBonus) * weaponAdvantageBonus))
 			reduceDmg = relevantDef + math.trunc(relevantDef * enemyDefModifier)
 			dmg = math.trunc((rawDmg - reduceDmg) * weaponModifier)
-			dmg = math.trunc(dmg * dmgMultiplier) - math.trunc(dmg * dmgReduction)
+			dmg = math.trunc(dmg * dmgMultiplier) + math.trunc(dmgBoost)
+			dmg = dmg - math.trunc(dmg * dmgReduction) - math.trunc(dmgBlock)
 			dmg = max(dmg, 0)
 			if self.verbose:
 				damageText += self.name + " attacks " + enemy.name + " for " + str(dmg) + " damage.\n"
@@ -524,16 +537,24 @@ class ActiveHero(object):
 				guard = 0
 				for skill in enemy.getActiveSkillsWithAttribute("guard"):
 					guard = max(guard, enemy.skillAttributes["guard"][skill])
+					
+				steady = 0
+				for skill in self.getActiveSkillsWithAttribute("steady"):
+					steady = max(steady, self.skillAttributes["steady"][skill])
 
-				self.charge = self.charge + 1 + heavy - guard
+				self.charge = self.charge + 1 + heavy + steady - guard
 
 			if (not defensiveSpecialActivated):
 				
 				guard = 0
 				for skill in self.getActiveSkillsWithAttribute("guard"):
 					guard = max(guard, self.skillAttributes["guard"][skill])
+					
+				steady = 0
+				for skill in enemy.getActiveSkillsWithAttribute("steady"):
+					steady = max(steady, enemy.skillAttributes["steady"][skill])
 
-				enemy.charge = enemy.charge + 1 - guard
+				enemy.charge = enemy.charge + 1 + steady - guard
 
 			#Show hp
 			#Make sure challenger is first
@@ -549,7 +570,7 @@ class ActiveHero(object):
 			if (brave and enemy.stats["hp"] > 0):
 				if self.verbose:
 					damageText += self.name + " attacks again with a brave weapon.\n"
-				damageText += self.doDamage(enemy, self.range)
+				damageText += self.doDamage(enemy, self.range, False, False, True)
 
 		return damageText
 
@@ -595,8 +616,8 @@ class ActiveHero(object):
 		roundText += enemy.startCombatSpur(self)
 
 		#Adjust speeds
-		selfEffSpd = self.stats["spd"] + self.getStatMods("spd")
-		enemyEffSpd = enemy.stats["spd"] + enemy.getStatMods("spd")
+		selfEffSpd = self.stats["spd"] + self.getStatMods("spd", enemy)
+		enemyEffSpd = enemy.stats["spd"] + enemy.getStatMods("spd", self)
 
 		#Check for any-distance counterattack
 		anyRangeCounter = ("anyrangecounter" in enemy.skillAttributes)
@@ -670,7 +691,8 @@ class ActiveHero(object):
 		if desperation and self.stats["hp"] > 0 and enemy.stats["hp"] > 0 and selfFollowUp:
 			if self.verbose:
 				roundText += self.name + " attacks again immediately with desperation.\n"
-			roundText += self.doDamage(enemy, self.range, brave)
+			#This is always a consecutive attack
+			roundText += self.doDamage(enemy, self.range, brave, False, True)
 
 		#Enemy attacks, either vantage follow-up or first attack
 		if (enemyCanCounter and enemy.stats["hp"] > 0 and self.stats["hp"] > 0 
@@ -679,7 +701,8 @@ class ActiveHero(object):
 			
 		#Hero's follow-up (unless it has already happened from desperation)
 		if selfFollowUp and self.stats["hp"] > 0 and enemy.stats["hp"] > 0 and (not desperation):
-			roundText += self.doDamage(enemy, self.range, brave)
+			#This is a consecutive attack if the enemy can't counter
+			roundText += self.doDamage(enemy, self.range, brave, False, (not enemyCanCounter))
 
 		#Enemy's non-vantage follow-up
 		if enemyCanCounter and enemyFollowUp and self.stats["hp"] > 0 and enemy.stats["hp"] > 0 and (not vantage):
@@ -786,6 +809,9 @@ def checkAttackedClass(self, enemy, condition, attribute):
 def checkDefensiveSpecial(self, enemy, condition, attribute):
 	return "special" in self.skillAttributes and self.skillAttributes["special"][self.special]["type"] == "defense"
 	
+def checkEnemyWeaponType(self, enemy, condition, attribute):
+	return enemy.weaponType in condition["value"]
+	
 #Map of functions to avoid a big ugly conditional
 #See skills.py for a more complete description of skill conditions
 conditionCheckFunctions = {
@@ -807,6 +833,7 @@ conditionCheckFunctions = {
 	"riposte": checkDefWithHpMin,
 	"sweep": checkSweep,
 	"defensivespecial": checkDefensiveSpecial,
+	"enemyweapon": checkEnemyWeaponType,
 }
 
 def checkCondition(self, skill, enemy=None, attribute=None):
