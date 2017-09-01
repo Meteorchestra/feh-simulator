@@ -320,8 +320,9 @@ class ActiveHero(object):
 		enemyDefModifier = 0
 		effectiveBonus = 1.0
 		dmgMultiplier = 1.0
-		dmgBoost = 0
-		dmgBlock = 0
+		dmgBoost = 0 #Boosts from stat-based specials
+		flatDmgBoost = 0 #Boosts from Wo Dao, etc.
+		flatDmgBlock = 0
 		absorbPct = 0
 
 		damageText = ""
@@ -367,7 +368,7 @@ class ActiveHero(object):
 			
 			if (offensiveSpecialActivated or AOE):
 				for skill in self.getSkillsWithAttribute("specialboost"):
-					dmgBoost += self.skillAttributes["specialboost"][skill]
+					flatDmgBoost += self.skillAttributes["specialboost"][skill]
 					if self.verbose:
 						damageText += (self.name + " gains " + str(self.skillAttributes["specialboost"][skill])
 									+ " damage from " + skill + ".\n")
@@ -379,7 +380,7 @@ class ActiveHero(object):
 				AOEEffectiveAtk = selfEffectiveStats["atk"] - self.spur["atk"] - self.combatSpur["atk"]
 				
 				multiplier = self.skillAttributes["special"][self.special]["multiplier"]
-				AOEDamage = max(enemy.getNonlethalDamage(dmgBoost
+				AOEDamage = max(enemy.getNonlethalDamage(flatDmgBoost
 						+ math.floor(multiplier * (AOEEffectiveAtk - relevantDef))), 0)
 				self.resetCharge()
 				enemy.stats["hp"] -= AOEDamage
@@ -458,7 +459,7 @@ class ActiveHero(object):
 						dmgReduction = effect["value"]
 						
 						for skill in enemy.getSkillsWithAttribute("specialshield"):
-							dmgBlock += enemy.skillAttributes["specialshield"][skill]
+							flatDmgBlock += enemy.skillAttributes["specialshield"][skill]
 							if self.verbose:
 								damageText += (enemy.name + " blocks "
 										+ str(enemy.skillAttributes["specialshield"][skill]) 
@@ -496,11 +497,11 @@ class ActiveHero(object):
 			#Damage calculation from http://feheroes.wiki/Damage_Calculation
 			#Doing calculation in steps to see the formula more clearly
 			rawDmg = (math.trunc(selfEffectiveStats["atk"] * effectiveBonus)
-					+ math.trunc(math.trunc(selfEffectiveStats["atk"] * effectiveBonus) * weaponAdvantageBonus))
+					+ math.trunc(math.trunc(selfEffectiveStats["atk"] * effectiveBonus) * weaponAdvantageBonus) + math.trunc(dmgBoost))
 			reduceDmg = relevantDef + math.trunc(relevantDef * enemyDefModifier)
 			dmg = math.trunc((rawDmg - reduceDmg) * weaponModifier)
-			dmg = math.trunc(dmg * dmgMultiplier) + math.trunc(dmgBoost)
-			dmg = dmg - math.trunc(dmg * dmgReduction) - math.trunc(dmgBlock)
+			dmg = math.trunc(dmg * dmgMultiplier) + math.trunc(flatDmgBoost)
+			dmg = dmg - math.trunc(dmg * dmgReduction) - math.trunc(flatDmgBlock)
 			dmg = max(dmg, 0)
 			if self.verbose:
 				damageText += self.name + " attacks " + enemy.name + " for " + str(dmg) + " damage.\n"
