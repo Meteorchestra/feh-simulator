@@ -1,18 +1,20 @@
 # FEH Build Evaluator
 A mass dueling simulator and build evaluator for Fire Emblem Heroes.
 
-Forked from https://github.com/Andu2/FEH-Mass-Simulator and converted to a Python command-line tool.
+Forked from https://github.com/Andu2/FEH-Mass-Simulator and converted to a Python command-line tool and standalone executable.
 
 Current features:
 - Calculate mass duel results based on character information and options stored in local input files
 - Evaluate results across multiple scenarios at once (offensive ORKOs, defensive ORKOs, extended duels, etc.)
 - Find optimal builds for a character with one command (based on provided criteria)
 - Evaluate results against custom enemy lists with multiple builds for the same hero
+- Evaluate effectiveness of builds over multiple consecutive battles with gauntlet mode
+- Judge builds according to a variety of statistics (wins, damage dealt, damage taken, damage ratio)
 
 Upcoming features:
 - More statistics to evaluate
-- Additional modes to better evaluate resiliency of builds over multiple battles
 - Team evaluation capabilities
+- ???
 
 Run with 'battleSim.exe OPTIONSFILEPATH' from the dist/battleSim directory - will default to options.txt if no filepath is given. Use 'python battleSim.py OPTIONSFILEPATH' from the main directory to run the Python script directly.
 
