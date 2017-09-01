@@ -447,7 +447,7 @@ class ActiveHero(object):
 
 			#Check damage reducing specials
 			defensiveSpecialActivated = False
-			dmgReduction = 0
+			dmgReduction = 1
 			miracle = False
 			if enemy.skillAttributes["charge"][enemy.special] <= enemy.charge:
 			
@@ -456,7 +456,7 @@ class ActiveHero(object):
 					if effect["type"] == "defense" and effect["range"] == range:
 						defensiveSpecialActivated = True
 						#All current defensive specials are damage reduction
-						dmgReduction = effect["value"]
+						dmgReduction = 1 - effect["value"]
 						
 						for skill in enemy.getSkillsWithAttribute("specialshield"):
 							flatDmgBlock += enemy.skillAttributes["specialshield"][skill]
@@ -469,6 +469,8 @@ class ActiveHero(object):
 					miracle = True
 
 			if defensiveSpecialActivated:
+				if self.verbose:
+					damageText += (enemy.name + " multiplies damage by " + format(dmgReduction, ".1f") + " with " + enemy.special + ".\n")
 				enemy.resetCharge()
 
 			#Weapon mod for healers
@@ -486,13 +488,13 @@ class ActiveHero(object):
 				absorbPct += self.skillAttributes["absorb"][skill]
 				
 			#Currently just Urvan
-			#TODO: Confirm interaction with defensive specials
+			#These are multiplicative with defensive specials
 			if consecutive:
 				for skill in enemy.getSkillsWithAttribute("blockconsecutive"):
-					dmgReduction = max(dmgReduction, enemy.skillAttributes["blockconsecutive"][skill])
-			
-			if self.verbose and (dmgReduction > 0):
-				damageText += (enemy.name + " multiplies damage by " + format(1-dmgReduction, ".1f") + " with defensive skills.\n")
+					dmgReduction = dmgReduction * (1 - enemy.skillAttributes["blockconsecutive"][skill])
+					if self.verbose:
+						damageText += (enemy.name + " multiplies damage by " +
+								format(1-enemy.skillAttributes["blockconsecutive"][skill], ".1f") + " with " + skill + ".\n")
 
 			#Damage calculation from http://feheroes.wiki/Damage_Calculation
 			#Doing calculation in steps to see the formula more clearly
@@ -501,7 +503,7 @@ class ActiveHero(object):
 			reduceDmg = relevantDef + math.trunc(relevantDef * enemyDefModifier)
 			dmg = math.trunc((rawDmg - reduceDmg) * weaponModifier)
 			dmg = math.trunc(dmg * dmgMultiplier) + math.trunc(flatDmgBoost)
-			dmg = dmg - math.trunc(dmg * dmgReduction) - math.trunc(flatDmgBlock)
+			dmg = dmg - math.trunc(dmg * (1 - dmgReduction)) - math.trunc(flatDmgBlock)
 			dmg = max(dmg, 0)
 			if self.verbose:
 				damageText += self.name + " attacks " + enemy.name + " for " + str(dmg) + " damage.\n"
