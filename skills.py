@@ -74,6 +74,7 @@
 # blockconsecutive: Negates a fraction of damage from consecutive attacks
 # steady: Gain bonus charge when defending
 # negatebuffs: Negate buffs on certain classes of enemies
+# buildcharge: Gain bonus charge at the start of each turn
 # condition: Condition that must be met for skill to activate
 #####
 
@@ -4958,5 +4959,106 @@ skillList = {
 		"affectsduel":1,
 		"atk":16,
 		"def":3,
+	},
+	"Slaying Lance":{
+		"slot":"weapon",
+		"sp":200,
+		"inheritrule":"lance",
+		"affectsduel":1,
+		"atk":10,
+		"charge":1,
+	},
+	"Slaying Lance+":{
+		"slot":"weapon",
+		"sp":300,
+		"inheritrule":"lance",
+		"affectsduel":1,
+		"ismax":1,
+		"atk":14,
+		"charge":1,
+	},
+	"Wrath 1":{
+		"slot":"b",
+		"inheritrule":"melee,infantry,armored",
+		"rulestomatch":2,
+		"sp":60,
+		"specialboost":10,
+		"buildcharge":1,
+		"condition":{"type":"hpmax", "value":.25},
+		"affectsduel":1,
+	},
+	"Wrath 2":{
+		"slot":"b",
+		"inheritrule":"melee,infantry,armored",
+		"rulestomatch":2,
+		"sp":120,
+		"specialboost":10,
+		"buildcharge":1,
+		"condition":{"type":"hpmax", "value":.5},
+		"affectsduel":1,
+	},
+	"Wrath 3":{
+		"slot":"b",
+		"inheritrule":"melee,infantry,armored",
+		"rulestomatch":2,
+		"sp":240,
+		"specialboost":10,
+		"buildcharge":1,
+		"condition":{"type":"hpmax", "value":.75},
+		"affectsduel":1,
+		"ismax":1,
+	},
+	"Atk Spd 1":{
+		"slot":"a",
+		"sp":80,
+		"atk":1,
+		"spd":1,
+		"inheritrule":"",
+		"affectsduel":1,
+	},
+	"Atk Spd 2":{
+		"slot":"a",
+		"sp":160,
+		"atk":2,
+		"spd":2,
+		"inheritrule":"",
+		"affectsduel":1,
+		"ismax":1,
+	},
+	"Spur Spd Def 1":{
+		"slot":"c",
+		"sp":120,
+		"inheritrule":"",
+	},
+	"Spur Spd Def 2":{
+		"slot":"c",
+		"sp":240,
+		"inheritrule":"",
+		"ismax":1,
+	},
+	"Flier Formation 1":{
+		"slot":"b",
+		"sp":60,
+		"inheritrule":"flying",
+	},
+	"Flier Formation 2":{
+		"slot":"b",
+		"sp":120,
+		"inheritrule":"flying",
+	},
+	"Flier Formation 3":{
+		"slot":"b",
+		"sp":240,
+		"inheritrule":"flying",
+	},
+	"Amiti":{
+		"slot":"weapon",
+		"sp":400,
+		"atk":11,
+		"spd":-2,
+		"inheritrule":"unique",
+		"affectsduel":1,
+		"ismax":1,
+		"brave":1,
 	},
 }

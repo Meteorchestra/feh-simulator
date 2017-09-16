@@ -367,7 +367,7 @@ class ActiveHero(object):
 					damageText += self.name + " activates " + self.special + ".\n"
 			
 			if (offensiveSpecialActivated or AOE):
-				for skill in self.getSkillsWithAttribute("specialboost"):
+				for skill in self.getActiveSkillsWithAttribute("specialboost"):
 					flatDmgBoost += self.skillAttributes["specialboost"][skill]
 					if self.verbose:
 						damageText += (self.name + " gains " + str(self.skillAttributes["specialboost"][skill])
@@ -606,6 +606,9 @@ class ActiveHero(object):
 			if ((not firstTurn) or data.options["threatenRule"] == "Both"
 					or data.options["threatenRule"] == "Defender"):
 				roundText += self.threaten(enemy)
+				
+			for skill in self.getActiveSkillsWithAttribute("buildcharge"):
+				self.charge += self.skillAttributes["buildcharge"][skill]
 
 		#Set after renewal
 		self.combatStartHp = self.stats["hp"]
