@@ -33,6 +33,10 @@ data["growths"] = [[6,8,9,11,13,14,16,18,19,21,23,24],
 		[7,9,11,13,15,17,19,21,23,25,27,29],
 		[8,10,12,14,16,18,20,22,24,26,28,31],
 		[8,10,13,15,17,19,22,24,26,28,30,33]]
+data["supports"] = {"C":{"hp":3,"res":2},
+		"B":{"hp":4,"def":2,"res":2},
+		"A":{"hp":4,"spd":2,"def":2,"res":2},
+		"S":{"hp":5,"atk":2,"spd":2,"def":2,"res":2}}
 		
 #Holder for options that aren't hero-specific
 options = {}
@@ -692,6 +696,8 @@ def parseOptions(optionsFile="options.txt"):
 				options["combatMode"] = opt[1]
 			elif opt[0] == "shuffleseed":
 				options["shuffleSeed"] = opt[1]
+			elif opt[0] == "support":
+				options["summonerSupport"] = opt[1]
 				
 	for skill in skills:
 		skills[skill] = buildSkillWithDefaults(skills[skill])

@@ -43,6 +43,9 @@ class ActiveHero(object):
 				"def":hero["def"], 
 				"res":hero["res"], 
 				"hp":max(self.maxHp - hero["damage"], 1)}
+				
+		if "challenger" in hero and "summonerSupport" in data.options:
+			self.applySupport()
 
 		self.moveType = hero["movetype"]
 		self.weaponType = hero["weapontype"]
@@ -108,6 +111,11 @@ class ActiveHero(object):
 
 	def resetCharge(self):
 		self.charge = data.skills[self.weapon]["charge"]
+		
+	def applySupport(self):
+		supportBonuses = data.data["supports"][data.options["summonerSupport"]]
+		for stat in self.stats:
+			self.stats[stat] += supportBonuses[stat]
 		
 	def hasWeaponAdvantage(self, enemy):
 		if ((self.color == "red" and enemy.color == "green") or

@@ -22,6 +22,9 @@ MERGE: Replace this with a numerical merge value (1-10 are officially supported)
 #merge = 10
 #enemymerge = 10
 
+SUPPORT: Specify a C/B/A/S value to apply that summoner support bonus to the challenger
+#support = S
+
 SKILLSET: Replace these with any skill name (will be reset to default if invalid)
 - For a complete list of skill names, see skills.py
 #A = Triangle Adept 3
