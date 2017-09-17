@@ -70,9 +70,9 @@ SCENARIOS: Different combinations of round initiations to analyze
 scenarios = CECECE,ECECEC
 
 COMBAT MODE: Style of combat to use (defaults to 'duel')
-- "Duel": Each battle is independent
-- "Gauntlet": Challenger's state after each battle they win carries over to the next
-combatmode = gauntlet
+- "duel": Each battle is independent
+- "gauntlet": Challenger's state after each battle they win carries over to the next
+combatmode = duel
 - When using Gauntlet mode, the order of the enemy list is shuffled for more representative results.
 - To ensure a consistent ordering of enemies across multiple tests, set a shuffleseed value (it can be anything)
 #shuffleseed = MagicIsEverything

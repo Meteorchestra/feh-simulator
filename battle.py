@@ -926,7 +926,7 @@ def fight(enemyName):
 	}
 		
 def sortByName(fightResult):
-	return fightResult["enemy"].name
+	return fightResult["enemy"]
 
 #Calculate results from duels with each enemy
 def calculate():
@@ -974,6 +974,10 @@ def calculate():
 			inconclusive += 1
 		damageDealt += result["damageDealt"]
 		damageTaken += result["damageTaken"]
+		
+	#Provide more useful info and avoid div by zero errors
+	if damageTaken == 0:
+		damageTaken = 1
 
 	statsByName = {
 		"Wins": wins,
