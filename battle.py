@@ -615,8 +615,9 @@ class ActiveHero(object):
 					or data.options["threatenRule"] == "Defender"):
 				roundText += self.threaten(enemy)
 				
-			for skill in self.getActiveSkillsWithAttribute("buildcharge"):
-				self.charge += self.skillAttributes["buildcharge"][skill]
+			if ("special" in self.skillAttributes and self.skillAttributes["special"][self.special]["type"] == "offense"):
+				for skill in self.getActiveSkillsWithAttribute("buildcharge"):
+					self.charge += self.skillAttributes["buildcharge"][skill]
 
 		#Set after renewal
 		self.combatStartHp = self.stats["hp"]
