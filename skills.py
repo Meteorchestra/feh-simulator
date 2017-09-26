@@ -4913,7 +4913,6 @@ skillList = {
 		"inheritrule":"nonstaff",
 		"ismax":1,
 	},
-	#TODO: Confirm the Heavy Blade effect, the wording is slightly different
 	"Blazing Durandal":{
 		"slot":"weapon",
 		"sp":400,
@@ -5060,5 +5059,36 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"brave":1,
+	},
+	"Alondite":{
+		"slot":"weapon",
+		"sp":400,
+		"atk":16,
+		"inheritrule":"unique",
+		"affectsduel":1,
+		"ismax":1,
+		"anyrangecounter":1,
+	},
+	"Black Luna":{
+		"slot":"special",
+		"sp":500,
+		"charge":3,
+		"inheritrule":"unique",
+		"affectsduel":1,
+		"ismax":1,
+		"special":{
+			"type":"offense",
+			"effect":"pierce",
+			"value":.8
+		},
+	},
+	"Steady Stance 3":{
+		"slot":"a",
+		"sp":200,
+		"inheritrule":"",
+		"affectsduel":1,
+		"def":6,
+		"condition":{"type":"def"},
+		"ismax":1,
 	},
 }
