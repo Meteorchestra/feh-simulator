@@ -877,7 +877,10 @@ heroList = {
 			"Light Breath+":5,
 			"Renewal 1":4,
 			"Renewal 2":4,
-			"Renewal 3":5
+			"Renewal 3":4,
+			"Threaten Atk 1":4,
+			"Threaten Atk 2":4,
+			"Threaten Atk 3":5,
 		},
 	},
 	"Frederick":{
