@@ -28,11 +28,11 @@ data["skillSlots"] = ["weapon","special","a","b","c","s"]
 data["buffTypes"] = ["buffs","debuffs","spur"]
 data["buffStats"] = ["atk","spd","def","res"]
 data["stats"] = ["hp","atk","spd","def","res"]
-data["growths"] = [[6,8,9,11,13,14,16,18,19,21,23,24],
-		[7,8,10,12,14,15,17,19,21,23,25,26],
-		[7,9,11,13,15,17,19,21,23,25,27,29],
-		[8,10,12,14,16,18,20,22,24,26,28,31],
-		[8,10,13,15,17,19,22,24,26,28,30,33]]
+data["growths"] = [[6,8,9,11,13,14,16,18,19,21,23,24,26,28],
+		[7,8,10,12,14,15,17,19,21,23,25,26,28,30],
+		[7,9,11,13,15,17,19,21,23,25,27,29,31,33],
+		[8,10,12,14,16,18,20,22,24,26,28,31,33,35],
+		[8,10,13,15,17,19,22,24,26,28,30,33,35,37]]
 data["supports"] = {"C":{"hp":3,"res":2},
 		"B":{"hp":4,"def":2,"res":2},
 		"A":{"hp":4,"spd":2,"def":2,"res":2},
@@ -84,8 +84,13 @@ def buildSkillWithDefaults(baseSkill):
 		#Set up skills that depend on adjacent allies using the option value
 		effect = baseSkill["condition"]["effect"]
 		baseSkill[effect] = {}
-		for field in baseSkill["condition"]["each"]:
-			baseSkill[effect][field] = baseSkill["condition"]["each"][field] * options["adjacentallies"]
+		if "each" in baseSkill["condition"]:
+			for field in baseSkill["condition"]["each"]:
+				baseSkill[effect][field] = baseSkill["condition"]["each"][field] * options["adjacentallies"]
+		if "any" in baseSkill["condition"]:
+			for field in baseSkill["condition"]["any"]:
+				if options["adjacentallies"] > 0:
+					baseSkill[effect][field] = baseSkill["condition"]["any"][field]
 	return baseSkill
 	
 #Get a complete mapping of valid skills for each slot for the unit with the given name

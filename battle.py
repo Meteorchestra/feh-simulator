@@ -321,7 +321,7 @@ class ActiveHero(object):
 			
 
 	#Represents one attack of combat
-	def doDamage(self, enemy, range, brave=False, AOE=False, consecutive=False):
+	def doDamage(self, enemy, range, brave=False, AOE=False, consecutive=False, first=False):
 		#Record whether a unit actually attacked for checking daggers and pain
 		self.didAttack = True
 
@@ -336,7 +336,7 @@ class ActiveHero(object):
 		damageText = ""
 		selfEffectiveStats = {}
 		enemyEffectiveStats = {}
-		for stat in ["atk", "def", "res"]:
+		for stat in ["atk", "def", "res", "spd"]:
 			selfEffectiveStats[stat] = self.stats[stat] + self.getStatMods(stat, enemy)
 			enemyEffectiveStats[stat] = enemy.stats[stat] + enemy.getStatMods(stat, self)
 
@@ -445,8 +445,8 @@ class ActiveHero(object):
 			effectiveBonus = 1
 			if "shield" not in enemy.skillAttributes:
 				for skill in self.getSkillsWithAttribute("effective"):
-					if (self.skillAttributes["effective"][skill] == enemy.moveType
-							or self.skillAttributes["effective"][skill] == enemy.weaponType):
+					if (enemy.moveType in self.skillAttributes["effective"][skill]
+							or enemy.weaponType in self.skillAttributes["effective"][skill]):
 						effectiveBonus = 1.5
 
 				if self.verbose and (effectiveBonus > 1):
@@ -495,14 +495,20 @@ class ActiveHero(object):
 			for skill in self.getSkillsWithAttribute("absorb"):
 				absorbPct += self.skillAttributes["absorb"][skill]
 				
-			#Currently just Urvan
+			#Deflect abilities
 			#These are multiplicative with defensive specials
 			if consecutive:
-				for skill in enemy.getSkillsWithAttribute("blockconsecutive"):
+				for skill in enemy.getActiveSkillsWithAttribute("blockconsecutive", self):
 					dmgReduction = dmgReduction * (1 - enemy.skillAttributes["blockconsecutive"][skill])
 					if self.verbose:
 						damageText += (enemy.name + " multiplies damage by " +
 								format(1-enemy.skillAttributes["blockconsecutive"][skill], ".1f") + " with " + skill + ".\n")
+			#Currently just Divine Tyrfing
+			if first:
+				for skill in enemy.getActiveSkillsWithAttribute("blockfirst", self):
+					dmgReduction = dmgReduction * (1 - enemy.skillAttributes["blockfirst"][skill])
+					if self.verbose:
+						damageText += (enemy.name + " multiplies damage by " + format(1-enemy.skillAttributes["blockfirst"][skill], ".1f") + " with " + skill + ".\n")
 
 			#Damage calculation from http://feheroes.wiki/Damage_Calculation
 			#Doing calculation in steps to see the formula more clearly
@@ -696,11 +702,13 @@ class ActiveHero(object):
 		if (vantage and enemyCanCounter):
 			if self.verbose:
 				roundText += enemy.name + " counterattacks first with vantage.\n"
-			roundText += enemy.doDamage(self, self.range)
+			#This is always the enemy's first attack
+			roundText += enemy.doDamage(self, self.range, False, False, False, True)
 
 		#Hero's initial attack (if not dead from vantage)
 		if (self.stats["hp"] > 0):
-			roundText += self.doDamage(enemy, self.range, brave)
+			#This is always the hero's first attack
+			roundText += self.doDamage(enemy, self.range, brave, False, False, True)
 
 		#Hero's desperation follow-up
 		if desperation and self.stats["hp"] > 0 and enemy.stats["hp"] > 0 and selfFollowUp:
@@ -712,7 +720,8 @@ class ActiveHero(object):
 		#Enemy attacks, either vantage follow-up or first attack
 		if (enemyCanCounter and enemy.stats["hp"] > 0 and self.stats["hp"] > 0 
 				and ((not vantage) or enemyFollowUp)):
-			roundText += enemy.doDamage(self, self.range)
+			#This is the enemy's first attack if the enemy doesn't have vantage
+			roundText += enemy.doDamage(self, self.range, False, False, False, (not vantage))
 			
 		#Hero's follow-up (unless it has already happened from desperation)
 		if selfFollowUp and self.stats["hp"] > 0 and enemy.stats["hp"] > 0 and (not desperation):
@@ -721,7 +730,8 @@ class ActiveHero(object):
 
 		#Enemy's non-vantage follow-up
 		if enemyCanCounter and enemyFollowUp and self.stats["hp"] > 0 and enemy.stats["hp"] > 0 and (not vantage):
-			roundText += enemy.doDamage(self, self.range)
+			#This is a consecutive attack if the attacker didn't follow up
+			roundText += enemy.doDamage(self, self.range, False, False, (desperation or not selfFollowUp))
 
 		#Do post-combat damage to enemy if enemy isn't dead	
 		if (enemy.stats["hp"] > 0):
