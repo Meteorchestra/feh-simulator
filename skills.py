@@ -76,6 +76,8 @@
 # steady: Gain bonus charge when defending
 # negatebuffs: Negate buffs on certain classes of enemies
 # buildcharge: Gain bonus charge at the start of each turn
+# seeking: Damage calculated using the lower of foe's Def or Res
+# reflect: Damage blocked when this special activates is added to the next attack
 # condition: Condition that must be met for skill to activate
 #####
 
@@ -93,12 +95,19 @@
 # init: Check that the unit initiated this round of combat
 # def: Check that the unit is defending this round of combat
 # rangeddef: Check that the unit is defending against a ranged attacker
+# rangedenemy: Check that the enemy has a ranged weapon
 # meleedef: Check that the unit is defending against a melee attacker
 # echo: Check conditions for Ragnarok-style weapons
 # 	These have three components:
 #	1. If the unit is at full health, grant the spur bonus
 # 	2. If the unit started combat at full health and made an attack, trigger fury
 # 	3. If the unit made an attack, trigger the Seashell's usual dagger effect
+# breath: Two-component conditional for certain breath weapons
+# - trigger the 'seeking' effect if the enemy is ranged
+# - trigger other effects (seal/postbuff) if the user attacked
+# dispell: Two-component conditional for Deathly Dagger upgrade
+# - trigger the dagger effect if the user attacks
+# - trigger the counter prevention if the enemy is using magic
 # chivalry: Check that the enemy's HP is at or above a certain percentage
 # - value = the threshold percentage
 # adjacency: Skills that vary based on adjacent allies, handled in skill setup
@@ -119,6 +128,85 @@
 # - stat = stat to compare for whether the enemy can counter
 # - margin = necessary stat margin to prevent the enemy from countering
 # defensivespecial: Check that the unit has a defensive special
+#####
+
+#####
+# WEAPON UPGRADES
+#####
+upgradeList = {
+	"Mighty":{
+		"hp":5,
+		"atk":2,
+	},
+	"Swift":{
+		"hp":5,
+		"spd":3,
+	},
+	"Sturdy":{
+		"hp":5,
+		"def":4,
+	},
+	"Warding":{
+		"hp":5,
+		"res":4,
+	},
+	"Piercing":{
+		"hp":2,
+		"atk":1,
+	},
+	"Quick":{
+		"hp":2,
+		"spd":2,
+	},
+	"Shielding":{
+		"hp":2,
+		"def":3,
+	},
+	"Mystic":{
+		"hp":2,
+		"res":3,
+	},
+	"Wrathful":{
+		"wrath":1,
+	},
+	"Dazzling":{
+		"noenemycounter":1,
+	},
+	"Brash":{
+		"brash":1,
+		"hp":3
+	},
+	"Furious":{
+		"atk":3,
+		"spd":3,
+		"def":3,
+		"res":3,
+		"hp":3,
+		"fury":6
+	},
+	"Resolute":{
+		"specialboost":10,
+		"hp":3,
+	},
+	"Dispelling":{
+		"noenemycounter":1,
+		"condition":{"type":"dispell"},
+	},
+	"Shattering":{
+		"negatebuffs":["armored"],
+		"hp":3,
+	},
+	"Crippling":{
+		"negatebuffs":["cavalry"],
+		"hp":3,
+	},
+	"Disrupting":{
+		"negatebuffs":["cavalry"],
+	},
+}
+
+#####
+# SKILLS
 #####
 
 skillList = {
@@ -150,6 +238,8 @@ skillList = {
 		"inheritrule":"sword",
 		"affectsduel":1,
 		"ismax":1,
+		"upgrades":["Mighty","Swift","Sturdy","Warding"],
+		"upgradeBonuses":{"atk":1},
 	},
 	"Armorslayer":{
 		"slot":"weapon",
@@ -165,8 +255,17 @@ skillList = {
 		"atk":12,
 		"inheritrule":"sword",
 		"affectsduel":1,
+		"effective":["armored"],
+	},
+	"Armorsmasher+":{
+		"slot":"weapon",
+		"sp":300,
+		"atk":14,
+		"inheritrule":"sword",
+		"affectsduel":1,
 		"ismax":1,
 		"effective":["armored"],
+		"upgrades":["Mighty","Swift","Sturdy","Warding","Shattering"],
 	},
 	"Brave Sword":{
 		"slot":"weapon",
@@ -238,7 +337,9 @@ skillList = {
 		"inheritrule":"sword",
 		"affectsduel":1,
 		"ismax":1,
-		"specialboost":10
+		"specialboost":10,
+		"upgrades":["Mighty","Swift","Sturdy","Warding"],
+		"upgradeBonuses":{"atk":1},
 	},
 	"Binding Blade":{
 		"slot":"weapon",
@@ -289,6 +390,7 @@ skillList = {
 		"inheritrule":"unique",
 		"affectsduel":1,
 		"ismax":1,
+		"upgrades":["Mighty", "Swift", "Sturdy", "Warding", "Furious"],
 	},
 	"Raijinto":{
 		"slot":"weapon",
@@ -316,6 +418,10 @@ skillList = {
 		"ismax":1,
 		"desperation":1,
 		"condition":{"type":"hpmax", "value":.5},
+		"upgrades":["Mighty", "Swift", "Sturdy", "Warding", "Brash"],
+		"upgradeBonuses":{
+			"condition":{"type":"hpmax", "value":.75},
+		},
 	},
 	"Tyrfing":{
 		"slot":"weapon",
@@ -328,7 +434,6 @@ skillList = {
 		"condition":{"type":"hpmax", "value":.5},
 	},
 	"Yato":{
-		"name":"Yato",
 		"slot":"weapon",
 		"sp":400,
 		"atk":16,
@@ -366,6 +471,8 @@ skillList = {
 		"inheritrule":"redtome",
 		"affectsduel":1,
 		"ismax":1,
+		"upgrades":["Piercing","Quick","Shielding","Mystic"],
+		"upgradeBonuses":{"atk":1},
 	},
 	"Flux":{
 		"slot":"weapon",
@@ -395,6 +502,8 @@ skillList = {
 		"inheritrule":"redtome",
 		"affectsduel":1,
 		"ismax":1,
+		"upgrades":["Piercing","Quick","Shielding","Mystic"],
+		"upgradeBonuses":{"atk":1},
 	},
 	"Raudrblade":{
 		"slot":"weapon",
@@ -446,8 +555,17 @@ skillList = {
 		"atk":10,
 		"inheritrule":"redtome",
 		"affectsduel":1,
+		"effective":["cavalry"],
+	},
+	"Keen Raudrwolf+":{
+		"slot":"weapon",
+		"sp":300,
+		"atk":12,
+		"inheritrule":"redtome",
+		"affectsduel":1,
 		"ismax":1,
 		"effective":["cavalry"],
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic", "Disrupting"],
 	},
 	"Brynhildr":{
 		"slot":"weapon",
@@ -493,6 +611,8 @@ skillList = {
 		"inheritrule":"axe",
 		"affectsduel":1,
 		"ismax":1,
+		"upgrades":["Mighty","Swift","Sturdy","Warding"],
+		"upgradeBonuses":{"atk":1},
 	},
 	"Brave Axe":{
 		"slot":"weapon",
@@ -544,8 +664,17 @@ skillList = {
 		"atk":12,
 		"inheritrule":"axe",
 		"affectsduel":1,
+		"effective":["armored"],
+	},
+	"Slaying Hammer+":{
+		"slot":"weapon",
+		"sp":300,
+		"atk":12,
+		"inheritrule":"axe",
+		"affectsduel":1,
 		"ismax":1,
 		"effective":["armored"],
+		"upgrades":["Mighty","Swift","Sturdy","Warding","Shattering"],
 	},
 	"Killer Axe":{
 		"slot":"weapon",
@@ -582,6 +711,7 @@ skillList = {
 		"inheritrule":"unique",
 		"affectsduel":1,
 		"ismax":1,
+		"upgrades":["Mighty", "Swift", "Sturdy", "Warding", "Resolute"],
 	},
 	"Noatun":{
 		"slot":"weapon",
@@ -665,6 +795,24 @@ skillList = {
 		"ismax":1,
 		"effective":["cavalry"],
 	},
+	"Keen Gronnwolf":{
+		"slot":"weapon",
+		"sp":200,
+		"atk":8,
+		"inheritrule":"greentome",
+		"affectsduel":1,
+		"effective":["cavalry"],
+	},
+	"Keen Gronnwolf+":{
+		"slot":"weapon",
+		"sp":300,
+		"atk":12,
+		"inheritrule":"greentome",
+		"affectsduel":1,
+		"ismax":1,
+		"effective":["cavalry"],
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic", "Disrupting"],
+	},
 	"Excalibur":{
 		"slot":"weapon",
 		"sp":400,
@@ -713,6 +861,8 @@ skillList = {
 		"inheritrule":"lance",
 		"affectsduel":1,
 		"ismax":1,
+		"upgrades":["Mighty","Swift","Sturdy","Warding"],
+		"upgradeBonuses":{"atk":1},
 	},
 	"Brave Lance":{
 		"slot":"weapon",
@@ -747,8 +897,17 @@ skillList = {
 		"atk":12,
 		"inheritrule":"lance",
 		"affectsduel":1,
+		"effective":["armored"],
+	},
+	"Slaying Spear+":{
+		"slot":"weapon",
+		"sp":300,
+		"atk":14,
+		"inheritrule":"lance",
+		"affectsduel":1,
 		"ismax":1,
 		"effective":["armored"],
+		"upgrades":["Mighty","Swift","Sturdy","Warding","Shattering"],
 	},
 	"Killer Lance":{
 		"slot":"weapon",
@@ -800,6 +959,8 @@ skillList = {
 		"inheritrule":"unique",
 		"affectsduel":1,
 		"ismax":1,
+		"condition":{"type":"hpmax", "value":.9},
+		"upgrades":["Mighty", "Swift", "Sturdy", "Warding", "Brash"],
 	},
 	"Thunder":{
 		"slot":"weapon",
@@ -857,6 +1018,16 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"effective":["cavalry"],
+	},
+	"Keen Blarwolf+":{
+		"slot":"weapon",
+		"sp":300,
+		"atk":12,
+		"inheritrule":"bluetome",
+		"affectsduel":1,
+		"ismax":1,
+		"effective":["cavalry"],
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic", "Disrupting"],
 	},
 	"Blarraven":{
 		"slot":"weapon",
@@ -921,6 +1092,14 @@ skillList = {
 		"inheritrule":"dragon",
 		"affectsduel":1,
 		"ismax":1,
+		"upgrades":["Mighty","Swift","Sturdy","Warding"],
+		"upgradeBonuses":{
+			"atk":1,
+			"seeking":1,
+			"condition":{
+				"type":"rangedenemy"
+			}
+		}
 	},
 	"Lightning Breath":{
 		"slot":"weapon",
@@ -940,6 +1119,14 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"anyrangecounter":1,
+		"upgrades":["Mighty","Swift","Sturdy","Warding"],
+		"upgradeBonuses":{
+			"atk":1,
+			"seeking":1,
+			"condition":{
+				"type":"rangedenemy"
+			}
+		}
 	},
 	"Light Breath":{
 		"slot":"weapon",
@@ -955,6 +1142,15 @@ skillList = {
 		"inheritrule":"dragon",
 		"affectsduel":1,
 		"ismax":1,
+		"upgrades":["Mighty","Swift","Sturdy","Warding"],
+		"upgradeBonuses":{
+			"atk":1,
+			"seeking":1,
+			"condition":{
+				"type":"breath"
+			},
+			"postbuff":{"atk":5, "spd":5, "def":5, "res":5},
+		},
 	},
 	"Dark Breath":{
 		"slot":"weapon",
@@ -970,6 +1166,15 @@ skillList = {
 		"inheritrule":"dragon",
 		"affectsduel":1,
 		"ismax":1,
+		"upgrades":["Mighty","Swift","Sturdy","Warding"],
+		"upgradeBonuses":{
+			"atk":1,
+			"seeking":1,
+			"condition":{
+				"type":"breath"
+			},
+			"seal":{"atk":-7, "spd":-7},
+		},
 	},
 	"Iron Bow":{
 		"slot":"weapon",
@@ -1003,6 +1208,8 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"effective":["flying"],
+		"upgrades":["Piercing","Quick","Shielding","Mystic"],
+		"upgradeBonuses":{"atk":1},
 	},
 	"Assassin's Bow":{
 		"slot":"weapon",
@@ -1026,6 +1233,18 @@ skillList = {
 		"autofollow":1,
 		"noenemyfollow":1,
 		"condition":{"type":"breaker", "value":0, "weapon":"dagger"},
+	},
+	"Guard Bow+":{
+		"slot":"weapon",
+		"sp":300,
+		"atk":12,
+		"inheritrule":"bow",
+		"affectsduel":1,
+		"ismax":1,
+		"effective":["flying"],
+		"spur":{"def":6, "res":6},
+		"condition":{"type":"rangeddef"},
+		"upgrades":["Piercing","Quick","Shielding","Mystic"],
 	},
 	"Brave Bow":{
 		"slot":"weapon",
@@ -1075,6 +1294,7 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"effective":["flying"],
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic"],
 	},
 	"Parthia":{
 		"slot":"weapon",
@@ -1123,6 +1343,8 @@ skillList = {
 		"ismax":1,
 		"seal":{"def":-7, "res":-7},
 		"condition":{"type":"didattack"},
+		"upgrades":["Piercing","Quick","Shielding","Mystic"],
+		"upgradeBonuses":{"atk":1},
 	},
 	"Poison Dagger":{
 		"slot":"weapon",
@@ -1165,6 +1387,12 @@ skillList = {
 		"seal":{"def":-5, "res":-5},
 		"postbuff":{"def":5, "res":5},
 		"condition":{"type":"didattack"},
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic"],
+		"upgradeBonuses":{
+			"atk":5,
+			"seal":{"def":-6, "res":-6},
+			"postbuff":{"def":6, "res":6},
+		},
 	},
 	"Smoke Dagger":{
 		"slot":"weapon",
@@ -1180,6 +1408,12 @@ skillList = {
 		"inheritrule":"dagger",
 		"affectsduel":1,
 		"ismax":1,
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic"],
+		"upgradeBonuses":{
+			"atk":3,
+			"seal":{"atk":-6, "spd":-6, "def":-6, "res":-6},
+			"condition":{"type":"didattack"},
+		},
 	},
 	"Deathly Dagger":{
 		"slot":"weapon",
@@ -1188,7 +1422,14 @@ skillList = {
 		"inheritrule":"unique",
 		"affectsduel":1,
 		"ismax":1,
-		"poison":7
+		"poison":7,
+		"seal":{"def":-7, "res":-7},
+		"condition":{"type":"didattack"},
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic", "Dispelling"],
+		"upgradeBonuses":{
+			"atk":3,
+			"poison":3,
+		},
 	},
 	"Assault":{
 		"slot":"weapon",
@@ -1204,8 +1445,17 @@ skillList = {
 		"atk":4,
 		"inheritrule":"staff",
 		"affectsduel":1,
+		"absorb":.5,
+	},
+	"Absorb+":{
+		"slot":"weapon",
+		"sp":300,
+		"atk":7,
+		"inheritrule":"staff",
+		"affectsduel":1,
 		"ismax":1,
 		"absorb":.5,
+		"upgrades":["Wrathful", "Dazzling"],
 	},
 	"Fear":{
 		"slot":"weapon",
@@ -1213,17 +1463,35 @@ skillList = {
 		"atk":5,
 		"inheritrule":"staff",
 		"affectsduel":1,
-		"ismax":1,
 		"seal":{"atk":-6},
 		"condition":{"type":"didattack"},
+	},
+	"Fear+":{
+		"slot":"weapon",
+		"sp":300,
+		"atk":12,
+		"inheritrule":"staff",
+		"affectsduel":1,
+		"ismax":1,
+		"seal":{"atk":-7},
+		"condition":{"type":"didattack"},
+		"upgrades":["Wrathful", "Dazzling"],
 	},
 	"Gravity":{
 		"slot":"weapon",
 		"sp":150,
 		"atk":6,
 		"inheritrule":"staff",
+		"affectsduel":1,
+	},
+	"Gravity+":{
+		"slot":"weapon",
+		"sp":300,
+		"atk":10,
+		"inheritrule":"staff",
 		"ismax":1,
 		"affectsduel":1,
+		"upgrades":["Wrathful", "Dazzling"],
 	},
 	"Pain":{
 		"slot":"weapon",
@@ -1231,8 +1499,17 @@ skillList = {
 		"atk":3,
 		"inheritrule":"staff",
 		"affectsduel":1,
+		"pain":10,
+	},
+	"Pain+":{
+		"slot":"weapon",
+		"sp":300,
+		"atk":10,
+		"inheritrule":"staff",
+		"affectsduel":1,
 		"ismax":1,
 		"pain":10,
+		"upgrades":["Wrathful", "Dazzling"],
 	},
 	"Panic":{
 		"slot":"weapon",
@@ -1240,8 +1517,17 @@ skillList = {
 		"atk":7,
 		"inheritrule":"staff",
 		"affectsduel":1,
+		"seal":{"panic":1},
+	},
+	"Panic+":{
+		"slot":"weapon",
+		"sp":300,
+		"atk":11,
+		"inheritrule":"staff",
+		"affectsduel":1,
 		"ismax":1,
 		"seal":{"panic":1},
+		"upgrades":["Wrathful", "Dazzling"],
 	},
 	"Slow":{
 		"slot":"weapon",
@@ -1249,14 +1535,24 @@ skillList = {
 		"atk":5,
 		"inheritrule":"staff",
 		"affectsduel":1,
-		"ismax":1,
 		"seal":{"spd":-6},
 		"condition":{"type":"didattack"},
+	},
+	"Slow+":{
+		"slot":"weapon",
+		"sp":300,
+		"atk":12,
+		"inheritrule":"staff",
+		"affectsduel":1,
+		"ismax":1,
+		"seal":{"spd":-7},
+		"condition":{"type":"didattack"},
+		"upgrades":["Wrathful", "Dazzling"],
 	},
 	"Night Sky":{
 		"slot":"special",
 		"sp":100,
-		"charge":4,
+		"charge":3,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"special":{
@@ -1294,7 +1590,7 @@ skillList = {
 	"Daylight":{
 		"slot":"special",
 		"sp":100,
-		"charge":4,
+		"charge":3,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"special":{
@@ -1343,7 +1639,7 @@ skillList = {
 	"Glimmer":{
 		"slot":"special",
 		"sp":200,
-		"charge":3,
+		"charge":2,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"ismax":1,
@@ -1356,7 +1652,7 @@ skillList = {
 	"Astra":{
 		"slot":"special",
 		"sp":200,
-		"charge":5,
+		"charge":4,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"ismax":1,
@@ -1425,7 +1721,7 @@ skillList = {
 	"Noontime":{
 		"slot":"special",
 		"sp":200,
-		"charge":3,
+		"charge":2,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"ismax":1,
@@ -1438,7 +1734,7 @@ skillList = {
 	"Sol":{
 		"slot":"special",
 		"sp":200,
-		"charge":4,
+		"charge":3,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"ismax":1,
@@ -1553,7 +1849,7 @@ skillList = {
 	"Rising Thunder":{
 		"slot":"special",
 		"sp":150,
-		"charge":5,
+		"charge":4,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"special":{"type":"AOE", "multiplier":1},
@@ -1561,7 +1857,7 @@ skillList = {
 	"Rising Wind":{
 		"slot":"special",
 		"sp":150,
-		"charge":5,
+		"charge":4,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"special":{"type":"AOE", "multiplier":1},
@@ -1569,7 +1865,7 @@ skillList = {
 	"Rising Light":{
 		"slot":"special",
 		"sp":150,
-		"charge":5,
+		"charge":4,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"special":{"type":"AOE", "multiplier":1},
@@ -1577,7 +1873,7 @@ skillList = {
 	"Rising Flame":{
 		"slot":"special",
 		"sp":150,
-		"charge":5,
+		"charge":4,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"special":{"type":"AOE", "multiplier":1},
@@ -1585,7 +1881,7 @@ skillList = {
 	"Growing Thunder":{
 		"slot":"special",
 		"sp":300,
-		"charge":5,
+		"charge":4,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"ismax":1,
@@ -1594,7 +1890,7 @@ skillList = {
 	"Blazing Thunder":{
 		"slot":"special",
 		"sp":300,
-		"charge":5,
+		"charge":4,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
 		"ismax":1,
@@ -1603,55 +1899,49 @@ skillList = {
 	"Growing Wind":{
 		"slot":"special",
 		"sp":300,
-		"charge":5,
+		"charge":4,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
-		"ismax":1,
 		"special":{"type":"AOE", "multiplier":1},
 	},
 	"Blazing Wind":{
 		"slot":"special",
 		"sp":300,
-		"charge":5,
+		"charge":4,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
-		"ismax":1,
 		"special":{"type":"AOE", "multiplier":1.5},
 	},
 	"Growing Light":{
 		"slot":"special",
 		"sp":300,
-		"charge":5,
+		"charge":4,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
-		"ismax":1,
 		"special":{"type":"AOE", "multiplier":1},
 	},
 	"Blazing Light":{
 		"slot":"special",
 		"sp":300,
-		"charge":5,
+		"charge":4,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
-		"ismax":1,
 		"special":{"type":"AOE", "multiplier":1.5},
 	},
 	"Growing Flame":{
 		"slot":"special",
 		"sp":300,
-		"charge":5,
+		"charge":4,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
-		"ismax":1,
 		"special":{"type":"AOE", "multiplier":1},
 	},
 	"Blazing Flame":{
 		"slot":"special",
 		"sp":300,
-		"charge":5,
+		"charge":4,
 		"inheritrule":"nonstaff",
 		"affectsduel":1,
-		"ismax":1,
 		"special":{"type":"AOE", "multiplier":1.5},
 	},
 	"Buckler":{
@@ -3150,6 +3440,7 @@ skillList = {
 		"inheritrule":"lance",
 		"affectsduel":1,
 		"postheal":4,
+		"condition":{"type":"init"},
 	},
 	"Carrot Lance+":{
 		"slot":"weapon",
@@ -3159,6 +3450,12 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"postheal":4,
+		"condition":{"type":"init"},
+		"upgrades":["Mighty", "Swift", "Sturdy", "Warding"],
+		"upgradeBonuses":{
+			"atk":1,
+			"condition":{"type":None}
+		},
 	},
 	"Carrot Axe":{
 		"slot":"weapon",
@@ -3167,6 +3464,7 @@ skillList = {
 		"inheritrule":"axe",
 		"affectsduel":1,
 		"postheal":4,
+		"condition":{"type":"init"},
 	},
 	"Carrot Axe+":{
 		"slot":"weapon",
@@ -3176,6 +3474,12 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"postheal":4,
+		"condition":{"type":"init"},
+		"upgrades":["Mighty", "Swift", "Sturdy", "Warding"],
+		"upgradeBonuses":{
+			"atk":1,
+			"condition":{"type":None}
+		},
 	},
 	"Blue Egg":{
 		"slot":"weapon",
@@ -3184,6 +3488,7 @@ skillList = {
 		"inheritrule":"bluetome",
 		"affectsduel":1,
 		"postheal":4,
+		"condition":{"type":"init"},
 	},
 	"Blue Egg+":{
 		"slot":"weapon",
@@ -3193,6 +3498,12 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"postheal":4,
+		"condition":{"type":"init"},
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic"],
+		"upgradeBonuses":{
+			"atk":1,
+			"condition":{"type":None}
+		},
 	},
 	"Green Egg":{
 		"slot":"weapon",
@@ -3201,6 +3512,7 @@ skillList = {
 		"inheritrule":"greentome",
 		"affectsduel":1,
 		"postheal":4,
+		"condition":{"type":"init"},
 	},
 	"Green Egg+":{
 		"slot":"weapon",
@@ -3210,6 +3522,12 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"postheal":4,
+		"condition":{"type":"init"},
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic"],
+		"upgradeBonuses":{
+			"atk":1,
+			"condition":{"type":None}
+		},
 	},
 	"Attack Def 1":{
 		"slot":"a",
@@ -3449,6 +3767,8 @@ skillList = {
 		"inheritrule":"greentome",
 		"affectsduel":1,
 		"ismax":1,
+		"upgrades":["Piercing","Quick","Shielding","Mystic"],
+		"upgradeBonuses":{"atk":1},
 	},
 	"Guard 1":{
 		"slot":"b",
@@ -3551,6 +3871,8 @@ skillList = {
 			"effect":"spur", 
 			"each":{"atk":2, "spd":2, "def":2, "res":2},
 		},
+		"upgrades":["Piercing","Quick","Shielding","Mystic"],
+		"upgradeBonuses":{"atk":1},
 	},
 	"Earth Boost 1":{
 		"slot":"a",
@@ -3636,7 +3958,6 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"wrath":1,
-		"condition":{"type":"hpstartmin", "value":0},
 	},
 	"Blarowl":{
 		"slot":"weapon",
@@ -3662,6 +3983,8 @@ skillList = {
 			"effect":"spur", 
 			"each":{"atk":2, "spd":2, "def":2, "res":2},
 		},
+		"upgrades":["Piercing","Quick","Shielding","Mystic"],
+		"upgradeBonuses":{"atk":1},
 	},
 	"B Tome Exp. 1":{
 		"slot":"c",
@@ -3703,6 +4026,8 @@ skillList = {
 		"inheritrule":"bluetome",
 		"affectsduel":1,
 		"ismax":1,
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic"],
+		"upgradeBonuses":{"postbuff":{"def":5, "res":5}},
 	},
 	"Attack Res 1":{
 		"slot":"a",
@@ -3752,6 +4077,8 @@ skillList = {
 		"inheritrule":"lance",
 		"affectsduel":1,
 		"ismax":1,
+		"upgrades":["Mighty", "Swift", "Sturdy", "Warding"],
+		"upgradeBonuses":{"postbuff":{"def":5, "res":5}},
 	},
 	"Wind Boost 1":{
 		"slot":"a",
@@ -3794,6 +4121,8 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"effective":["flying"],
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic"],
+		"upgradeBonuses":{"postbuff":{"def":5, "res":5}},
 	},
 	"Candlelight":{
 		"slot":"weapon",
@@ -3801,8 +4130,17 @@ skillList = {
 		"atk":7,
 		"inheritrule":"staff",
 		"affectsduel":1,
+		"seal":{"blind":1},
+	},
+	"Candlelight+":{
+		"slot":"weapon",
+		"sp":300,
+		"atk":11,
+		"inheritrule":"staff",
+		"affectsduel":1,
 		"ismax":1,
 		"seal":{"blind":1},
+		"upgrades":["Wrathful", "Dazzling"],
 	},
 	"Dazzling Staff 1":{
 		"slot":"b",
@@ -3878,6 +4216,8 @@ skillList = {
 			"effect":"spur", 
 			"each":{"atk":2, "spd":2, "def":2, "res":2},
 		},
+		"upgrades":["Piercing","Quick","Shielding","Mystic"],
+		"upgradeBonuses":{"atk":1},
 	},
 	"Atk Ploy 1":{
 		"slot":"c",
@@ -4024,6 +4364,7 @@ skillList = {
 		"inheritrule":"axe",
 		"affectsduel":1,
 		"seal":{"panic":1},
+		"condition":{"type":"didattack"},
 	},
 	"Legion's Axe+":{
 		"slot":"weapon",
@@ -4033,6 +4374,8 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"seal":{"panic":1},
+		"condition":{"type":"didattack"},
+		"upgrades":["Mighty", "Swift", "Sturdy", "Warding"],
 	},
 	"Clarisse's Bow":{
 		"slot":"weapon",
@@ -4050,6 +4393,10 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"effective":["flying"],
+		"upgrades":["Mighty", "Swift", "Sturdy", "Warding"],
+		"upgradeBonuses":{
+			"seal":{"atk":-5, "spd":-5},
+		},
 	},
 	"Seashell":{
 		"slot":"weapon",
@@ -4073,6 +4420,8 @@ skillList = {
 		"fury":2,
 		"seal":{"def":-7, "res":-7},
 		"condition":{"type":"echo"},
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic"],
+		"upgradeBonuses":{"atk":2},
 	},
 	"Seal Atk Spd 1":{
 		"slot":"b",
@@ -4111,6 +4460,7 @@ skillList = {
 		"fury":2,
 		"condition":{"type":"echo"},
 		"effective":["flying"],
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic"],
 	},
 	"Def Ploy 1":{
 		"slot":"c",
@@ -4157,6 +4507,7 @@ skillList = {
 		"spur":{"atk":2, "spd":2, "def":2, "res":2},
 		"fury":2,
 		"condition":{"type":"echo"},
+		"upgrades":["Mighty", "Swift", "Sturdy", "Warding"],
 	},
 	"Lance Valor 1":{
 		"slot":"c",
@@ -4194,6 +4545,7 @@ skillList = {
 		"spur":{"atk":2, "spd":2, "def":2, "res":2},
 		"fury":2,
 		"condition":{"type":"echo"},
+		"upgrades":["Mighty", "Swift", "Sturdy", "Warding"],
 	},
 	"HP Def 1":{
 		"slot":"a",
@@ -4337,6 +4689,7 @@ skillList = {
 		"ismax":1,
 		"atk":14,
 		"charge":1,
+		"upgrades":["Mighty", "Swift", "Sturdy", "Warding"],
 	},
 	"Shield Pulse 1":{
 		"slot":"b",
@@ -4384,6 +4737,7 @@ skillList = {
 		"ismax":1,
 		"atk":14,
 		"effective":["cavalry"],
+		"upgrades":["Mighty", "Swift", "Sturdy", "Warding", "Crippling"],
 	},
 	"Cancel Affinity 1":{
 		"slot":"b",
@@ -4432,6 +4786,7 @@ skillList = {
 		"atk":12,
 		"effective":["flying"],
 		"charge":1,
+		"upgrades":["Piercing","Quick","Shielding","Mystic"],
 	},
 	"Zanbato":{
 		"slot":"weapon",
@@ -4449,6 +4804,7 @@ skillList = {
 		"ismax":1,
 		"atk":14,
 		"effective":["cavalry"],
+		"upgrades":["Mighty", "Swift", "Sturdy", "Warding", "Crippling"],
 	},
 	"Sword Valor 1":{
 		"slot":"c",
@@ -4503,6 +4859,10 @@ skillList = {
 		"atk":14,
 		"spur":{"res":4},
 		"condition":{"type":"def"},
+		"upgrades":["Mighty", "Swift", "Sturdy", "Warding"],
+		"upgradeBonuses":{
+			"spur":{"res":7},
+		},
 	},
 	"Water Boost 1":{
 		"slot":"a",
@@ -4543,6 +4903,7 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"atk":14,
+		"upgrades":["Mighty", "Swift", "Sturdy", "Warding"],
 	},
 	"Infantry Pulse 1":{
 		"slot":"c",
@@ -4574,6 +4935,7 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"atk":12,
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic"],
 	},
 	"Hibiscus Tome":{
 		"slot":"weapon",
@@ -4589,6 +4951,7 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"atk":12,
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic"],
 	},
 	"Spd Res 1":{
 		"slot":"a",
@@ -4637,6 +5000,7 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"atk":12,
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic"],
 	},
 	"Swift Strike 1":{
 		"slot":"a",
@@ -4754,6 +5118,7 @@ skillList = {
 		"ismax":1,
 		"atk":14,
 		"charge":1,
+		"upgrades":["Mighty", "Swift", "Sturdy", "Warding"],
 	},
 	"Armor March 1":{
 		"slot":"c",
@@ -4977,6 +5342,7 @@ skillList = {
 		"ismax":1,
 		"atk":14,
 		"charge":1,
+		"upgrades":["Mighty", "Swift", "Sturdy", "Warding"],
 	},
 	"Wrath 1":{
 		"slot":"b",
@@ -5126,6 +5492,7 @@ skillList = {
 		"inheritrule":"greentome",
 		"affectsduel":1,
 		"ismax":1,
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic"],
 	},
 	"Gale Dance 1":{
 		"slot":"b",
@@ -5191,8 +5558,10 @@ skillList = {
 		"inheritrule":"dagger",
 		"affectsduel":1,
 		"ismax":1,
-		"seal":{"def":-5, "res":-5},
+		"seal":{"def":-7, "res":-7},
 		"condition":{"type":"didattack"},
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic"],
+		"upgradeBonuses":{"atk":2},
 	},
 	"B Tome Valor 1":{
 		"slot":"c",
@@ -5224,6 +5593,7 @@ skillList = {
 		"inheritrule":"bluetome",
 		"affectsduel":1,
 		"ismax":1,
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic"],
 	},
 	"Attack Res 1":{
 		"slot":"a",
@@ -5256,6 +5626,8 @@ skillList = {
 		"inheritrule":"greentome",
 		"affectsduel":1,
 		"ismax":1,
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic"],
+		"upgradeBonuses":{"seal":{"panic":1}},
 	},
 	"Monstrous Bow":{
 		"slot":"weapon",
@@ -5273,6 +5645,8 @@ skillList = {
 		"effective":["flying"],
 		"affectsduel":1,
 		"ismax":1,
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic"],
+		"upgradeBonuses":{"seal":{"panic":1}},
 	},
 	"Bracing Blow 1":{
 		"slot":"a",
@@ -5526,5 +5900,239 @@ skillList = {
 		"sp":120,
 		"inheritrule":"dagger",
 		"ismax":1,
+	},
+	"Dark Greatsword":{
+		"slot":"weapon",
+		"sp":400,
+		"atk":16,
+		"inheritrule":"unique",
+		"affectsduel":1,
+		"ismax":1,
+		"spur":{"atk":4, "spd":4},
+		"condition":{"type":"init"},
+	},
+	"Bright Naginata":{
+		"slot":"weapon",
+		"sp":400,
+		"atk":16,
+		"inheritrule":"unique",
+		"affectsduel":1,
+		"ismax":1,
+		"spur":{"atk":4, "def":4},
+		"condition":{"type":"def"},
+	},
+	"Def Tactic 1":{
+		"slot":"c",
+		"sp":60,
+		"inheritrule":"",
+	},
+	"Def Tactic 2":{
+		"slot":"c",
+		"sp":120,
+		"inheritrule":"",
+	},
+	"Def Tactic 3":{
+		"slot":"c",
+		"sp":240,
+		"inheritrule":"",
+		"ismax":1,
+	},
+	"Atk Tactic 1":{
+		"slot":"c",
+		"sp":60,
+		"inheritrule":"",
+	},
+	"Atk Tactic 2":{
+		"slot":"c",
+		"sp":120,
+		"inheritrule":"",
+	},
+	"Atk Tactic 3":{
+		"slot":"c",
+		"sp":240,
+		"inheritrule":"",
+		"ismax":1,
+	},
+	"Firesweep Sword":{
+		"slot":"weapon",
+		"sp":200,
+		"atk":11,
+		"inheritrule":"sword",
+		"affectsduel":1,
+		"noselfcounter":1,
+		"noenemycounter":1,
+	},
+	"Firesweep Sword+":{
+		"slot":"weapon",
+		"sp":300,
+		"atk":15,
+		"inheritrule":"sword",
+		"affectsduel":1,
+		"ismax":1,
+		"noselfcounter":1,
+		"noenemycounter":1,
+	},
+	"Leiptr":{
+		"slot":"weapon",
+		"sp":400,
+		"atk":16,
+		"inheritrule":"unique",
+		"affectsduel":1,
+		"ismax":1,
+		"anyrangecounter":1,
+	},
+	"Ice Mirror":{
+		"slot":"special",
+		"sp":500,
+		"charge":2,
+		"inheritrule":"unique",
+		"affectsduel":1,
+		"ismax":1,
+		"reflect":1,
+		"special":{
+			"type":"defense",
+			"range":"ranged",
+			"value":.3
+		},
+	},
+	"Atk Def Bond 1":{
+		"slot":"a",
+		"sp":60,
+		"inheritrule":"any",
+		"affectsduel":1,
+		"condition":{
+			"type":"adjacency",
+			"effect":"spur", 
+			"any":{"atk":3, "def":3},
+		},
+	},
+	"Atk Def Bond 2":{
+		"slot":"a",
+		"sp":120,
+		"inheritrule":"any",
+		"affectsduel":1,
+		"condition":{
+			"type":"adjacency",
+			"effect":"spur", 
+			"any":{"atk":4, "def":4},
+		},
+	},
+	"Atk Def Bond 3":{
+		"slot":"a",
+		"sp":240,
+		"inheritrule":"any",
+		"affectsduel":1,
+		"condition":{
+			"type":"adjacency",
+			"effect":"spur", 
+			"any":{"atk":5, "def":5},
+		},
+		"ismax":1,
+	},
+	"Audhulma":{
+		"slot":"weapon",
+		"sp":400,
+		"atk":16,
+		"charge":1,
+		"inheritrule":"unique",
+		"affectsduel":1,
+		"ismax":1,
+		"res":5,
+	},
+	"Fierce Stance 1":{
+		"slot":"a",
+		"sp":50,
+		"inheritrule":"nonstaff",
+		"affectsduel":1,
+		"spur":{"atk":2},
+		"condition":{"type":"def"},
+	},
+	"Fierce Stance 2":{
+		"slot":"a",
+		"sp":100,
+		"inheritrule":"nonstaff",
+		"affectsduel":1,
+		"spur":{"atk":4},
+		"condition":{"type":"def"},
+	},
+	"Fierce Stance 3":{
+		"slot":"a",
+		"sp":200,
+		"inheritrule":"nonstaff",
+		"affectsduel":1,
+		"ismax":1,
+		"spur":{"atk":6},
+		"condition":{"type":"def"},
+	},
+	"Stout Tomahawk":{
+		"slot":"weapon",
+		"sp":400,
+		"atk":16,
+		"inheritrule":"unique",
+		"affectsduel":1,
+		"ismax":1,
+		"anyrangecounter":1,
+	},
+	"Weirding Tome":{
+		"slot":"weapon",
+		"sp":400,
+		"atk":14,
+		"inheritrule":"unique",
+		"affectsduel":1,
+		"ismax":1,
+		"condition":{"type":"statcomp", "stat":"res", "margin":1},
+		"ploy":{"spd":-5},
+		"spd":3,
+	},
+	"HP Res 1":{
+		"slot":"a",
+		"sp":100,
+		"hp":3,
+		"res":1,
+		"inheritrule":"",
+		"affectsduel":1,
+	},
+	"HP Res 2":{
+		"slot":"a",
+		"sp":200,
+		"hp":4,
+		"res":2,
+		"inheritrule":"",
+		"affectsduel":1,
+		"ismax":1,
+	},
+	"Resolute Blade":{
+		"slot":"weapon",
+		"sp":400,
+		"atk":19,
+		"inheritrule":"unique",
+		"affectsduel":1,
+		"ismax":1,
+		"specialboost":10,
+	},
+	"Flashing Blade 1":{
+		"slot":"a",
+		"sp":60,
+		"inheritrule":"nonstaff,infantry,armored",
+		"rulestomatch":2,
+		"affectsduel":1,
+		"heavy":{"stat":"spd", "margin":5, "value":1},
+	},
+	"Flashing Blade 2":{
+		"slot":"a",
+		"sp":120,
+		"inheritrule":"nonstaff,infantry,armored",
+		"rulestomatch":2,
+		"affectsduel":1,
+		"heavy":{"stat":"spd", "margin":3, "value":1},
+	},
+	"Flashing Blade 3":{
+		"slot":"a",
+		"sp":240,
+		"inheritrule":"nonstaff,infantry,armored",
+		"rulestomatch":2,
+		"affectsduel":1,
+		"ismax":1,
+		"heavy":{"stat":"spd", "margin":1, "value":1},
 	},
 }

@@ -6,7 +6,7 @@ import time
 import random
 
 # Initial logic and code by github.com/Andu2
-# Python conversion and github.com/Meteorchestra
+# Python conversion and revisions by github.com/Meteorchestra
 
 class ActiveHero(object):
 
@@ -52,6 +52,9 @@ class ActiveHero(object):
 		self.color = hero["color"]
 
 		self.precharge = hero["precharge"]
+		
+		#Thanks, Ice Mirror
+		self.damageBlocked = 0
 
 		#Categorize weapon
 		self.range = data.getAttackDistanceFromWeapon(self.weaponType)
@@ -97,6 +100,7 @@ class ActiveHero(object):
 		self.lit = False
 		self.didAttack = False
 		self.overkill = 0
+		self.damageBlocked = 0
 		
 		#Set charge at beginning
 		self.resetCharge()
@@ -278,11 +282,13 @@ class ActiveHero(object):
 	def postCombatBuff(self):
 		postCombatBuffText = ""
 		
-		for skill in self.getActiveSkillsWithAttribute("postbuff"):
-			for stat in self.skillAttributes["postbuff"][skill]:
-				if self.skillAttributes["postbuff"][skill][stat] > self.combatBuffs[stat]:
-					self.combatBuffs[stat] = self.skillAttributes["postbuff"][skill][stat]
-					postCombatBuffText += self.generateBuffText(stat, self.combatBuffs[stat], skill)
+		#Currently, all post-combat buff effects only apply if the user attacked
+		if self.didAttack:
+			for skill in self.getSkillsWithAttribute("postbuff"):
+				for stat in self.skillAttributes["postbuff"][skill]:
+					if self.skillAttributes["postbuff"][skill][stat] > self.combatBuffs[stat]:
+						self.combatBuffs[stat] = self.skillAttributes["postbuff"][skill][stat]
+						postCombatBuffText += self.generateBuffText(stat, self.combatBuffs[stat], skill)
 
 		return postCombatBuffText
 
@@ -290,15 +296,13 @@ class ActiveHero(object):
 	def postCombatHeal(self):
 		postCombatHealText = ""
 		
-		#Currently, all skills that heal after combat only activate if the unit initiated
-		if self.initiator:
-			for skill in self.getSkillsWithAttribute("postheal"):
-				healAmount = self.getMaximumHealAmount(self.skillAttributes["postheal"][skill])
-				if healAmount > 0:
-					self.stats["hp"] += healAmount
-					if self.verbose:
-						postCombatHealText += (self.name + " heals " + str(healAmount) + " hp with "
-								+ skill + ".\n")
+		for skill in self.getActiveSkillsWithAttribute("postheal"):
+			healAmount = self.getMaximumHealAmount(self.skillAttributes["postheal"][skill])
+			if healAmount > 0:
+				self.stats["hp"] += healAmount
+				if self.verbose:
+					postCombatHealText += (self.name + " heals " + str(healAmount) + " hp with "
+							+ skill + ".\n")
 
 		return postCombatHealText
 		
@@ -340,7 +344,9 @@ class ActiveHero(object):
 			selfEffectiveStats[stat] = self.stats[stat] + self.getStatMods(stat, enemy)
 			enemyEffectiveStats[stat] = enemy.stats[stat] + enemy.getStatMods(stat, self)
 
-		if (self.attackType == "magical"):
+		if any(self.getActiveSkillsWithAttribute("seeking", enemy)):
+			relevantDef = min(enemyEffectiveStats["res"], enemyEffectiveStats["def"])
+		elif (self.attackType == "magical"):
 			relevantDef = enemyEffectiveStats["res"]
 		else:
 			relevantDef = enemyEffectiveStats["def"]
@@ -480,6 +486,12 @@ class ActiveHero(object):
 				if self.verbose:
 					damageText += (enemy.name + " multiplies damage by " + format(dmgReduction, ".1f") + " with " + enemy.special + ".\n")
 				enemy.resetCharge()
+				
+			if any(self.getSkillsWithAttribute("reflect")) and self.damageBlocked > 0:
+				dmgBoost += self.damageBlocked
+				if self.verbose:
+					damageText += (self.name + " reflects " + str(self.damageBlocked) + " damage to the foe with " + self.special + ".\n")
+				self.damageBlocked = 0
 
 			#Weapon mod for healers
 			if (self.weaponType == "staff"):
@@ -517,7 +529,10 @@ class ActiveHero(object):
 			reduceDmg = relevantDef + math.trunc(relevantDef * enemyDefModifier)
 			dmg = math.trunc((rawDmg - reduceDmg) * weaponModifier)
 			dmg = math.trunc(dmg * dmgMultiplier) + math.trunc(flatDmgBoost)
-			dmg = dmg - math.trunc(dmg * (1 - dmgReduction)) - math.trunc(flatDmgBlock)
+			dmgBlocked = math.trunc(dmg * (1 - dmgReduction)) + math.trunc(flatDmgBlock)
+			if defensiveSpecialActivated:
+				enemy.damageBlocked = dmgBlocked
+			dmg = dmg - dmgBlocked
 			dmg = max(dmg, 0)
 			if self.verbose:
 				damageText += self.name + " attacks " + enemy.name + " for " + str(dmg) + " damage.\n"
@@ -751,6 +766,8 @@ class ActiveHero(object):
 		self.combatDebuffs = {"atk":0,"spd":0,"def":0,"res":0}
 		self.panicked = False
 		self.lit = False
+		self.damageBlocked = 0
+		enemy.damageBlocked = 0
 
 		#Do stuff if both aren't dead
 		if (self.stats["hp"] > 0 and enemy.stats["hp"] > 0):
@@ -814,12 +831,25 @@ def checkDefWithHpMin(self, enemy, condition, attribute):
 
 def checkRangedDef(self, enemy, condition, attribute):
 	return ((not self.initiator) and enemy.range == "ranged")
+	
+def checkRangedEnemy(self, enemy, condition, attribute):
+	return enemy.range == "ranged"
 
 def checkMeleeDef(self, enemy, condition, attribute):
 	return ((not self.initiator) and enemy.range == "melee")
 
 def checkEcho(self, enemy, condition, attribute):
 	return (self.didAttack or attribute == "spur") and (self.combatStartHp >= self.maxHp or attribute == "seal")
+	
+def checkBreath(self, enemy, condition, attribute):
+	if (attribute == "seeking"):
+		return checkRangedEnemy(self, enemy, condition, attribute)
+	return self.didAttack
+	
+def checkDispell(self, enemy, condition, attribute):
+	if (attribute == "noenemycounter"):
+		return enemy.weaponType in ["bluetome", "redtome", "greentome"]
+	return self.didAttack
 
 def checkChivalry(self, enemy, condition, attribute):
 	return enemy.combatStartHp / enemy.maxHp >= condition["value"]
@@ -848,6 +878,7 @@ conditionCheckFunctions = {
 	"init": checkInit,
 	"def": checkDef,
 	"rangeddef": checkRangedDef,
+	"rangedenemy": checkRangedEnemy,
 	"meleedef": checkMeleeDef,
 	"echo": checkEcho,
 	"chivalry": checkChivalry,
@@ -859,6 +890,8 @@ conditionCheckFunctions = {
 	"sweep": checkSweep,
 	"defensivespecial": checkDefensiveSpecial,
 	"enemyweapon": checkEnemyWeaponType,
+	"breath": checkBreath,
+	"dispell": checkDispell,
 }
 
 def checkCondition(self, skill, enemy=None, attribute=None):

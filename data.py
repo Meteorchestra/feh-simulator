@@ -5,10 +5,12 @@ import math
 import sys
 
 # Initial logic and code by github.com/Andu2
-# Python conversion and github.com/Meteorchestra
+# Python conversion and revisions by github.com/Meteorchestra
 
 heroes = heroes.heroList
+upgrades = skills.upgradeList
 skills = skills.skillList
+
 #Dummy empty skill
 skills["None"] = {
 		"sp":-10,
@@ -214,7 +216,7 @@ def getMaxSkills(hero, rarity):
 	for skillName in heroes[hero]["skills"]:
 		skill = skills[skillName] 
 		if (heroes[hero]["skills"][skillName] <= rarity):
-			if (skills[maxSkillset[skill["slot"]]]["sp"] < skill["sp"]):
+			if (skills[maxSkillset[skill["slot"]]]["sp"] <= skill["sp"]):
 					maxSkillset[skill["slot"]] = skillName
 	return maxSkillset
 	
@@ -703,6 +705,34 @@ def parseOptions(optionsFile="options.txt"):
 				options["shuffleSeed"] = opt[1]
 			elif opt[0] == "support":
 				options["summonerSupport"] = opt[1]
-				
+		
+	skillsToAdd = {}
 	for skill in skills:
 		skills[skill] = buildSkillWithDefaults(skills[skill])
+		if "upgrades" in skills[skill]:
+			for upgrade in skills[skill]["upgrades"]:
+				upgradedName = upgrade + " " + skill
+				upgradeData = upgrades[upgrade]
+				upgradedSkill = {}
+				for key in skills[skill].keys():
+					upgradedSkill[key] = skills[skill][key]
+				for key in upgradeData.keys():
+					if key in upgradedSkill:
+						if isinstance(upgradedSkill[key], dict):
+							upgradedSkill[key].update(upgradeData[key])
+						else:
+							upgradedSkill[key] += upgradeData[key]
+					else:
+						upgradedSkill[key] = upgradeData[key]
+				if "upgradeBonuses" in skills[skill]:
+					for key in skills[skill]["upgradeBonuses"]:
+						if key in upgradedSkill:
+							if isinstance(upgradedSkill[key], dict):
+								upgradedSkill[key].update(skills[skill]["upgradeBonuses"][key])
+							else:
+								upgradedSkill[key] += skills[skill]["upgradeBonuses"][key]
+						else:
+							upgradedSkill[key] = skills[skill]["upgradeBonuses"][key]
+				skillsToAdd[upgradedName] = upgradedSkill
+				print(upgradedSkill)
+	skills.update(skillsToAdd)
