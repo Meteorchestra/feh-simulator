@@ -734,5 +734,4 @@ def parseOptions(optionsFile="options.txt"):
 						else:
 							upgradedSkill[key] = skills[skill]["upgradeBonuses"][key]
 				skillsToAdd[upgradedName] = upgradedSkill
-				print(upgradedSkill)
 	skills.update(skillsToAdd)
