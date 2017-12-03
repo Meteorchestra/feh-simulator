@@ -4,12 +4,6 @@ import data
 import battle
 import sys
 
-#Process options from the specified file or fallback to options.txt
-if len(sys.argv) > 1:
-	data.parseOptions(sys.argv[1])
-else:
-	data.parseOptions()
-	
 #If there's another argument, set it as the challenger name
 if len(sys.argv) > 2:
 	data.options["heronames"] = [sys.argv[2]]

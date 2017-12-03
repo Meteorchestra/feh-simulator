@@ -451,16 +451,7 @@ def initEnemyList():
 						enemy[slot] = enemies["fl"][slot]
 			
 			setStats(enemy)
-
-#Find hero skills
-for hero in heroes:
-	heroes[hero]["possibleSkills"] = getValidSkillsForSlot(hero, None)
-	heroes[hero]["maxSkills"] = {}
-	for j in range(1,6):
-		heroes[hero]["maxSkills"][j] = getMaxSkills(hero,j)
-		
-trackedCalls = {}
-
+			
 #Holder for challenger options and pre-calculated stats
 challenger = {}
 
@@ -539,6 +530,8 @@ fl["precharge"] = 0
 
 fl["activeHeroes"] = {}
 enemies["fl"] = fl
+
+trackedCalls = {}
 
 def parseOptions(optionsFile="options.txt"):
 	optionsFile = open(optionsFile)
@@ -735,3 +728,18 @@ def parseOptions(optionsFile="options.txt"):
 							upgradedSkill[key] = skills[skill]["upgradeBonuses"][key]
 				skillsToAdd[upgradedName] = upgradedSkill
 	skills.update(skillsToAdd)
+
+	
+#Process options from the specified file or fallback to options.txt
+if len(sys.argv) > 1:
+	parseOptions(sys.argv[1])
+else:
+	parseOptions()
+
+#Find hero skills
+for hero in heroes:
+	heroes[hero]["possibleSkills"] = getValidSkillsForSlot(hero, None)
+	heroes[hero]["maxSkills"] = {}
+	for j in range(1,6):
+		heroes[hero]["maxSkills"][j] = getMaxSkills(hero,j)
+

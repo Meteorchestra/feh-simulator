@@ -4393,7 +4393,7 @@ skillList = {
 		"affectsduel":1,
 		"ismax":1,
 		"effective":["flying"],
-		"upgrades":["Mighty", "Swift", "Sturdy", "Warding"],
+		"upgrades":["Piercing", "Quick", "Shielding", "Mystic"],
 		"upgradeBonuses":{
 			"seal":{"atk":-5, "spd":-5},
 		},
