@@ -351,10 +351,15 @@ class ActiveHero(object):
 		else:
 			relevantDef = enemyEffectiveStats["def"]
 
-		#Blade tomes add atk
+		#Blade tomes add atk based on user buffs
 		if "blade" in self.skillAttributes:
 			for stat in self.combatBuffs:
 				selfEffectiveStats["atk"] += max(self.buffs[stat], self.combatBuffs[stat])
+				
+		#Deblade tomes (Blizzard) add atk based on enemy debuffs
+		if "deblade" in self.skillAttributes:
+			for stat in self.combatBuffs:
+				selfEffectiveStats["atk"] -= min(enemy.debuffs[stat], enemy.combatDebuffs[stat])
 
 		offensiveSpecialActivated = False
 
@@ -828,6 +833,9 @@ def checkDef(self, enemy, condition, attribute):
 	
 def checkDefWithHpMin(self, enemy, condition, attribute):
 	return checkDef(self, enemy, condition, attribute) and checkHpMin(self, enemy, condition, attribute)
+	
+def checkInitWithHpMin(self, enemy, condition, attribute):
+	return checkInit(self, enemy, condition, attribute) and checkHpStartMin(self, enemy, condition, attribute)
 
 def checkRangedDef(self, enemy, condition, attribute):
 	return ((not self.initiator) and enemy.range == "ranged")
@@ -867,6 +875,14 @@ def checkDefensiveSpecial(self, enemy, condition, attribute):
 def checkEnemyWeaponType(self, enemy, condition, attribute):
 	return enemy.weaponType in condition["value"]
 	
+def checkEnemyWeaponAndClass(self, enemy, condition, attribute):
+	return enemy.weaponType in condition["weapon"] and enemy.moveType in condition["class"]
+	
+def checkGreatFlame(self, enemy, condition, attribute):
+	if (attribute == "noenemyfollow"):
+		return checkStatComp(self, enemy, condition, attribute)
+	return checkRangedEnemy(self, enemy, condition, attribute)
+	
 #Map of functions to avoid a big ugly conditional
 #See skills.py for a more complete description of skill conditions
 conditionCheckFunctions = {
@@ -887,11 +903,14 @@ conditionCheckFunctions = {
 	"attackedclass": checkAttackedClass,
 	"breaker": checkBreaker,
 	"riposte": checkDefWithHpMin,
+	"bold": checkInitWithHpMin,
 	"sweep": checkSweep,
 	"defensivespecial": checkDefensiveSpecial,
 	"enemyweapon": checkEnemyWeaponType,
 	"breath": checkBreath,
 	"dispell": checkDispell,
+	"enemyweaponclass": checkEnemyWeaponAndClass,
+	"greatflame": checkGreatFlame,
 }
 
 def checkCondition(self, skill, enemy=None, attribute=None):
